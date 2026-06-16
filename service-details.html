@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Our Services — Banshap Investment Company Limited</title>
+  <meta name="description" content="Banshap provides logistics, cargo transportation, BRELA registration, business licensing, annual tax filing, agricultural supplies, and corporate advisory across Tanzania.">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary:#0B1F3A; --primary-mid:#0f2847; --secondary:#123E7A;
+      --accent:#F5B041; --accent-dark:#d4922e; --accent-pale:#fef3e2;
+      --light:#F8F9FA; --white:#FFFFFF; --text:#2C3E50; --text-light:#6c757d;
+      --border:rgba(18,62,122,0.1); --shadow-sm:0 2px 12px rgba(11,31,58,0.08);
+      --shadow:0 8px 32px rgba(11,31,58,0.12); --shadow-lg:0 20px 60px rgba(11,31,58,0.18);
+      --radius:8px; --radius-lg:16px; --transition:all 0.3s ease;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;font-size:16px;color:var(--text);background:var(--white);overflow-x:hidden;}
+    h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif;color:var(--primary);line-height:1.25;}
+    p{line-height:1.75;color:var(--text-light);}
+    a{text-decoration:none;}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-track{background:var(--light);}
+    ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
+    .label-tag{font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:10px;margin-bottom:12px;}
+    .label-tag::before{content:'';width:32px;height:2px;background:var(--accent);flex-shrink:0;}
+    .section-heading{font-size:clamp(28px,3.5vw,42px);font-weight:700;color:var(--primary);margin-bottom:16px;}
+    .section-heading span{color:var(--accent);}
+    .btn-accent{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--primary);font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:14px 30px;border-radius:var(--radius);transition:var(--transition);border:2px solid var(--accent);}
+    .btn-accent:hover{background:var(--accent-dark);border-color:var(--accent-dark);color:var(--white);transform:translateY(-2px);}
+
+    /* HEADER */
+    #header{position:fixed;top:0;left:0;right:0;z-index:9999;padding:0 40px;height:80px;background:rgba(11,31,58,0.97);backdrop-filter:blur(20px);transition:var(--transition);}
+    #header.scrolled{height:68px;box-shadow:0 4px 24px rgba(0,0,0,0.25);}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;height:100%;}
+    .logo-wrap{display:flex;align-items:center;text-decoration:none;}
+    .site-logo{height:52px;width:auto;}
+    .footer-brand .site-logo{background:#ffffff;border-radius:8px;padding:6px 14px;height:60px;}
+    #header{background:#ffffff!important;box-shadow:0 2px 16px rgba(0,0,0,0.08)!important;}
+    #header.scrolled{background:#ffffff!important;box-shadow:0 4px 24px rgba(0,0,0,0.12)!important;}
+    .main-nav a{color:var(--primary)!important;}
+    .header-phone{color:var(--primary)!important;}
+    .header-cta{background:var(--primary)!important;color:#fff!important;}
+    .header-cta:hover{background:var(--accent)!important;color:var(--primary)!important;}
+    .mobile-menu-btn{border-color:var(--primary)!important;color:var(--primary)!important;}
+    .main-nav ul{list-style:none;display:flex;align-items:center;gap:32px;margin:0;}
+    .main-nav a{font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;color:rgba(255,255,255,0.8);text-decoration:none;position:relative;padding-bottom:4px;transition:var(--transition);}
+    .main-nav a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent);border-radius:1px;transform:scaleX(0);transition:var(--transition);}
+    .main-nav a:hover,.main-nav a.active{color:var(--accent);}
+    .main-nav a:hover::after,.main-nav a.active::after{transform:scaleX(1);}
+    .header-cta{font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--primary);background:var(--accent);padding:10px 22px;border-radius:var(--radius);transition:var(--transition);text-decoration:none;}
+    .header-cta:hover{background:var(--accent-dark);color:var(--white);}
+    .mobile-menu-btn{display:none;background:transparent;border:2px solid rgba(255,255,255,0.3);color:white;padding:6px 10px;border-radius:6px;cursor:pointer;font-size:18px;}
+    .offcanvas-nav .offcanvas-header,.offcanvas-nav .offcanvas-body{background:var(--primary);}
+    .offcanvas-nav .nav-link{font-family:'Outfit',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:var(--transition);}
+    .offcanvas-nav .nav-link:hover{color:var(--accent);padding-left:8px;}
+    .offcanvas-nav .btn-close{filter:invert(1) opacity(0.6);}
+    .offcanvas-nav .offcanvas-cta{display:block;text-align:center;background:var(--accent);color:var(--primary);font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:14px;border-radius:var(--radius);margin-top:24px;text-decoration:none;}
+
+    /* PAGE BANNER */
+    .page-banner{background:var(--primary);padding:140px 40px 80px;position:relative;overflow:hidden;}
+    .page-banner::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:60px 60px;}
+    .page-banner::after{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;border:1px solid rgba(245,176,65,0.08);}
+    .page-banner-inner{max-width:1280px;margin:0 auto;position:relative;z-index:2;}
+    .page-banner h1{font-size:clamp(36px,5vw,60px);color:var(--white);margin-bottom:16px;}
+    .page-banner h1 span{color:var(--accent);}
+    .page-banner p{color:rgba(255,255,255,0.55);font-size:17px;font-weight:300;max-width:520px;line-height:1.7;margin-bottom:24px;}
+    .breadcrumb-nav{display:flex;align-items:center;gap:10px;}
+    .breadcrumb-nav a{font-family:'Outfit',sans-serif;font-size:12px;letter-spacing:1px;color:var(--accent);text-decoration:none;text-transform:uppercase;}
+    .breadcrumb-nav span{font-family:'Outfit',sans-serif;font-size:12px;color:rgba(255,255,255,0.35);text-transform:uppercase;}
+    .breadcrumb-nav i{color:rgba(255,255,255,0.2);font-size:10px;}
+
+    /* SERVICES LAYOUT */
+    .services-layout{padding:80px 40px;background:var(--light);}
+    .services-layout-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start;}
+    /* Sidebar */
+    .services-sidebar{position:sticky;top:100px;}
+    .sidebar-nav{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);}
+    .sidebar-nav-title{background:var(--primary);color:var(--white);font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;padding:18px 24px;display:block;}
+    .sidebar-nav a{display:flex;align-items:center;gap:12px;padding:14px 24px;font-size:14px;color:var(--text);text-decoration:none;border-bottom:1px solid var(--border);transition:var(--transition);}
+    .sidebar-nav a:last-child{border-bottom:none;}
+    .sidebar-nav a i{font-size:16px;color:var(--text-light);transition:var(--transition);}
+    .sidebar-nav a:hover,.sidebar-nav a.active{background:var(--accent-pale);color:var(--primary);padding-left:32px;}
+    .sidebar-nav a:hover i,.sidebar-nav a.active i{color:var(--accent);}
+    .sidebar-cta{background:var(--primary);border-radius:var(--radius-lg);padding:28px;margin-top:20px;position:relative;overflow:hidden;}
+    .sidebar-cta::before{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:rgba(245,176,65,0.1);}
+    .sidebar-cta h5{font-size:18px;color:var(--white);margin-bottom:10px;position:relative;}
+    .sidebar-cta p{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:20px;position:relative;}
+    .sidebar-cta a.cta-btn{display:block;text-align:center;background:var(--accent);color:var(--primary);font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:12px;border-radius:var(--radius);transition:var(--transition);text-decoration:none;position:relative;}
+    .sidebar-cta a.cta-btn:hover{background:var(--accent-dark);color:var(--white);}
+    /* Service Sections */
+    .services-content{display:flex;flex-direction:column;gap:64px;}
+    .service-section{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);}
+    .service-section-banner{height:220px;position:relative;overflow:hidden;}
+    .service-section-banner img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
+    .service-section:hover .service-section-banner img{transform:scale(1.04);}
+    .service-section-banner-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(11,31,58,0.8),rgba(11,31,58,0.3));}
+    .service-section-banner-content{position:absolute;inset:0;display:flex;align-items:center;padding:32px 40px;gap:20px;}
+    .service-section-icon{width:60px;height:60px;background:var(--accent);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:26px;color:var(--primary);flex-shrink:0;}
+    .service-section-banner-content h2{font-size:28px;color:var(--white);}
+    .service-section-banner-content p{color:rgba(255,255,255,0.65);font-size:14px;margin-top:4px;}
+    .service-body{padding:40px;}
+    .service-body p{font-size:15.5px;line-height:1.8;color:var(--text-light);margin-bottom:20px;}
+    .service-tags{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0;}
+    .stag{font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;border-radius:50px;background:rgba(18,62,122,0.07);color:var(--secondary);border:1px solid var(--border);}
+    .service-features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px;}
+    .sf-item{display:flex;align-items:flex-start;gap:10px;}
+    .sf-item i{color:var(--accent);font-size:15px;margin-top:3px;flex-shrink:0;}
+    .sf-item span{font-size:14px;color:var(--text);line-height:1.6;}
+    .service-divider{height:1px;background:var(--border);margin:28px 0;}
+
+    /* BENEFITS GRID */
+    .benefits-section{padding:80px 40px;background:var(--primary);}
+    .benefits-inner{max-width:1280px;margin:0 auto;}
+    .benefits-header{text-align:center;margin-bottom:56px;}
+    .benefits-header .label-tag{color:var(--accent);justify-content:center;}
+    .benefits-header .label-tag::before{display:none;}
+    .benefits-header .section-heading{color:var(--white);}
+    .benefits-header p{color:rgba(255,255,255,0.5);font-size:16px;max-width:520px;margin:0 auto;}
+    .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,0.05);border-radius:var(--radius-lg);overflow:hidden;}
+    .benefit-item{padding:40px 32px;background:rgba(11,31,58,0.6);transition:var(--transition);}
+    .benefit-item:hover{background:rgba(18,62,122,0.7);}
+    .benefit-icon{width:52px;height:52px;background:rgba(245,176,65,0.12);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--accent);margin-bottom:18px;transition:var(--transition);}
+    .benefit-item:hover .benefit-icon{background:var(--accent);color:var(--primary);}
+    .benefit-item h4{font-size:17px;color:var(--white);margin-bottom:10px;}
+    .benefit-item p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;margin:0;}
+
+    /* FOOTER */
+    #footer{background:var(--primary);padding:80px 40px 0;}
+    .footer-inner{max-width:1280px;margin:0 auto;}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:60px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .footer-brand p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8;margin:20px 0 28px;font-weight:300;}
+    .footer-socials{display:flex;gap:10px;}
+    .footer-social{width:38px;height:38px;border:1px solid rgba(255,255,255,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:14px;text-decoration:none;transition:var(--transition);}
+    .footer-social:hover{background:var(--accent);border-color:var(--accent);color:var(--primary);}
+    .footer-col h5{font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:24px;}
+    .footer-links{list-style:none;}
+    .footer-links li{margin-bottom:10px;}
+    .footer-links a{font-size:14px;color:rgba(255,255,255,0.45);text-decoration:none;display:flex;align-items:center;gap:8px;transition:var(--transition);}
+    .footer-links a i{font-size:12px;color:var(--accent);}
+    .footer-links a:hover{color:rgba(255,255,255,0.85);padding-left:4px;}
+    .footer-contact-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;}
+    .footer-contact-item i{color:var(--accent);font-size:14px;margin-top:3px;flex-shrink:0;}
+    .footer-contact-item span{font-size:13.5px;color:rgba(255,255,255,0.45);line-height:1.6;}
+    .footer-bottom{padding:24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .footer-bottom p{font-size:13px;color:rgba(255,255,255,0.3);}
+    .footer-bottom a{color:var(--accent);}
+    .footer-legal{display:flex;gap:24px;}
+    .footer-legal a{font-family:'Outfit',sans-serif;font-size:11px;color:rgba(255,255,255,0.3);text-decoration:none;text-transform:uppercase;transition:var(--transition);}
+    .footer-legal a:hover{color:var(--accent);}
+
+    @media(max-width:1100px){
+      #header,.page-banner,.services-layout,.benefits-section,#footer{padding-left:24px;padding-right:24px;}
+      .services-layout-inner{grid-template-columns:1fr;gap:32px;}
+      .services-sidebar{position:static;}
+      .service-features{grid-template-columns:1fr;}
+      .benefits-grid{grid-template-columns:repeat(2,1fr);}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:40px;}
+    }
+    @media(max-width:768px){
+      .main-nav,.header-cta{display:none;}
+      .mobile-menu-btn{display:block;}
+      .benefits-grid{grid-template-columns:1fr;}
+      .footer-grid{grid-template-columns:1fr;gap:36px;}
+      .service-section-banner{height:180px;}
+      .service-section-banner-content{padding:20px;}
+      .service-body{padding:24px;}
+    }
+  
+    /* ===== WHATSAPP FLOAT + HEADER PHONE ===== */
+    /* WhatsApp Float Button */
+    @keyframes wa-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,0.5),0 6px 24px rgba(37,211,102,0.4);} 60%{box-shadow:0 0 0 14px rgba(37,211,102,0),0 6px 24px rgba(37,211,102,0.4);} }
+    @keyframes wa-bounce { 0%,100%{transform:scale(1);} 30%{transform:scale(1.15);} 60%{transform:scale(0.95);} }
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 9990; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+    .wa-btn { width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; text-decoration: none; animation: wa-pulse 2.4s ease-in-out infinite; transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), filter 0.25s ease; }
+    .wa-btn:hover { transform: scale(1.14); filter: brightness(1.1); animation: wa-bounce 0.5s ease; }
+    .wa-btn svg { width: 30px; height: 30px; fill: #fff; transition: transform 0.25s ease; }
+    .wa-btn:hover svg { transform: rotate(-8deg) scale(1.08); }
+    .wa-label { background: var(--primary); color: var(--white); font-family: 'Outfit', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; padding: 7px 16px; border-radius: 50px; white-space: nowrap; opacity: 0; transform: translateX(12px); transition: opacity 0.3s ease, transform 0.3s cubic-bezier(.34,1.56,.64,1); pointer-events: none; box-shadow: 0 4px 16px rgba(11,31,58,0.18); }
+    .wa-label::after { content: ''; position: absolute; right: -6px; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-left-color: var(--primary); border-right: none; }
+    .wa-label { position: relative; }
+    .wa-float:hover .wa-label { opacity: 1; transform: translateX(0); }
+    .header-phone { display: flex; align-items: center; gap: 7px; font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; color: rgba(255,255,255,0.9); text-decoration: none; transition: color 0.3s ease; white-space: nowrap; }
+    .header-phone i { color: var(--accent); font-size: 13px; }
+    .header-phone:hover { color: var(--accent); }
+    .header-right { display: flex; align-items: center; gap: 20px; }
+    @media (max-width: 768px) { .header-phone { display: none; } .wa-float { bottom: 18px; right: 18px; } .wa-btn { width: 52px; height: 52px; } }
+  </style>
+</head>
+<body>
+
+  <header id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="assets/img/logo.png" alt="Banshap Investment Company Limited" class="site-logo">
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="starter-page.html">About Us</a></li>
+          <li><a href="service-details.html" class="active">Services</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="blog.html">Insights</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-right"><a href="tel:+255716628867" class="header-phone"><i class="bi bi-telephone-fill"></i> +255 716 628 867</a><a href="index.html#contact" class="header-cta">Request Consultation</a></div>
+      <button class="mobile-menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"><i class="bi bi-list"></i></button>
+    </div>
+  </header>
+
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="mobileNav">
+    <div class="offcanvas-header">
+      <div class="logo-wrap"><img src="assets/img/logo.png" alt="Banshap Investment Company Limited" class="site-logo"></div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="starter-page.html" class="nav-link">About Us</a>
+        <a href="service-details.html" class="nav-link active">Services</a>
+        <a href="index.html#projects" class="nav-link" data-bs-dismiss="offcanvas">Projects</a>
+        <a href="blog.html" class="nav-link">Insights</a>
+        <a href="index.html#contact" class="nav-link" data-bs-dismiss="offcanvas">Contact</a>
+      </nav>
+      <a href="index.html#contact" class="offcanvas-cta" data-bs-dismiss="offcanvas">Request Consultation</a>
+    </div>
+  </div>
+
+  <!-- PAGE BANNER -->
+  <section class="page-banner">
+    <div class="page-banner-inner">
+      <div class="label-tag" data-aos="fade-right">What We Offer</div>
+      <h1 data-aos="fade-up">Our <span>Services</span></h1>
+      <p data-aos="fade-up" data-aos-delay="100">Nine integrated service lines designed to cover every operational, regulatory, and logistical need your business has — delivered by specialists who know Tanzania's business landscape.</p>
+      <div class="breadcrumb-nav" data-aos="fade-up" data-aos-delay="200">
+        <a href="index.html">Home</a>
+        <i class="bi bi-chevron-right"></i>
+        <span>Services</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES LAYOUT -->
+  <section class="services-layout">
+    <div class="services-layout-inner">
+
+      <!-- Sidebar -->
+      <aside class="services-sidebar" data-aos="fade-right">
+        <div class="sidebar-nav">
+          <span class="sidebar-nav-title">Service Areas</span>
+          <a href="#logistics" class="active"><i class="bi bi-truck"></i> Logistics & Freight</a>
+          <a href="#agriculture"><i class="bi bi-flower1"></i> Agriculture Inputs</a>
+          <a href="#licensing"><i class="bi bi-card-checklist"></i> Business Licensing</a>
+          <a href="#brela"><i class="bi bi-building"></i> BRELA Registration</a>
+          <a href="#registration"><i class="bi bi-file-earmark-person"></i> Company Registration</a>
+          <a href="#filing"><i class="bi bi-calculator"></i> Annual Filing</a>
+          <a href="#supplies"><i class="bi bi-shop"></i> General Supplies</a>
+          <a href="#advisory"><i class="bi bi-graph-up-arrow"></i> Investment Advisory</a>
+        </div>
+        <div class="sidebar-cta">
+          <h5>Need Expert Advice?</h5>
+          <p>Speak directly with a specialist. We respond within one business day.</p>
+          <a href="index.html#contact" class="cta-btn">Book a Consultation</a>
+        </div>
+      </aside>
+
+      <!-- Service Sections -->
+      <div class="services-content">
+
+        <!-- LOGISTICS -->
+        <div class="service-section" id="logistics" data-aos="fade-up">
+          <div class="service-section-banner">
+            <img src="assets/img/banshap/banshap-transport-1.jpg" alt="Logistics & Freight">
+            <div class="service-section-banner-overlay"></div>
+            <div class="service-section-banner-content">
+              <div class="service-section-icon"><i class="bi bi-truck"></i></div>
+              <div>
+                <h2>Logistics &amp; Freight Infrastructure</h2>
+                <p>Nationwide haulage, port operations &amp; supply chain management</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-body">
+            <p>Banshap's logistics division provides comprehensive freight and haulage services covering Tanzania's Northern, Central, and TAZARA corridors. From port clearance at Dar es Salaam to last-mile delivery in remote regions, we manage the complete supply chain on your behalf — with real-time cargo tracking, experienced drivers, and a fleet maintained to the highest standards.</p>
+            <p>Our logistics team holds active working relationships with the Tanzania Ports Authority, Tanzania International Container Terminal Services (TICTS), and Tanzania Ports Services Limited (TPSL) — enabling us to move goods efficiently and cost-effectively, even during peak congestion periods.</p>
+            <div class="service-tags">
+              <span class="stag">Nationwide Haulage</span><span class="stag">Port Clearance</span><span class="stag">Warehousing</span>
+              <span class="stag">Cargo Tracking</span><span class="stag">Cold Chain</span><span class="stag">Bulk Freight</span>
+            </div>
+            <div class="service-divider"></div>
+            <div class="service-features">
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Fleet of heavy commercial vehicles for bulk and break-bulk cargo</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Port clearing and customs documentation management</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Temperature-controlled transport for perishables and pharmaceuticals</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Real-time GPS cargo tracking and client visibility portal</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Regional warehousing in Dar es Salaam, Arusha, and Mwanza</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>24/7 operations centre for critical logistics escalations</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AGRICULTURE -->
+        <div class="service-section" id="agriculture" data-aos="fade-up">
+          <div class="service-section-banner">
+            <img src="assets/img/banshap/banshap-agri-farmer-1.jpg" alt="Agriculture Inputs">
+            <div class="service-section-banner-overlay"></div>
+            <div class="service-section-banner-content">
+              <div class="service-section-icon"><i class="bi bi-flower1"></i></div>
+              <div>
+                <h2>Agricultural Inputs &amp; Supplies</h2>
+                <p>Certified seeds, fertilisers &amp; agri-equipment distribution</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-body">
+            <p>We supply certified seeds, fertilisers, irrigation equipment, and agrochemicals to farming enterprises, cooperatives, and NGOs operating across Tanzania's agricultural regions. All products are sourced from certified suppliers and distributed with full documentation including phytosanitary certificates and certificates of conformity where applicable.</p>
+            <div class="service-tags">
+              <span class="stag">Certified Seeds</span><span class="stag">Fertilisers</span><span class="stag">Irrigation Equipment</span>
+              <span class="stag">Agrochemicals</span><span class="stag">Farm Advisory</span>
+            </div>
+            <div class="service-features">
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>TOSCI-certified seed varieties for major food and cash crops</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>TFRA-licensed agrochemical distribution with full compliance</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Bulk procurement and delivery to cooperative warehouses</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Nationwide distribution covering all major agricultural zones</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LICENSING -->
+        <div class="service-section" id="licensing" data-aos="fade-up">
+          <div class="service-section-banner">
+            <img src="assets/img/banshap/banshap-reg-certificate-1.jpg" alt="Business Licensing">
+            <div class="service-section-banner-overlay"></div>
+            <div class="service-section-banner-content">
+              <div class="service-section-icon"><i class="bi bi-card-checklist"></i></div>
+              <div>
+                <h2>Business Licensing Services</h2>
+                <p>Sector-specific permits, renewals &amp; regulatory compliance</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-body">
+            <p>Navigating Tanzania's business licence landscape requires detailed knowledge of sector-specific requirements, multi-agency coordination, and precise documentation management. Our licensing team has successfully obtained and renewed permits across 12 industry sectors — including healthcare, food processing, transport, construction, and finance.</p>
+            <div class="service-tags">
+              <span class="stag">TBS Licences</span><span class="stag">TFDA Permits</span><span class="stag">SUMATRA</span>
+              <span class="stag">NEMC Compliance</span><span class="stag">Fire &amp; Safety</span><span class="stag">Local Authority</span>
+            </div>
+            <div class="service-features">
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Business licence procurement from all regulatory bodies</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Annual renewal management and deadline tracking</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Vehicle licensing and SUMATRA compliance support</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Sector-specific licence audits and gap analysis</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BRELA -->
+        <div class="service-section" id="brela" data-aos="fade-up">
+          <div class="service-section-banner">
+            <img src="assets/img/banshap/banshap-reg-signing-1.jpg" alt="BRELA Registration">
+            <div class="service-section-banner-overlay"></div>
+            <div class="service-section-banner-content">
+              <div class="service-section-icon"><i class="bi bi-building"></i></div>
+              <div>
+                <h2>BRELA Registration Assistance</h2>
+                <p>Company incorporation &amp; certificate of registration services</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-body">
+            <p>We handle the complete BRELA registration process on your behalf — from company name search and availability confirmation, through memorandum and articles of association preparation, to certificate of incorporation delivery. For straightforward entities, we complete the process in as few as 3 business days.</p>
+            <div class="service-tags">
+              <span class="stag">Name Search</span><span class="stag">Incorporation</span><span class="stag">M&amp;A Preparation</span>
+              <span class="stag">Foreign Companies</span><span class="stag">NGO Registration</span>
+            </div>
+            <div class="service-features">
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Company name reservation and availability search</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Memorandum and articles of association drafting</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Foreign company branch registration and compliance</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Annual returns filing with BRELA</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- REGISTRATION -->
+        <div class="service-section" id="registration" data-aos="fade-up">
+          <div class="service-section-banner">
+            <img src="assets/img/banshap/banshap-reg-signing-2.jpg" alt="Company Registration">
+            <div class="service-section-banner-overlay"></div>
+            <div class="service-section-banner-content">
+              <div class="service-section-icon"><i class="bi bi-file-earmark-person"></i></div>
+              <div>
+                <h2>TRA &amp; TIN Registration</h2>
+                <p>Taxpayer identification, VAT registration &amp; tax compliance setup</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-body">
+            <p>Following company incorporation, every business operating in Tanzania requires a Taxpayer Identification Number (TIN) from the Tanzania Revenue Authority — and, where applicable, VAT registration. We manage the full TRA registration process and set up your compliance framework from day one to ensure you start trading without regulatory risk.</p>
+            <div class="service-tags">
+              <span class="stag">TIN Registration</span><span class="stag">VAT Registration</span><span class="stag">EFD Machines</span><span class="stag">TRA Portal Setup</span>
+            </div>
+            <div class="service-features">
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>TIN number application and certificate collection</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>VAT registration for eligible businesses</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>EFD machine procurement and TRA registration</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Tax compliance calendar setup and advisory</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FILING -->
+        <div class="service-section" id="filing" data-aos="fade-up">
+          <div class="service-section-banner">
+            <img src="assets/img/banshap/banshap-advisory-1.jpg" alt="Annual Filing">
+            <div class="service-section-banner-overlay"></div>
+            <div class="service-section-banner-content">
+              <div class="service-section-icon"><i class="bi bi-calculator"></i></div>
+              <div>
+                <h2>Annual Returns &amp; Tax Filing</h2>
+                <p>TRA corporate tax, VAT returns &amp; statutory compliance</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-body">
+            <p>Our CPA-T qualified tax specialists manage all annual TRA filing obligations — including corporate income tax returns, VAT monthly submissions, PAYE reconciliations, and skills development levy filings. We maintain your compliance calendar, prepare all documentation, and represent your business in TRA correspondence and audit queries.</p>
+            <div class="service-tags">
+              <span class="stag">Corporate Tax</span><span class="stag">VAT Returns</span><span class="stag">PAYE</span>
+              <span class="stag">SDL Filing</span><span class="stag">TRA Audit Support</span>
+            </div>
+            <div class="service-features">
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Annual income tax return preparation and submission</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Monthly VAT return filing and reconciliation</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>PAYE, SDL, and withholding tax management</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>TRA audit representation and dispute resolution</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUPPLIES -->
+        <div class="service-section" id="supplies" data-aos="fade-up">
+          <div class="service-section-banner">
+            <img src="assets/img/banshap/banshap-supplies-warehouse-1.jpg" alt="General Supplies">
+            <div class="service-section-banner-overlay"></div>
+            <div class="service-section-banner-content">
+              <div class="service-section-icon"><i class="bi bi-shop"></i></div>
+              <div>
+                <h2>General Supplies &amp; Procurement</h2>
+                <p>Corporate procurement, IT equipment &amp; institutional supplies</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-body">
+            <p>We source and supply office furniture, IT hardware, stationery, industrial consumables, and institutional equipment for government bodies, corporations, and NGOs operating across Tanzania. All procurement is conducted with full documentation, competitive pricing, and verified compliance with relevant procurement regulations.</p>
+            <div class="service-tags">
+              <span class="stag">IT Equipment</span><span class="stag">Office Furniture</span><span class="stag">Industrial Supplies</span><span class="stag">Institutional Procurement</span>
+            </div>
+            <div class="service-features">
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Government and institutional supply contracts</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>IT hardware sourcing with warranty documentation</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Nationwide delivery with invoice and receipt management</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>PPRA-compliant procurement documentation</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADVISORY -->
+        <div class="service-section" id="advisory" data-aos="fade-up">
+          <div class="service-section-banner">
+            <img src="assets/img/banshap/banshap-team-meeting.jpg" alt="Investment Advisory">
+            <div class="service-section-banner-overlay"></div>
+            <div class="service-section-banner-content">
+              <div class="service-section-icon"><i class="bi bi-graph-up-arrow"></i></div>
+              <div>
+                <h2>Investment &amp; Corporate Advisory</h2>
+                <p>Market entry strategy, sector analysis &amp; business structuring</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-body">
+            <p>Our investment advisory practice supports domestic entrepreneurs, diaspora investors, and foreign corporations entering the Tanzanian market. We provide sector analysis, regulatory environment briefings, business structuring recommendations, and ongoing strategic advisory to help clients build sustainable, compliant, and profitable operations in Tanzania.</p>
+            <div class="service-tags">
+              <span class="stag">Market Entry</span><span class="stag">Sector Analysis</span><span class="stag">Business Structuring</span>
+              <span class="stag">Feasibility Studies</span><span class="stag">Strategic Planning</span>
+            </div>
+            <div class="service-features">
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Tanzania market entry strategy and sector feasibility</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Regulatory environment briefing for new entrants</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Business plan development and financial modelling</span></div>
+              <div class="sf-item"><i class="bi bi-check-circle-fill"></i><span>Ongoing strategic advisory retainer arrangements</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /services-content -->
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits-section">
+    <div class="benefits-inner">
+      <div class="benefits-header" data-aos="fade-up">
+        <div class="label-tag">Why Banshap</div>
+        <h2 class="section-heading">The Benefits of Working <span>With Us</span></h2>
+        <p>Every engagement delivers these core benefits — regardless of which service line you engage us for.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="benefit-icon"><i class="bi bi-lightning-charge"></i></div>
+          <h4>Fast Turnaround</h4>
+          <p>We set realistic timelines and hold ourselves to them. Most regulatory processes are completed ahead of the industry average turnaround time.</p>
+        </div>
+        <div class="benefit-item" data-aos="fade-up" data-aos-delay="80">
+          <div class="benefit-icon"><i class="bi bi-shield-check"></i></div>
+          <h4>Full Compliance Guarantee</h4>
+          <p>Every document we produce and every application we submit meets the current standards of the relevant regulatory authority — no exceptions.</p>
+        </div>
+        <div class="benefit-item" data-aos="fade-up" data-aos-delay="160">
+          <div class="benefit-icon"><i class="bi bi-person-lines-fill"></i></div>
+          <h4>Dedicated Account Manager</h4>
+          <p>You have a named, accountable contact for every engagement — available Monday to Saturday with clear escalation routes for urgent matters.</p>
+        </div>
+        <div class="benefit-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="benefit-icon"><i class="bi bi-geo-alt"></i></div>
+          <h4>Nationwide Reach</h4>
+          <p>Our operations and agent network cover all 26 regions of Tanzania — delivering the same service quality whether your operations are in Dar es Salaam or Kigoma.</p>
+        </div>
+        <div class="benefit-item" data-aos="fade-up" data-aos-delay="80">
+          <div class="benefit-icon"><i class="bi bi-eye"></i></div>
+          <h4>Complete Transparency</h4>
+          <p>Fixed-price engagements with clear scope definitions. No hidden fees, no surprise invoices. You know exactly what you are paying and what you will receive.</p>
+        </div>
+        <div class="benefit-item" data-aos="fade-up" data-aos-delay="160">
+          <div class="benefit-icon"><i class="bi bi-headset"></i></div>
+          <h4>24/7 Operations Support</h4>
+          <p>For active logistics engagements, our operations centre is staffed around the clock — so critical shipments and time-sensitive compliance matters are never left unattended.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap"><img src="assets/img/logo.png" alt="Banshap Investment Company Limited" class="site-logo"></div>
+          <p>Tanzania's trusted partner for logistics infrastructure, regulatory navigation, and business facilitation — operating across all major regions since 2010.</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/banshapinvestment" target="_blank" rel="noopener" class="footer-social" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/banshapinvestment" target="_blank" rel="noopener" class="footer-social" title="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/banshapinvestment" target="_blank" rel="noopener" class="footer-social" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://wa.me/255716628867" target="_blank" rel="noopener" class="footer-social" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="starter-page.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Insights</a></li>
+            <li><a href="index.html#contact"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="#logistics"><i class="bi bi-chevron-right"></i> Logistics</a></li>
+            <li><a href="#brela"><i class="bi bi-chevron-right"></i> BRELA Registration</a></li>
+            <li><a href="#licensing"><i class="bi bi-chevron-right"></i> Licensing</a></li>
+            <li><a href="#filing"><i class="bi bi-chevron-right"></i> Annual Filing</a></li>
+            <li><a href="#agriculture"><i class="bi bi-chevron-right"></i> Agriculture</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="bi bi-geo-alt"></i><span>Mkwepu &amp; Samora St, Samora Avenue<br>Near Salamanda Tower, Dar es Salaam</span></div>
+          <div class="footer-contact-item"><i class="bi bi-telephone"></i><span>+255 716 628 867</span></div>
+          <div class="footer-contact-item"><i class="bi bi-envelope"></i><span>sharifu.mtuta@banshapinvestment.co.tz</span></div><div class="footer-contact-item"><i class="bi bi-envelope"></i><span>adam.sharifu@banshapinvestment.co.tz</span></div>
+          <div class="footer-contact-item"><i class="bi bi-clock"></i><span>Mon–Fri: 08:00–17:30</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 <a href="index.html">Banshap Investment Company Limited</a>. All rights reserved.</p>
+        <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, easing: 'ease-out-quad', once: true, offset: 60 });
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 60); });
+    // Sidebar active highlight on scroll
+    const svcLinks = document.querySelectorAll('.sidebar-nav a');
+    const sections = Array.from(document.querySelectorAll('.service-section'));
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 140) current = s.id; });
+      svcLinks.forEach(a => { a.classList.remove('active'); if (a.getAttribute('href') === '#' + current) a.classList.add('active'); });
+    });
+  </script>
+</body>
+</html>

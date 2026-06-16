@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Banshap Investment Company Limited — Logistics, Investment & Business Services, Tanzania</title>
+  <meta name="description" content="Banshap Investment Company Limited delivers reliable logistics infrastructure, transportation solutions, business investments, and strategic growth services across Tanzania.">
+  <meta name="keywords" content="Banshap, Tanzania logistics, BRELA registration, business licensing, investment advisory, Dar es Salaam freight, Tanzania transport">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* ===================================================
+       BANSHAP — SURVEX-INSPIRED DESIGN SYSTEM
+    =================================================== */
+    :root {
+      --primary:      #0B1F3A;
+      --primary-mid:  #0f2847;
+      --secondary:    #123E7A;
+      --accent:       #F5B041;
+      --accent-dark:  #d4922e;
+      --accent-pale:  #fef3e2;
+      --light:        #F8F9FA;
+      --white:        #FFFFFF;
+      --text:         #2C3E50;
+      --text-light:   #6c757d;
+      --border:       rgba(18,62,122,0.1);
+      --shadow-sm:    0 2px 12px rgba(11,31,58,0.08);
+      --shadow:       0 8px 32px rgba(11,31,58,0.12);
+      --shadow-lg:    0 20px 60px rgba(11,31,58,0.18);
+      --radius:       8px;
+      --radius-lg:    16px;
+      --transition:   all 0.3s ease;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--text); background: var(--white); overflow-x: hidden; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; color: var(--primary); line-height: 1.25; }
+    p { line-height: 1.75; color: var(--text-light); }
+    a { text-decoration: none; }
+    img { max-width: 100%; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--light); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+    .label-tag { font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); display: inline-flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .label-tag::before { content: ''; width: 32px; height: 2px; background: var(--accent); flex-shrink: 0; }
+    .section-heading { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; color: var(--primary); margin-bottom: 16px; }
+    .section-heading span { color: var(--accent); }
+    .section-sub { font-size: 16px; color: var(--text-light); line-height: 1.75; max-width: 540px; }
+    .btn-accent { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--primary); font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 14px 30px; border-radius: var(--radius); transition: var(--transition); border: 2px solid var(--accent); }
+    .btn-accent:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: var(--white); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,176,65,0.35); }
+    .btn-outline-primary-custom { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--white); font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 14px 30px; border-radius: var(--radius); border: 2px solid rgba(255,255,255,0.4); transition: var(--transition); }
+    .btn-outline-primary-custom:hover { background: rgba(255,255,255,0.12); border-color: var(--white); color: var(--white); transform: translateY(-2px); }
+    .btn-outline-accent { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--accent); font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 12px 28px; border-radius: var(--radius); border: 2px solid var(--accent); transition: var(--transition); }
+    .btn-outline-accent:hover { background: var(--accent); color: var(--primary); transform: translateY(-2px); }
+
+    /* ===== HEADER ===== */
+    #header { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; padding: 0 40px; height: 80px; background: #ffffff; box-shadow: 0 2px 16px rgba(0,0,0,0.08); transition: var(--transition); }
+    #header.scrolled { background: #ffffff; height: 68px; box-shadow: 0 4px 24px rgba(0,0,0,0.12); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1280px; margin: 0 auto; height: 100%; }
+    .logo-wrap { display: flex; align-items: center; text-decoration: none; }
+    .site-logo { height: 52px; width: auto; }
+    .footer-brand .site-logo { background: #ffffff; border-radius: 8px; padding: 6px 14px; height: 60px; }
+    .main-nav ul { list-style: none; display: flex; align-items: center; gap: 32px; margin: 0; }
+    .main-nav a { font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; color: var(--primary); letter-spacing: 0.5px; text-decoration: none; position: relative; padding-bottom: 4px; transition: var(--transition); }
+    .main-nav a::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--accent); border-radius: 1px; transform: scaleX(0); transition: var(--transition); }
+    .main-nav a:hover, .main-nav a.active { color: var(--accent); }
+    .main-nav a:hover::after, .main-nav a.active::after { transform: scaleX(1); }
+    .header-phone { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+    .header-phone:hover { color: var(--accent); }
+    .header-cta { font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--white); background: var(--primary); padding: 10px 22px; border-radius: var(--radius); transition: var(--transition); text-decoration: none; }
+    .header-cta:hover { background: var(--accent); color: var(--primary); }
+    .mobile-menu-btn { display: none; background: transparent; border: 2px solid var(--primary); color: var(--primary); padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 18px; }
+
+    /* ===== HERO ===== */
+    #hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; background: var(--primary); }
+    .hero-bg { position: absolute; inset: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.18; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(11,31,58,0.96) 0%, rgba(18,62,122,0.85) 50%, rgba(11,31,58,0.94) 100%); }
+    .hero-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 50%, rgba(245,176,65,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(18,62,122,0.4) 0%, transparent 50%); }
+    .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 64px 64px; }
+    .hero-shape-1 { position: absolute; right: -80px; top: 10%; width: 400px; height: 400px; border-radius: 50%; border: 1px solid rgba(245,176,65,0.1); }
+    .hero-shape-2 { position: absolute; right: 40px; top: 5%; width: 200px; height: 200px; border-radius: 50%; border: 1px solid rgba(245,176,65,0.15); }
+    .hero-shape-3 { position: absolute; left: -60px; bottom: 10%; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(ellipse, rgba(18,62,122,0.3), transparent 70%); }
+    .hero-content { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 120px 40px 80px; width: 100%; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,176,65,0.15); border: 1px solid rgba(245,176,65,0.3); color: var(--accent); font-family: 'Outfit', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; padding: 8px 16px; border-radius: 50px; margin-bottom: 28px; }
+    .hero-badge i { font-size: 14px; }
+    .hero-title { font-size: clamp(38px, 5.5vw, 72px); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 24px; }
+    .hero-title span { color: var(--accent); }
+    .hero-desc { font-size: 18px; color: rgba(255,255,255,0.65); line-height: 1.8; margin-bottom: 44px; max-width: 600px; font-weight: 300; }
+    .hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 72px; }
+    .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); }
+    .hero-stat { padding: 28px 24px; border-right: 1px solid rgba(255,255,255,0.06); text-align: center; }
+    .hero-stat:last-child { border-right: none; }
+    .hero-stat-num { font-family: 'Poppins', sans-serif; font-size: 36px; font-weight: 800; color: var(--white); line-height: 1; display: block; }
+    .hero-stat-num span { color: var(--accent); }
+    .hero-stat-lbl { font-family: 'Outfit', sans-serif; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 6px; display: block; }
+
+    /* ===== CLIENTS STRIP ===== */
+    .clients-strip { background: var(--light); padding: 36px 40px; border-bottom: 1px solid var(--border); }
+    .clients-strip-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 48px; flex-wrap: wrap; }
+    .clients-label { font-family: 'Outfit', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); white-space: nowrap; flex-shrink: 0; }
+    .clients-logos { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; flex: 1; }
+    .client-badge {
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--text-light);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 16px;
+      white-space: nowrap;
+      transition: var(--transition);
+      cursor: default;
+    }
+    .client-badge:hover {
+      color: var(--secondary);
+      border-color: var(--secondary);
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+    }
+    .client-badge .cb-sector {
+      display: block;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    /* ===== ABOUT / INTRODUCTION ===== */
+    #about { padding: 100px 40px; background: var(--white); }
+    .about-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: center; }
+    .about-media { position: relative; }
+    .about-img-main { width: 100%; height: 520px; object-fit: cover; border-radius: var(--radius-lg); }
+    .about-img-inset { position: absolute; bottom: -28px; right: -28px; width: 200px; height: 160px; object-fit: cover; border-radius: var(--radius); border: 5px solid var(--white); box-shadow: var(--shadow); }
+    .about-badge { position: absolute; top: 28px; left: -24px; background: var(--accent); color: var(--primary); padding: 20px 24px; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; }
+    .about-badge .num { font-family: 'Poppins', sans-serif; font-size: 32px; font-weight: 800; line-height: 1; display: block; }
+    .about-badge .lbl { font-family: 'Outfit', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-top: 4px; }
+    .about-cert { position: absolute; bottom: 60px; left: -20px; background: var(--white); border-radius: var(--radius); padding: 14px 18px; box-shadow: var(--shadow); display: flex; align-items: center; gap: 12px; }
+    .about-cert i { font-size: 22px; color: var(--secondary); }
+    .about-cert .cert-text { font-family: 'Outfit', sans-serif; }
+    .about-cert .cert-text strong { display: block; font-size: 13px; color: var(--primary); }
+    .about-cert .cert-text span { font-size: 11px; color: var(--text-light); }
+    .about-content { }
+    .about-trust { display: flex; gap: 32px; margin: 32px 0; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 10px; }
+    .trust-item i { width: 36px; height: 36px; background: var(--accent-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 14px; flex-shrink: 0; }
+    .trust-item span { font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; color: var(--text); }
+    .about-mission { background: var(--light); border-radius: var(--radius); padding: 24px; margin: 28px 0; border-left: 4px solid var(--accent); }
+    .about-mission p { font-size: 15px; color: var(--text); font-style: italic; line-height: 1.7; margin: 0; }
+
+    /* ===== SERVICES ===== */
+    #services { padding: 100px 40px; background: var(--light); }
+    .services-inner { max-width: 1280px; margin: 0 auto; }
+    .services-header { text-align: center; margin-bottom: 60px; }
+    .services-header .label-tag { justify-content: center; }
+    .services-header .label-tag::before { display: none; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .service-card { background: var(--white); border-radius: var(--radius-lg); padding: 36px 32px; border: 1px solid var(--border); transition: var(--transition); position: relative; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--accent); transform: scaleX(0); transition: var(--transition); }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card:hover .svc-icon { background: var(--accent); color: var(--primary); }
+    .svc-icon { width: 60px; height: 60px; background: rgba(18,62,122,0.08); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--secondary); margin-bottom: 22px; transition: var(--transition); }
+    .service-card h4 { font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 12px; }
+    .service-card p { font-size: 14.5px; line-height: 1.7; color: var(--text-light); margin-bottom: 22px; }
+    .svc-learn { font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--secondary); display: inline-flex; align-items: center; gap: 6px; transition: var(--transition); }
+    .svc-learn:hover, .service-card:hover .svc-learn { color: var(--accent); gap: 10px; }
+
+    /* ===== METRICS / STATS ===== */
+    #metrics { padding: 90px 40px; background: var(--primary); position: relative; overflow: hidden; }
+    #metrics::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(ellipse 60% 80% at 20% 50%, rgba(18,62,122,0.5), transparent), radial-gradient(ellipse 40% 60% at 80% 30%, rgba(245,176,65,0.06), transparent); }
+    #metrics::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 50px 50px; }
+    .metrics-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+    .metrics-top { text-align: center; margin-bottom: 64px; }
+    .metrics-top .label-tag { color: var(--accent); justify-content: center; }
+    .metrics-top .label-tag::before { display: none; }
+    .metrics-top .section-heading { color: var(--white); }
+    .metrics-top .section-sub { color: rgba(255,255,255,0.55); margin: 0 auto; }
+    .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: rgba(255,255,255,0.05); border-radius: var(--radius-lg); overflow: hidden; }
+    .metric-item { padding: 48px 32px; text-align: center; background: rgba(11,31,58,0.6); backdrop-filter: blur(10px); transition: var(--transition); }
+    .metric-item:hover { background: rgba(18,62,122,0.7); }
+    .metric-icon { font-size: 32px; color: var(--accent); margin-bottom: 16px; display: block; }
+    .metric-num { font-family: 'Poppins', sans-serif; font-size: 52px; font-weight: 800; color: var(--white); line-height: 1; display: block; }
+    .metric-num span { color: var(--accent); }
+    .metric-label { font-family: 'Outfit', sans-serif; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 10px; display: block; }
+
+    /* ===== WHY CHOOSE ===== */
+    #why { padding: 100px 40px; background: var(--white); }
+    .why-inner { max-width: 1280px; margin: 0 auto; }
+    .why-header { text-align: center; max-width: 640px; margin: 0 auto 64px; }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .why-card { padding: 36px 28px; border: 1px solid var(--border); border-radius: var(--radius-lg); transition: var(--transition); }
+    .why-card:hover { border-color: var(--accent); background: var(--accent-pale); transform: translateY(-4px); box-shadow: var(--shadow); }
+    .why-num { font-family: 'Poppins', sans-serif; font-size: 48px; font-weight: 800; color: rgba(11,31,58,0.06); line-height: 1; margin-bottom: -8px; }
+    .why-icon { width: 52px; height: 52px; background: rgba(18,62,122,0.08); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--secondary); margin-bottom: 18px; transition: var(--transition); }
+    .why-card:hover .why-icon { background: var(--accent); color: var(--primary); }
+    .why-card h4 { font-size: 17px; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+    .why-card p { font-size: 14.5px; line-height: 1.7; color: var(--text-light); margin: 0; }
+
+    /* ===== PROJECTS / PORTFOLIO ===== */
+    #projects { padding: 100px 40px; background: var(--light); }
+    .projects-inner { max-width: 1280px; margin: 0 auto; }
+    .projects-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 44px; flex-wrap: wrap; gap: 24px; }
+    .portfolio-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+    .pf-btn { font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 8px 18px; border-radius: 50px; border: 1.5px solid var(--border); background: var(--white); color: var(--text-light); cursor: pointer; transition: var(--transition); }
+    .pf-btn.active, .pf-btn:hover { background: var(--accent); border-color: var(--accent); color: var(--primary); }
+    .portfolio-grid { position: relative; }
+    .portfolio-item { position: relative; border-radius: var(--radius-lg); overflow: hidden; width: 32%; margin: 0.66%; display: inline-block; vertical-align: top; transition: opacity 0.25s ease; }
+    .portfolio-item img { width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.6s ease; }
+    .portfolio-item:hover img { transform: scale(1.08); }
+    .portfolio-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(11,31,58,0.92), rgba(11,31,58,0.3) 50%, transparent); opacity: 0; transition: var(--transition); display: flex; flex-direction: column; justify-content: flex-end; padding: 24px; }
+    .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+    .portfolio-cat { font-family: 'Outfit', sans-serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+    .portfolio-overlay h4 { font-size: 18px; color: var(--white); margin-bottom: 12px; }
+    .portfolio-overlay-actions { display: flex; gap: 10px; }
+    .pov-btn { width: 36px; height: 36px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 14px; transition: var(--transition); }
+    .pov-btn:hover { background: var(--accent); color: var(--primary); }
+    .portfolio-badge { position: absolute; top: 16px; left: 16px; background: var(--accent); color: var(--primary); font-family: 'Outfit', sans-serif; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; font-weight: 600; }
+
+    /* ===== TESTIMONIALS ===== */
+    #testimonials { padding: 100px 40px; background: var(--primary); position: relative; overflow: hidden; }
+    #testimonials::before { content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; border-radius: 50%; border: 1px solid rgba(245,176,65,0.08); }
+    #testimonials::after { content: ''; position: absolute; bottom: -80px; left: -80px; width: 300px; height: 300px; border-radius: 50%; border: 1px solid rgba(245,176,65,0.06); }
+    .testimonials-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+    .testi-header { text-align: center; margin-bottom: 60px; }
+    .testi-header .label-tag { color: var(--accent); justify-content: center; }
+    .testi-header .label-tag::before { display: none; }
+    .testi-header .section-heading { color: var(--white); }
+    .testi-header .section-sub { color: rgba(255,255,255,0.5); margin: 0 auto; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .testi-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); padding: 36px; transition: var(--transition); }
+    .testi-card:hover { background: rgba(255,255,255,0.09); border-color: rgba(245,176,65,0.2); transform: translateY(-4px); }
+    .testi-quote-icon { font-size: 36px; color: var(--accent); opacity: 0.4; line-height: 1; margin-bottom: 12px; display: block; }
+    .testi-text { font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.8; margin-bottom: 28px; font-style: italic; }
+    .testi-rating { display: flex; gap: 3px; margin-bottom: 20px; }
+    .testi-rating i { color: var(--accent); font-size: 14px; }
+    .testi-author { display: flex; align-items: center; gap: 14px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.07); }
+    .testi-author img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(245,176,65,0.3); }
+    .testi-avatar { width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(245,176,65,0.4); display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 15px; color: var(--accent); flex-shrink: 0; }
+    .tav-1 { background: linear-gradient(135deg,#0f2847,#1a4a7a); }
+    .tav-2 { background: linear-gradient(135deg,#162d50,#123E7A); }
+    .tav-3 { background: linear-gradient(135deg,#0d2a50,#0f3870); }
+    .testi-author-info .name { font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; color: var(--white); display: block; }
+    .testi-author-info .role { font-family: 'Outfit', sans-serif; font-size: 11px; letter-spacing: 1px; color: var(--accent); text-transform: uppercase; display: block; margin-top: 2px; }
+
+    /* ===== PROCESS TIMELINE ===== */
+    #process { padding: 100px 40px; background: var(--white); }
+    .process-inner { max-width: 1280px; margin: 0 auto; }
+    .process-header { text-align: center; max-width: 560px; margin: 0 auto 72px; }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+    .process-steps::before { content: ''; position: absolute; top: 40px; left: 12.5%; right: 12.5%; height: 2px; background: linear-gradient(90deg, var(--accent), var(--secondary)); z-index: 0; }
+    .process-step { text-align: center; position: relative; z-index: 1; padding: 0 16px; }
+    .step-dot { width: 80px; height: 80px; background: var(--white); border: 3px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; transition: var(--transition); position: relative; }
+    .process-step:hover .step-dot { border-color: var(--accent); background: var(--accent); }
+    .process-step:hover .step-dot i { color: var(--primary); }
+    .step-dot i { font-size: 26px; color: var(--secondary); transition: var(--transition); }
+    .step-num { position: absolute; top: -8px; right: -8px; width: 24px; height: 24px; background: var(--accent); color: var(--primary); font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 800; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .process-step h4 { font-size: 17px; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+    .process-step p { font-size: 14px; color: var(--text-light); line-height: 1.7; }
+
+    /* ===== CONTACT / CTA ===== */
+    #contact { padding: 100px 40px; background: var(--light); }
+    .contact-inner { max-width: 1280px; margin: 0 auto; }
+    .contact-top { text-align: center; max-width: 600px; margin: 0 auto 64px; }
+    .contact-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; }
+    .contact-map { margin-top: 48px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--border); }
+    .contact-map iframe { width: 100%; height: 380px; display: block; border: none; }
+    .contact-info { }
+    .contact-info-item { display: flex; gap: 18px; align-items: flex-start; margin-bottom: 32px; }
+    .ci-icon { width: 52px; height: 52px; background: rgba(18,62,122,0.08); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-size: 20px; color: var(--secondary); flex-shrink: 0; }
+    .ci-body strong { font-family: 'Poppins', sans-serif; font-size: 15px; color: var(--primary); display: block; margin-bottom: 4px; }
+    .ci-body span { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+    .contact-cta-box { background: var(--primary); border-radius: var(--radius-lg); padding: 36px; margin-top: 32px; position: relative; overflow: hidden; }
+    .contact-cta-box::before { content: ''; position: absolute; top: -40px; right: -40px; width: 140px; height: 140px; border-radius: 50%; background: rgba(245,176,65,0.08); }
+    .contact-cta-box h4 { font-size: 22px; color: var(--white); margin-bottom: 10px; }
+    .contact-cta-box p { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 24px; }
+    .contact-form-wrap { background: var(--white); border-radius: var(--radius-lg); padding: 44px; box-shadow: var(--shadow); }
+    .contact-form-wrap h3 { font-size: 24px; color: var(--primary); margin-bottom: 28px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--primary); display: block; margin-bottom: 8px; }
+    .form-control-custom { width: 100%; padding: 13px 16px; border: 1.5px solid var(--border); border-radius: var(--radius); font-family: 'Inter', sans-serif; font-size: 14px; color: var(--text); background: var(--light); outline: none; transition: var(--transition); }
+    .form-control-custom:focus { border-color: var(--secondary); background: var(--white); box-shadow: 0 0 0 3px rgba(18,62,122,0.08); }
+    .form-control-custom::placeholder { color: #aab; }
+    textarea.form-control-custom { resize: vertical; min-height: 110px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    /* ===== FOOTER ===== */
+    #footer { background: var(--primary); padding: 80px 40px 0; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 60px; padding-bottom: 60px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.8; margin: 20px 0 28px; font-weight: 300; }
+    .footer-socials { display: flex; gap: 10px; }
+    .footer-social { width: 38px; height: 38px; border: 1px solid rgba(255,255,255,0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 14px; text-decoration: none; transition: var(--transition); }
+    .footer-social:hover { background: var(--accent); border-color: var(--accent); color: var(--primary); }
+    .footer-col h5 { font-family: 'Outfit', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { font-size: 14px; color: rgba(255,255,255,0.45); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: var(--transition); }
+    .footer-links a i { font-size: 12px; color: var(--accent); }
+    .footer-links a:hover { color: rgba(255,255,255,0.85); padding-left: 4px; }
+    .footer-contact-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
+    .footer-contact-item i { color: var(--accent); font-size: 14px; margin-top: 3px; flex-shrink: 0; }
+    .footer-contact-item span { font-size: 13.5px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+    .footer-bottom { padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.3); }
+    .footer-bottom a { color: var(--accent); }
+    .footer-legal { display: flex; gap: 24px; }
+    .footer-legal a { font-family: 'Outfit', sans-serif; font-size: 11px; letter-spacing: 1px; color: rgba(255,255,255,0.3); text-decoration: none; text-transform: uppercase; transition: var(--transition); }
+    .footer-legal a:hover { color: var(--accent); }
+
+    /* ===== OFFCANVAS MOBILE NAV ===== */
+    .offcanvas-nav .offcanvas-header { background: var(--primary); }
+    .offcanvas-nav .offcanvas-body { background: var(--primary); }
+    .offcanvas-nav .nav-link { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.75); padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); letter-spacing: 0.5px; transition: var(--transition); }
+    .offcanvas-nav .nav-link:hover, .offcanvas-nav .nav-link.active { color: var(--accent); padding-left: 8px; }
+    .offcanvas-nav .btn-close { filter: invert(1) opacity(0.6); }
+    .offcanvas-nav .offcanvas-cta { display: block; text-align: center; background: var(--accent); color: var(--primary); font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 14px; border-radius: var(--radius); margin-top: 24px; text-decoration: none; transition: var(--transition); }
+    .offcanvas-nav .offcanvas-cta:hover { background: var(--accent-dark); color: var(--white); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1100px) {
+      #header { padding: 0 24px; }
+      #hero .hero-content, #about, #services, #metrics, #why, #projects, #testimonials, #process, #contact, #footer { padding-left: 24px; padding-right: 24px; }
+      .about-inner { grid-template-columns: 1fr; gap: 60px; }
+      .about-badge { left: 12px; }
+      .about-img-inset { right: 12px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .testi-grid { grid-template-columns: repeat(2, 1fr); }
+      .portfolio-item { width: 48%; margin: 1%; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+      .process-steps::before { display: none; }
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .main-nav, .header-cta { display: none; }
+      .mobile-menu-btn { display: block; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .hero-stat { border-bottom: 1px solid rgba(255,255,255,0.05); }
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .portfolio-item { width: 98%; margin: 1%; }
+      .process-steps { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .form-row { grid-template-columns: 1fr; }
+      .clients-strip-inner { flex-direction: column; align-items: flex-start; }
+      .clients-logos { gap: 10px; }
+      .client-badge { font-size: 11px; padding: 6px 12px; }
+    }
+  
+    /* ===== WHATSAPP FLOAT + HEADER PHONE ===== */
+    /* WhatsApp Float Button */
+    @keyframes wa-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,0.5),0 6px 24px rgba(37,211,102,0.4);} 60%{box-shadow:0 0 0 14px rgba(37,211,102,0),0 6px 24px rgba(37,211,102,0.4);} }
+    @keyframes wa-bounce { 0%,100%{transform:scale(1);} 30%{transform:scale(1.15);} 60%{transform:scale(0.95);} }
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 9990; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+    .wa-btn { width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; text-decoration: none; animation: wa-pulse 2.4s ease-in-out infinite; transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), filter 0.25s ease; }
+    .wa-btn:hover { transform: scale(1.14); filter: brightness(1.1); animation: wa-bounce 0.5s ease; }
+    .wa-btn svg { width: 30px; height: 30px; fill: #fff; transition: transform 0.25s ease; }
+    .wa-btn:hover svg { transform: rotate(-8deg) scale(1.08); }
+    .wa-label { background: var(--primary); color: var(--white); font-family: 'Outfit', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; padding: 7px 16px; border-radius: 50px; white-space: nowrap; opacity: 0; transform: translateX(12px); transition: opacity 0.3s ease, transform 0.3s cubic-bezier(.34,1.56,.64,1); pointer-events: none; box-shadow: 0 4px 16px rgba(11,31,58,0.18); }
+    .wa-label::after { content: ''; position: absolute; right: -6px; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-left-color: var(--primary); border-right: none; }
+    .wa-label { position: relative; }
+    .wa-float:hover .wa-label { opacity: 1; transform: translateX(0); }
+    .header-phone { display: flex; align-items: center; gap: 7px; font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; color: rgba(255,255,255,0.9); text-decoration: none; transition: color 0.3s ease; white-space: nowrap; }
+    .header-phone i { color: var(--accent); font-size: 13px; }
+    .header-phone:hover { color: var(--accent); }
+    .header-right { display: flex; align-items: center; gap: 20px; }
+    @media (max-width: 768px) { .header-phone { display: none; } .wa-float { bottom: 18px; right: 18px; } .wa-btn { width: 52px; height: 52px; } }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="assets/img/logo.png" alt="Banshap Investment Company Limited" class="site-logo">
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="starter-page.html">About Us</a></li>
+          <li><a href="service-details.html">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="blog.html">Insights</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-right"><a href="tel:+255716628867" class="header-phone"><i class="bi bi-telephone-fill"></i> +255 716 628 867</a><a href="#contact" class="header-cta">Request Consultation</a></div>
+      <button class="mobile-menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Bootstrap Offcanvas Mobile Nav -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="mobileNav">
+    <div class="offcanvas-header">
+      <div class="logo-wrap">
+        <img src="assets/img/logo.png" alt="Banshap Investment Company Limited" class="site-logo">
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <nav>
+        <a href="index.html" class="nav-link active d-block">Home</a>
+        <a href="starter-page.html" class="nav-link d-block">About Us</a>
+        <a href="service-details.html" class="nav-link d-block">Services</a>
+        <a href="#projects" class="nav-link d-block" data-bs-dismiss="offcanvas">Projects</a>
+        <a href="blog.html" class="nav-link d-block">Insights</a>
+        <a href="#contact" class="nav-link d-block" data-bs-dismiss="offcanvas">Contact</a>
+      </nav>
+      <a href="#contact" class="offcanvas-cta" data-bs-dismiss="offcanvas">Request Consultation</a>
+      <div class="mt-auto pt-4" style="border-top:1px solid rgba(255,255,255,0.07);margin-top:32px!important;">
+        <p style="font-size:12px;color:rgba(255,255,255,0.3);margin:0;">Mkwepu &amp; Samora St, Samora Avenue<br>Near Salamanda Tower, Dar es Salaam</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-bg"><img src="assets/img/banshap/banshap-transport-2.jpg" alt="Banshap Operations"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-shape-1"></div>
+    <div class="hero-shape-2"></div>
+    <div class="hero-shape-3"></div>
+    <div class="hero-content">
+      <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+        <i class="bi bi-patch-check-fill"></i>
+        Tanzania's Trusted Investment & Logistics Partner
+      </div>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+        Driving Business Growth Through<br><span>Strategic Investments</span><br>&amp; Logistics Excellence
+      </h1>
+      <p class="hero-desc" data-aos="fade-up" data-aos-delay="300">
+        Banshap Investment Company Limited delivers reliable logistics infrastructure, transportation solutions, business investments, and strategic growth services across Tanzania.
+      </p>
+      <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+        <a href="service-details.html" class="btn-accent">Explore Our Services <i class="bi bi-arrow-right"></i></a>
+        <a href="#contact" class="btn-outline-primary-custom">Request Consultation <i class="bi bi-calendar-check"></i></a>
+      </div>
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+        <div class="hero-stat">
+          <span class="hero-stat-num"><span class="counter" data-target="500">0</span><span>+</span></span>
+          <span class="hero-stat-lbl">Projects Completed</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num"><span class="counter" data-target="98">0</span><span>%</span></span>
+          <span class="hero-stat-lbl">Client Satisfaction</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num"><span class="counter" data-target="15">0</span><span>+</span></span>
+          <span class="hero-stat-lbl">Years Experience</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">24<span>/7</span></span>
+          <span class="hero-stat-lbl">Operational Support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLIENTS STRIP ===== -->
+  <div class="clients-strip">
+    <div class="clients-strip-inner">
+      <span class="clients-label">Trusted By</span>
+      <div class="clients-logos">
+        <span class="client-badge">CRDB Bank<span class="cb-sector">Banking</span></span>
+        <span class="client-badge">NMB Bank<span class="cb-sector">Banking</span></span>
+        <span class="client-badge">Vodacom TZ<span class="cb-sector">Telecoms</span></span>
+        <span class="client-badge">Azam Group<span class="cb-sector">Conglomerate</span></span>
+        <span class="client-badge">TANESCO<span class="cb-sector">Energy</span></span>
+        <span class="client-badge">TPA<span class="cb-sector">Ports Authority</span></span>
+        <span class="client-badge">TRA<span class="cb-sector">Revenue Authority</span></span>
+        <span class="client-badge">Watu Credit<span class="cb-sector">Finance</span></span>
+        <span class="client-badge">Stanbic Tanzania<span class="cb-sector">Banking</span></span>
+        <span class="client-badge">TBL<span class="cb-sector">Manufacturing</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT / INTRODUCTION ===== -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-media" data-aos="fade-right">
+        <img src="assets/img/banshap/banshap-team-meeting.jpg" alt="Banshap Operations" class="about-img-main">
+        <img src="assets/img/banshap/banshap-team-review.jpg" alt="Banshap Team" class="about-img-inset">
+        <div class="about-badge">
+          <span class="num">15+</span>
+          <span class="lbl">Years of<br>Excellence</span>
+        </div>
+        <div class="about-cert">
+          <i class="bi bi-shield-check"></i>
+          <div class="cert-text">
+            <strong>BRELA Certified</strong>
+            <span>Fully Registered Entity</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-content" data-aos="fade-left">
+        <div class="label-tag">About Banshap</div>
+        <h2 class="section-heading">Tanzania's <span>Premier</span> Business Facilitation Partner</h2>
+        <p class="section-sub">Since 2010, Banshap Investment Company Limited has been the strategic partner of choice for businesses navigating Tanzania's commercial landscape — from logistics and freight to regulatory compliance and corporate advisory.</p>
+        <div class="about-mission">
+          <p>"Our mission is to eliminate operational friction for businesses across Tanzania — connecting reliable logistics infrastructure with expert regulatory support to accelerate growth at every stage."</p>
+        </div>
+        <div class="about-trust">
+          <div class="trust-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <span>Nationwide Operations</span>
+          </div>
+          <div class="trust-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <span>TRA & BRELA Compliant</span>
+          </div>
+          <div class="trust-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <span>500+ Businesses Served</span>
+          </div>
+          <div class="trust-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <span>ISO-Aligned Processes</span>
+          </div>
+        </div>
+        <div class="d-flex gap-3 flex-wrap mt-2">
+          <a href="starter-page.html" class="btn-accent">Learn More About Us <i class="bi bi-arrow-right"></i></a>
+          <a href="#contact" class="btn-outline-accent">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="services-inner">
+      <div class="services-header" data-aos="fade-up">
+        <div class="label-tag">Our Services</div>
+        <h2 class="section-heading">Comprehensive Business <span>Solutions</span></h2>
+        <p class="section-sub mx-auto">From freight and haulage to company registration and annual tax filing — we cover every operational need your business requires across Tanzania.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="svc-icon"><i class="bi bi-truck"></i></div>
+          <h4>Logistics Infrastructure</h4>
+          <p>End-to-end logistics management covering nationwide haulage, port clearing, warehousing, and last-mile delivery — built for reliability and speed across Tanzania's major corridors.</p>
+          <a href="service-details.html#logistics" class="svc-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="svc-icon"><i class="bi bi-boxes"></i></div>
+          <h4>Cargo Transportation</h4>
+          <p>Dedicated fleet operations for bulk cargo, perishables, and break-bulk freight. We operate on the TAZARA, Central, and Northern Corridors with real-time cargo tracking.</p>
+          <a href="service-details.html#logistics" class="svc-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="svc-icon"><i class="bi bi-card-checklist"></i></div>
+          <h4>Vehicle Registration Support</h4>
+          <p>Comprehensive SUMATRA licensing, vehicle inspection scheduling, and fleet documentation management — keeping your entire vehicle fleet road-legal and fully insured.</p>
+          <a href="service-details.html#licensing" class="svc-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="svc-icon"><i class="bi bi-file-earmark-check"></i></div>
+          <h4>Business Licensing Services</h4>
+          <p>Sector-specific business licence procurement and renewal across all key regulatory bodies — TBS, TFDA, SUMATRA, NEMC, and local government authorities nationwide.</p>
+          <a href="service-details.html#licensing" class="svc-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="svc-icon"><i class="bi bi-building"></i></div>
+          <h4>BRELA Registration Assistance</h4>
+          <p>Company incorporation, name search, and certificate of incorporation services through the Business Registrations and Licensing Agency — completed in as few as 3 business days.</p>
+          <a href="service-details.html#brela" class="svc-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="svc-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <h4>Investment &amp; Corporate Advisory</h4>
+          <p>Strategic advisory for market entry, business structuring, sector analysis, and operational optimisation — guiding domestic and foreign investors through Tanzania's dynamic business environment.</p>
+          <a href="service-details.html" class="svc-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="svc-icon"><i class="bi bi-calculator"></i></div>
+          <h4>Annual Returns &amp; Tax Filing</h4>
+          <p>TRA annual return preparation, corporate tax filing, VAT submissions, and audit support — ensuring your business remains fully compliant with all Tanzania Revenue Authority obligations.</p>
+          <a href="service-details.html#filing" class="svc-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="svc-icon"><i class="bi bi-flower1"></i></div>
+          <h4>Agricultural Supplies</h4>
+          <p>Distribution of certified seeds, agri-inputs, fertilisers, and irrigation equipment to farming enterprises and cooperatives across Tanzania's productive agricultural regions.</p>
+          <a href="service-details.html#agriculture" class="svc-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="svc-icon"><i class="bi bi-shop"></i></div>
+          <h4>General Supplies &amp; Procurement</h4>
+          <p>Corporate procurement of office equipment, IT hardware, industrial consumables, and institutional supplies — delivered with verified documentation and competitive pricing.</p>
+          <a href="service-details.html#supplies" class="svc-learn">Learn More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== METRICS ===== -->
+  <section id="metrics">
+    <div class="metrics-inner">
+      <div class="metrics-top" data-aos="fade-up">
+        <div class="label-tag">Our Impact</div>
+        <h2 class="section-heading">Performance That <span>Speaks Volumes</span></h2>
+        <p class="section-sub">Fifteen years of consistent delivery have built a track record that Tanzania's business community trusts. These numbers represent real clients, real outcomes.</p>
+      </div>
+      <div class="metrics-grid">
+        <div class="metric-item" data-aos="zoom-in" data-aos-delay="0">
+          <span class="metric-icon"><i class="bi bi-truck-front"></i></span>
+          <span class="metric-num"><span class="counter-dark" data-target="500">0</span><span>+</span></span>
+          <span class="metric-label">Registered Vehicles</span>
+        </div>
+        <div class="metric-item" data-aos="zoom-in" data-aos-delay="100">
+          <span class="metric-icon"><i class="bi bi-building-check"></i></span>
+          <span class="metric-num"><span class="counter-dark" data-target="100">0</span><span>+</span></span>
+          <span class="metric-label">Licensed Businesses</span>
+        </div>
+        <div class="metric-item" data-aos="zoom-in" data-aos-delay="200">
+          <span class="metric-icon"><i class="bi bi-boxes"></i></span>
+          <span class="metric-num"><span class="counter-dark" data-target="300">0</span><span>+</span></span>
+          <span class="metric-label">Logistics Projects</span>
+        </div>
+        <div class="metric-item" data-aos="zoom-in" data-aos-delay="300">
+          <span class="metric-icon"><i class="bi bi-people"></i></span>
+          <span class="metric-num"><span class="counter-dark" data-target="50">0</span><span>+</span></span>
+          <span class="metric-label">Strategic Partners</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE ===== -->
+  <section id="why">
+    <div class="why-inner">
+      <div class="why-header" data-aos="fade-up">
+        <div class="label-tag" style="justify-content:center;"><span style="display:none;"></span>Why Banshap</div>
+        <h2 class="section-heading">The Banshap <span>Advantage</span></h2>
+        <p class="section-sub mx-auto" style="max-width:520px;">We combine operational depth with regulatory expertise to deliver a partner experience that independent service providers simply cannot match.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="why-num">01</div>
+          <div class="why-icon"><i class="bi bi-shield-check"></i></div>
+          <h4>Operational Reliability</h4>
+          <p>Our logistics fleet and regulatory teams maintain 98.4% on-time performance across all active engagements — backed by real-time tracking and proactive client communication.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="why-num">02</div>
+          <div class="why-icon"><i class="bi bi-lightning-charge"></i></div>
+          <h4>Fast Service Delivery</h4>
+          <p>Standard BRELA registrations completed in 3 business days. Licence applications tracked daily. Logistics dispatched within 4 hours of confirmed booking — speed is our baseline.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="why-num">03</div>
+          <div class="why-icon"><i class="bi bi-person-check"></i></div>
+          <h4>Professional Advisory</h4>
+          <p>Our advisory team includes certified accountants, regulatory specialists, and logistics planners with collective experience across 15+ years of Tanzania's commercial environment.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="why-num">04</div>
+          <div class="why-icon"><i class="bi bi-file-earmark-text"></i></div>
+          <h4>Regulatory Expertise</h4>
+          <p>Deep working relationships with BRELA, TRA, TFDA, TBS, SUMATRA, and NEMC enable us to navigate complex multi-agency applications faster than any other firm in the market.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="why-num">05</div>
+          <div class="why-icon"><i class="bi bi-geo-alt"></i></div>
+          <h4>Nationwide Coverage</h4>
+          <p>Operations spanning Dar es Salaam, Dodoma, Mwanza, Arusha, Mbeya, and Zanzibar — with an established agent network covering all 26 regions of Tanzania.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="why-num">06</div>
+          <div class="why-icon"><i class="bi bi-headset"></i></div>
+          <h4>Dedicated Support</h4>
+          <p>Every client is assigned a dedicated account manager available Monday to Saturday. Critical logistics operations receive 24/7 escalation support through our operations centre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS / PORTFOLIO ===== -->
+  <section id="projects">
+    <div class="projects-inner">
+      <div class="projects-header" data-aos="fade-up">
+        <div>
+          <div class="label-tag">Our Portfolio</div>
+          <h2 class="section-heading">Featured <span>Projects</span></h2>
+        </div>
+        <div class="portfolio-filters">
+          <button class="pf-btn active" data-filter="*">All Projects</button>
+          <button class="pf-btn" data-filter=".filter-logistics">Logistics</button>
+          <button class="pf-btn" data-filter=".filter-transport">Transport</button>
+          <button class="pf-btn" data-filter=".filter-investment">Investment</button>
+          <button class="pf-btn" data-filter=".filter-corporate">Corporate</button>
+        </div>
+      </div>
+      <div class="portfolio-grid isotope-container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="portfolio-item filter-logistics">
+          <div class="portfolio-badge">Logistics</div>
+          <img src="assets/img/banshap/banshap-transport-1.jpg" alt="Northern Corridor Freight Programme">
+          <div class="portfolio-overlay">
+            <div class="portfolio-cat">Logistics</div>
+            <h4>Northern Corridor Freight Programme</h4>
+            <div class="portfolio-overlay-actions">
+              <a href="assets/img/banshap/banshap-transport-1.jpg" class="pov-btn glightbox"><i class="bi bi-zoom-in"></i></a>
+              <a href="service-details.html" class="pov-btn"><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item filter-transport">
+          <div class="portfolio-badge">Transport</div>
+          <img src="assets/img/banshap/banshap-fleet-1.jpg" alt="Fleet Mobilisation — Mbeya Region">
+          <div class="portfolio-overlay">
+            <div class="portfolio-cat">Transportation</div>
+            <h4>Fleet Mobilisation — Mbeya Region</h4>
+            <div class="portfolio-overlay-actions">
+              <a href="assets/img/banshap/banshap-fleet-1.jpg" class="pov-btn glightbox"><i class="bi bi-zoom-in"></i></a>
+              <a href="service-details.html" class="pov-btn"><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item filter-investment">
+          <div class="portfolio-badge">Investment</div>
+          <img src="assets/img/banshap/banshap-agri-farmer-1.jpg" alt="Agri-Investment Advisory — Kilosa">
+          <div class="portfolio-overlay">
+            <div class="portfolio-cat">Investment Advisory</div>
+            <h4>Agri-Investment Advisory — Kilosa</h4>
+            <div class="portfolio-overlay-actions">
+              <a href="assets/img/banshap/banshap-agri-farmer-1.jpg" class="pov-btn glightbox"><i class="bi bi-zoom-in"></i></a>
+              <a href="service-details.html" class="pov-btn"><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item filter-corporate">
+          <div class="portfolio-badge">Corporate</div>
+          <img src="assets/img/banshap/banshap-reg-certificate-1.jpg" alt="BRELA Bulk Registration — Arusha SME Cluster">
+          <div class="portfolio-overlay">
+            <div class="portfolio-cat">Corporate Services</div>
+            <h4>BRELA Bulk Registration — Arusha SME Cluster</h4>
+            <div class="portfolio-overlay-actions">
+              <a href="assets/img/banshap/banshap-reg-certificate-1.jpg" class="pov-btn glightbox"><i class="bi bi-zoom-in"></i></a>
+              <a href="service-details.html" class="pov-btn"><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item filter-logistics">
+          <div class="portfolio-badge">Logistics</div>
+          <img src="assets/img/banshap/banshap-transport-3.jpg" alt="Dar es Salaam Port Clearance Operations">
+          <div class="portfolio-overlay">
+            <div class="portfolio-cat">Logistics</div>
+            <h4>Dar es Salaam Port Clearance Operations</h4>
+            <div class="portfolio-overlay-actions">
+              <a href="assets/img/banshap/banshap-transport-3.jpg" class="pov-btn glightbox"><i class="bi bi-zoom-in"></i></a>
+              <a href="service-details.html" class="pov-btn"><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item filter-transport">
+          <div class="portfolio-badge">Transport</div>
+          <img src="assets/img/banshap/banshap-agri-citrus-1.jpg" alt="Cold Chain Horticultural Distribution — Iringa">
+          <div class="portfolio-overlay">
+            <div class="portfolio-cat">Transportation</div>
+            <h4>Cold Chain Distribution — Iringa</h4>
+            <div class="portfolio-overlay-actions">
+              <a href="assets/img/banshap/banshap-agri-citrus-1.jpg" class="pov-btn glightbox"><i class="bi bi-zoom-in"></i></a>
+              <a href="service-details.html" class="pov-btn"><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials">
+    <div class="testimonials-inner">
+      <div class="testi-header" data-aos="fade-up">
+        <div class="label-tag">Client Voices</div>
+        <h2 class="section-heading">What Our <span>Clients Say</span></h2>
+        <p class="section-sub">From first-time investors to established multinationals — here is what businesses across Tanzania say about working with Banshap.</p>
+      </div>
+      <div class="testi-grid">
+
+        <div class="testi-card" data-aos="fade-up" data-aos-delay="0">
+          <span class="testi-quote-icon"><i class="bi bi-quote"></i></span>
+          <p class="testi-text">"Banshap handled our entire BRELA registration and business licence applications in under a week. What we were told would take a month was done in four business days. Exceptional professionalism from start to finish."</p>
+          <div class="testi-rating">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <div class="testi-author">
+            <div class="testi-avatar tav-1">EK</div>
+            <div class="testi-author-info">
+              <span class="name">Emmanuel Kariuki</span>
+              <span class="role">CEO, Kariuki Trading Co.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card" data-aos="fade-up" data-aos-delay="100">
+          <span class="testi-quote-icon"><i class="bi bi-quote"></i></span>
+          <p class="testi-text">"Our logistics costs dropped 22% in the first quarter after engaging Banshap for route planning and freight consolidation. Their team understands the Tanzania corridor like no other firm we have worked with."</p>
+          <div class="testi-rating">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <div class="testi-author">
+            <div class="testi-avatar tav-2">AM</div>
+            <div class="testi-author-info">
+              <span class="name">Amina Msangi</span>
+              <span class="role">Procurement Director, Agro Exports Ltd.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="testi-quote-icon"><i class="bi bi-quote"></i></span>
+          <p class="testi-text">"As a foreign investor entering the Tanzanian market, the regulatory landscape was daunting. Banshap guided us through every step — from company incorporation to sector licences — with transparency and speed."</p>
+          <div class="testi-rating">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+          </div>
+          <div class="testi-author">
+            <div class="testi-avatar tav-3">SO</div>
+            <div class="testi-author-info">
+              <span class="name">Sarah Odhiambo</span>
+              <span class="role">Country Manager, NovaBridge Capital</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS TIMELINE ===== -->
+  <section id="process">
+    <div class="process-inner">
+      <div class="process-header" data-aos="fade-up">
+        <div class="label-tag" style="justify-content:center;">How We Work</div>
+        <h2 class="section-heading">Our <span>4-Step</span> Process</h2>
+        <p class="section-sub mx-auto">A streamlined engagement model designed to deliver results quickly — with full transparency at every stage.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step" data-aos="fade-up" data-aos-delay="0">
+          <div class="step-dot">
+            <i class="bi bi-chat-dots"></i>
+            <span class="step-num">1</span>
+          </div>
+          <h4>Consultation</h4>
+          <p>We begin with a no-obligation consultation to understand your requirements, timeline, and business objectives — in person or via video call.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-dot">
+            <i class="bi bi-clipboard-data"></i>
+            <span class="step-num">2</span>
+          </div>
+          <h4>Assessment &amp; Planning</h4>
+          <p>Our specialists assess your documentation, regulatory status, and operational requirements — then deliver a clear action plan with defined milestones and costs.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-dot">
+            <i class="bi bi-gear-wide-connected"></i>
+            <span class="step-num">3</span>
+          </div>
+          <h4>Implementation</h4>
+          <p>Our dedicated team executes the plan — submitting applications, coordinating logistics, and managing all agency interactions on your behalf with daily status updates.</p>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-dot">
+            <i class="bi bi-patch-check"></i>
+            <span class="step-num">4</span>
+          </div>
+          <h4>Delivery &amp; Support</h4>
+          <p>We deliver all documentation, confirmations, and operational handovers — followed by ongoing support to ensure continued compliance and operational stability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / CTA ===== -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-top" data-aos="fade-up">
+        <div class="label-tag" style="justify-content:center;">Get In Touch</div>
+        <h2 class="section-heading">Ready to <span>Grow Your Business?</span></h2>
+        <p class="section-sub mx-auto">Speak with our team today. We respond to all consultation requests within one business day.</p>
+      </div>
+      <div class="contact-layout">
+        <div data-aos="fade-right">
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="bi bi-geo-alt"></i></div>
+            <div class="ci-body">
+              <strong>Office Address</strong>
+              <span>Mkwepu &amp; Samora St, Samora Avenue<br>Near Salamanda Tower, Dar es Salaam</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="bi bi-telephone"></i></div>
+            <div class="ci-body">
+              <strong>Phone</strong>
+              <span>+255 716 628 867</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="bi bi-envelope"></i></div>
+            <div class="ci-body">
+              <strong>Email</strong>
+              <span>sharifu.mtuta@banshapinvestment.co.tz<br>adam.sharifu@banshapinvestment.co.tz</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="bi bi-clock"></i></div>
+            <div class="ci-body">
+              <strong>Business Hours</strong>
+              <span>Monday – Friday: 08:00 – 17:30<br>Saturday: 09:00 – 13:00</span>
+            </div>
+          </div>
+          <div class="contact-cta-box">
+            <div style="position:relative;z-index:1;">
+              <h4>Nationwide Coverage</h4>
+              <p>We operate across all 26 regions of Tanzania — with established presence in Dar es Salaam, Dodoma, Arusha, Mwanza, Mbeya, and Zanzibar.</p>
+              <a href="starter-page.html" class="btn-accent" style="font-size:12px;padding:12px 24px;">Meet Our Team <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap" data-aos="fade-left">
+          <h3>Request a Consultation</h3>
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" class="form-control-custom" placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label>Company</label>
+                <input type="text" class="form-control-custom" placeholder="Your company name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" class="form-control-custom" placeholder="your@email.com">
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" class="form-control-custom" placeholder="+255 7xx xxx xxx">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Service Required</label>
+              <select class="form-control-custom">
+                <option value="" disabled selected>Select a service area</option>
+                <option>Logistics &amp; Freight</option>
+                <option>BRELA Registration</option>
+                <option>Business Licensing</option>
+                <option>Tax &amp; Annual Filing</option>
+                <option>Agricultural Supplies</option>
+                <option>Investment Advisory</option>
+                <option>General Enquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea class="form-control-custom" placeholder="Describe your requirement or enquiry…"></textarea>
+            </div>
+            <button type="submit" class="btn-accent w-100" style="justify-content:center;">Send Request <i class="bi bi-send"></i></button>
+          </form>
+        </div>
+      </div>
+      <!-- Google Maps Location -->
+      <div class="contact-map" data-aos="fade-up">
+        <iframe
+          src="https://maps.google.com/maps?q=-6.8176531,39.2880593&z=17&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Banshap Investment Company — Office Location">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <img src="assets/img/logo.png" alt="Banshap Investment Company Limited" class="site-logo">
+          </div>
+          <p>Tanzania's trusted partner for logistics infrastructure, regulatory navigation, and business facilitation — operating across all major regions since 2010.</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/banshapinvestment" target="_blank" rel="noopener" class="footer-social" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/banshapinvestment" target="_blank" rel="noopener" class="footer-social" title="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/banshapinvestment" target="_blank" rel="noopener" class="footer-social" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://wa.me/255716628867" target="_blank" rel="noopener" class="footer-social" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="starter-page.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="#projects"><i class="bi bi-chevron-right"></i> Projects</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Insights</a></li>
+            <li><a href="#contact"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html#logistics"><i class="bi bi-chevron-right"></i> Logistics</a></li>
+            <li><a href="service-details.html#logistics"><i class="bi bi-chevron-right"></i> Transportation</a></li>
+            <li><a href="service-details.html#brela"><i class="bi bi-chevron-right"></i> BRELA Registration</a></li>
+            <li><a href="service-details.html#licensing"><i class="bi bi-chevron-right"></i> Business Licensing</a></li>
+            <li><a href="service-details.html#filing"><i class="bi bi-chevron-right"></i> Annual Filing</a></li>
+            <li><a href="service-details.html#agriculture"><i class="bi bi-chevron-right"></i> Agriculture</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact Us</h5>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt"></i>
+            <span>Mkwepu &amp; Samora St, Samora Avenue<br>Near Salamanda Tower<br>Dar es Salaam, Tanzania</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <span>+255 716 628 867</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope"></i>
+            <span>sharifu.mtuta@banshapinvestment.co.tz</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock"></i>
+            <span>Mon–Fri: 08:00–17:30</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 <a href="index.html">Banshap Investment Company Limited</a>. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+
+  <script>
+    // AOS
+    AOS.init({ duration: 700, easing: 'ease-out-quad', once: true, offset: 60 });
+
+    // Header scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // GLightbox
+    const lightbox = GLightbox({ selector: '.glightbox' });
+
+    // Counter animation
+    function animateCounter(el, target, suffix) {
+      let start = 0;
+      const step = target / 80;
+      const timer = setInterval(() => {
+        start += step;
+        if (start >= target) { el.textContent = target + suffix; clearInterval(timer); }
+        else { el.textContent = Math.floor(start) + suffix; }
+      }, 18);
+    }
+    const counterObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target);
+          const suffix = el.dataset.suffix || '';
+          animateCounter(el, target, suffix);
+          counterObs.unobserve(el);
+        }
+      });
+    }, { threshold: 0 });
+    document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+
+    // Portfolio filter (vanilla JS)
+    (function() {
+      var filterBtns = document.querySelectorAll('.portfolio-filters button');
+      var items = document.querySelectorAll('.portfolio-item');
+      filterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(function(b) { b.classList.remove('active'); });
+          this.classList.add('active');
+          var filter = this.getAttribute('data-filter');
+          items.forEach(function(item) {
+            if (filter === '*') {
+              item.style.display = '';
+              item.style.opacity = '1';
+            } else {
+              var cls = filter.replace('.', '');
+              if (item.classList.contains(cls)) {
+                item.style.display = '';
+                item.style.opacity = '1';
+              } else {
+                item.style.opacity = '0';
+                setTimeout(function() {
+                  if (item.style.opacity === '0') item.style.display = 'none';
+                }, 250);
+              }
+            }
+          });
+        });
+      });
+    })();
+  </script>
+
+  <!-- WhatsApp Float -->
+  <div class="wa-float">
+    <span class="wa-label">Chat on WhatsApp</span>
+    <a href="https://wa.me/255716628867" class="wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Insights &amp; News — Banshap Investment Company Limited</title>
+  <meta name="description" content="Industry insights, regulatory updates, and business intelligence from Banshap Investment Company Limited — Tanzania's premier business facilitation partner.">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    :root{--primary:#0B1F3A;--primary-mid:#0f2847;--secondary:#123E7A;--accent:#F5B041;--accent-dark:#d4922e;--accent-pale:#fef3e2;--light:#F8F9FA;--white:#FFFFFF;--text:#2C3E50;--text-light:#6c757d;--border:rgba(18,62,122,0.1);--shadow-sm:0 2px 12px rgba(11,31,58,0.08);--shadow:0 8px 32px rgba(11,31,58,0.12);--shadow-lg:0 20px 60px rgba(11,31,58,0.18);--radius:8px;--radius-lg:16px;--transition:all 0.3s ease;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;font-size:16px;color:var(--text);background:var(--white);overflow-x:hidden;}
+    h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif;color:var(--primary);line-height:1.25;}
+    p{line-height:1.75;color:var(--text-light);}
+    a{text-decoration:none;}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
+    .label-tag{font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:10px;margin-bottom:12px;}
+    .label-tag::before{content:'';width:32px;height:2px;background:var(--accent);flex-shrink:0;}
+    .section-heading{font-size:clamp(28px,3.5vw,42px);font-weight:700;color:var(--primary);margin-bottom:16px;}
+    .section-heading span{color:var(--accent);}
+    /* HEADER */
+    #header{position:fixed;top:0;left:0;right:0;z-index:9999;padding:0 40px;height:80px;background:rgba(11,31,58,0.97);backdrop-filter:blur(20px);transition:var(--transition);}
+    #header.scrolled{height:68px;box-shadow:0 4px 24px rgba(0,0,0,0.25);}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;height:100%;}
+    .logo-wrap{display:flex;align-items:center;text-decoration:none;}
+    .site-logo{height:52px;width:auto;}
+    .footer-brand .site-logo{background:#ffffff;border-radius:8px;padding:6px 14px;height:60px;}
+    #header{background:#ffffff!important;box-shadow:0 2px 16px rgba(0,0,0,0.08)!important;}
+    #header.scrolled{background:#ffffff!important;box-shadow:0 4px 24px rgba(0,0,0,0.12)!important;}
+    .main-nav a{color:var(--primary)!important;}
+    .header-phone{color:var(--primary)!important;}
+    .header-cta{background:var(--primary)!important;color:#fff!important;}
+    .header-cta:hover{background:var(--accent)!important;color:var(--primary)!important;}
+    .mobile-menu-btn{border-color:var(--primary)!important;color:var(--primary)!important;}
+    .main-nav ul{list-style:none;display:flex;align-items:center;gap:32px;margin:0;}
+    .main-nav a{font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;color:rgba(255,255,255,0.8);text-decoration:none;position:relative;padding-bottom:4px;transition:var(--transition);}
+    .main-nav a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent);border-radius:1px;transform:scaleX(0);transition:var(--transition);}
+    .main-nav a:hover,.main-nav a.active{color:var(--accent);}
+    .main-nav a:hover::after,.main-nav a.active::after{transform:scaleX(1);}
+    .header-cta{font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--primary);background:var(--accent);padding:10px 22px;border-radius:var(--radius);transition:var(--transition);text-decoration:none;}
+    .header-cta:hover{background:var(--accent-dark);color:var(--white);}
+    .mobile-menu-btn{display:none;background:transparent;border:2px solid rgba(255,255,255,0.3);color:white;padding:6px 10px;border-radius:6px;cursor:pointer;font-size:18px;}
+    .offcanvas-nav .offcanvas-header,.offcanvas-nav .offcanvas-body{background:var(--primary);}
+    .offcanvas-nav .nav-link{font-family:'Outfit',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:var(--transition);}
+    .offcanvas-nav .nav-link:hover{color:var(--accent);padding-left:8px;}
+    .offcanvas-nav .btn-close{filter:invert(1) opacity(0.6);}
+    .offcanvas-nav .offcanvas-cta{display:block;text-align:center;background:var(--accent);color:var(--primary);font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:14px;border-radius:var(--radius);margin-top:24px;text-decoration:none;}
+    /* BANNER */
+    .page-banner{background:var(--primary);padding:140px 40px 80px;position:relative;overflow:hidden;}
+    .page-banner::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:60px 60px;}
+    .page-banner::after{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;border:1px solid rgba(245,176,65,0.08);}
+    .page-banner-inner{max-width:1280px;margin:0 auto;position:relative;z-index:2;}
+    .page-banner h1{font-size:clamp(36px,5vw,60px);color:var(--white);margin-bottom:16px;}
+    .page-banner h1 span{color:var(--accent);}
+    .page-banner p{color:rgba(255,255,255,0.55);font-size:17px;font-weight:300;max-width:520px;line-height:1.7;margin-bottom:24px;}
+    .breadcrumb-nav{display:flex;align-items:center;gap:10px;}
+    .breadcrumb-nav a{font-family:'Outfit',sans-serif;font-size:12px;letter-spacing:1px;color:var(--accent);text-decoration:none;text-transform:uppercase;}
+    .breadcrumb-nav span{font-family:'Outfit',sans-serif;font-size:12px;color:rgba(255,255,255,0.35);text-transform:uppercase;}
+    .breadcrumb-nav i{color:rgba(255,255,255,0.2);font-size:10px;}
+    /* BLOG LAYOUT */
+    .blog-section{padding:80px 40px;background:var(--light);}
+    .blog-section-inner{max-width:1280px;margin:0 auto;}
+    /* FEATURED */
+    .featured-post{display:grid;grid-template-columns:1.1fr 0.9fr;background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);margin-bottom:60px;}
+    .fp-img{position:relative;overflow:hidden;min-height:460px;}
+    .fp-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease;}
+    .featured-post:hover .fp-img img{transform:scale(1.04);}
+    .fp-badge{position:absolute;top:20px;left:20px;background:var(--accent);color:var(--primary);font-family:'Outfit',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:50px;font-weight:600;}
+    .fp-body{padding:52px;display:flex;flex-direction:column;justify-content:center;}
+    .post-cat{font-family:'Outfit',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);background:var(--accent-pale);padding:5px 12px;border-radius:50px;display:inline-block;margin-bottom:14px;}
+    .post-meta{display:flex;align-items:center;gap:16px;margin-bottom:16px;flex-wrap:wrap;}
+    .pm-item{display:flex;align-items:center;gap:5px;font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:1px;color:var(--text-light);text-transform:uppercase;}
+    .pm-item i{color:var(--accent);font-size:12px;}
+    .fp-body h2{font-size:clamp(22px,2.5vw,32px);margin-bottom:16px;line-height:1.3;}
+    .fp-body h2 a{color:var(--primary);text-decoration:none;transition:var(--transition);}
+    .fp-body h2 a:hover{color:var(--accent);}
+    .fp-body p{font-size:15px;line-height:1.8;color:var(--text-light);margin-bottom:28px;}
+    .btn-read{display:inline-flex;align-items:center;gap:8px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--primary);border-bottom:2px solid var(--accent);padding-bottom:3px;transition:var(--transition);}
+    .btn-read:hover{color:var(--accent);gap:14px;}
+    /* GRID */
+    .posts-grid-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;padding-bottom:20px;border-bottom:2px solid var(--border);}
+    .filter-pills{display:flex;gap:8px;flex-wrap:wrap;}
+    .fp-pill{font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:7px 16px;border-radius:50px;border:1.5px solid var(--border);background:var(--white);color:var(--text-light);cursor:pointer;transition:var(--transition);}
+    .fp-pill.active,.fp-pill:hover{background:var(--accent);border-color:var(--accent);color:var(--primary);}
+    .posts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;}
+    .post-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition);}
+    .post-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);}
+    .pc-img{position:relative;overflow:hidden;height:220px;}
+    .pc-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
+    .post-card:hover .pc-img img{transform:scale(1.06);}
+    .pc-cat-badge{position:absolute;bottom:0;left:0;background:var(--primary);color:var(--accent);font-family:'Outfit',sans-serif;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:0 6px 0 0;}
+    .pc-body{padding:24px 28px;}
+    .pc-body .post-meta{margin-bottom:12px;}
+    .pc-body h3{font-size:18px;margin-bottom:10px;line-height:1.35;}
+    .pc-body h3 a{color:var(--primary);text-decoration:none;transition:var(--transition);}
+    .pc-body h3 a:hover{color:var(--accent);}
+    .pc-body p{font-size:14px;line-height:1.7;margin-bottom:16px;}
+    .pc-footer{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);}
+    .author-mini{display:flex;align-items:center;gap:10px;}
+    .author-mini img{width:30px;height:30px;border-radius:50%;object-fit:cover;border:2px solid var(--accent-pale);}
+    .author-mini span{font-size:13px;color:var(--text);font-weight:500;}
+    .author-avatar{width:30px;height:30px;border-radius:50%;border:2px solid var(--accent-pale);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:10px;color:var(--white);flex-shrink:0;}
+    .aa-1{background:linear-gradient(135deg,#0B1F3A,#123E7A);}
+    .aa-2{background:linear-gradient(135deg,#162d50,#1a4a7a);}
+    .aa-3{background:linear-gradient(135deg,#0f2847,#0d3060);}
+    .aa-4{background:linear-gradient(135deg,#0d2a50,#123E7A);}
+    .read-time{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:1px;color:var(--text-light);}
+    /* SIDEBAR */
+    .blog-sidebar{padding-left:20px;}
+    .sw{background:var(--white);border-radius:var(--radius-lg);padding:28px;margin-bottom:24px;box-shadow:var(--shadow-sm);}
+    .wt{font-size:18px;color:var(--primary);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--accent);}
+    .search-f{display:flex;}
+    .search-f input{flex:1;padding:11px 14px;border:1.5px solid var(--border);border-radius:var(--radius) 0 0 var(--radius);font-family:'Inter',sans-serif;font-size:14px;color:var(--text);background:var(--light);outline:none;transition:var(--transition);}
+    .search-f input:focus{border-color:var(--secondary);}
+    .search-f button{padding:11px 16px;background:var(--accent);border:none;border-radius:0 var(--radius) var(--radius) 0;color:var(--primary);cursor:pointer;font-size:16px;}
+    .cat-list{list-style:none;}
+    .cat-list li{border-bottom:1px solid var(--border);}
+    .cat-list li:last-child{border:none;}
+    .cat-list a{display:flex;align-items:center;justify-content:space-between;padding:11px 0;font-size:14px;color:var(--text);text-decoration:none;transition:var(--transition);}
+    .cat-list a:hover{color:var(--accent);padding-left:6px;}
+    .cat-count{font-family:'Outfit',sans-serif;font-size:11px;background:var(--light);color:var(--text-light);padding:2px 8px;border-radius:4px;}
+    .rp{display:flex;gap:12px;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--border);align-items:flex-start;}
+    .rp:last-child{margin:0;padding:0;border:none;}
+    .rp-img{width:68px;height:54px;flex-shrink:0;overflow:hidden;border-radius:var(--radius);}
+    .rp-img img{width:100%;height:100%;object-fit:cover;}
+    .rp-date{font-family:'Outfit',sans-serif;font-size:10px;letter-spacing:1px;color:var(--accent);text-transform:uppercase;display:block;margin-bottom:5px;}
+    .rp-info a{font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;color:var(--primary);text-decoration:none;line-height:1.35;display:block;transition:var(--transition);}
+    .rp-info a:hover{color:var(--accent);}
+    .tag-cloud{display:flex;flex-wrap:wrap;gap:8px;}
+    .tag{font-family:'Outfit',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:50px;border:1.5px solid var(--border);color:var(--text-light);text-decoration:none;transition:var(--transition);}
+    .tag:hover{border-color:var(--accent);color:var(--accent);}
+    .sw-cta{background:var(--primary);border-radius:var(--radius-lg);padding:28px;position:relative;overflow:hidden;}
+    .sw-cta::before{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:rgba(245,176,65,0.08);}
+    .sw-cta h4{font-size:20px;color:var(--white);margin-bottom:10px;position:relative;}
+    .sw-cta p{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:20px;position:relative;}
+    .sw-cta a{display:block;text-align:center;background:var(--accent);color:var(--primary);font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:12px;border-radius:var(--radius);text-decoration:none;transition:var(--transition);position:relative;}
+    .sw-cta a:hover{background:var(--accent-dark);color:var(--white);}
+    /* NEWSLETTER */
+    .newsletter{background:var(--secondary);padding:64px 40px;}
+    .nl-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+    .nl-copy h2{font-size:32px;color:var(--white);margin-bottom:10px;}
+    .nl-copy h2 span{color:var(--accent);}
+    .nl-copy p{color:rgba(255,255,255,0.5);font-size:15px;}
+    .nl-form{display:flex;}
+    .nl-form input{flex:1;padding:15px 18px;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.15);border-radius:var(--radius) 0 0 var(--radius);color:var(--white);font-family:'Inter',sans-serif;font-size:14px;outline:none;transition:var(--transition);}
+    .nl-form input::placeholder{color:rgba(255,255,255,0.35);}
+    .nl-form input:focus{border-color:var(--accent);}
+    .nl-form button{padding:15px 24px;background:var(--accent);border:none;border-radius:0 var(--radius) var(--radius) 0;color:var(--primary);font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:var(--transition);}
+    .nl-form button:hover{background:var(--accent-dark);color:var(--white);}
+    /* FOOTER */
+    #footer{background:var(--primary);padding:80px 40px 0;}
+    .footer-inner{max-width:1280px;margin:0 auto;}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:60px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .footer-brand p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8;margin:20px 0 28px;font-weight:300;}
+    .footer-socials{display:flex;gap:10px;}
+    .footer-social{width:38px;height:38px;border:1px solid rgba(255,255,255,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:14px;text-decoration:none;transition:var(--transition);}
+    .footer-social:hover{background:var(--accent);border-color:var(--accent);color:var(--primary);}
+    .footer-col h5{font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:24px;}
+    .footer-links{list-style:none;}
+    .footer-links li{margin-bottom:10px;}
+    .footer-links a{font-size:14px;color:rgba(255,255,255,0.45);text-decoration:none;display:flex;align-items:center;gap:8px;transition:var(--transition);}
+    .footer-links a i{font-size:12px;color:var(--accent);}
+    .footer-links a:hover{color:rgba(255,255,255,0.85);padding-left:4px;}
+    .footer-contact-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;}
+    .footer-contact-item i{color:var(--accent);font-size:14px;margin-top:3px;flex-shrink:0;}
+    .footer-contact-item span{font-size:13.5px;color:rgba(255,255,255,0.45);line-height:1.6;}
+    .footer-bottom{padding:24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .footer-bottom p{font-size:13px;color:rgba(255,255,255,0.3);}
+    .footer-bottom a{color:var(--accent);}
+    .footer-legal{display:flex;gap:24px;}
+    .footer-legal a{font-family:'Outfit',sans-serif;font-size:11px;color:rgba(255,255,255,0.3);text-decoration:none;text-transform:uppercase;transition:var(--transition);}
+    .footer-legal a:hover{color:var(--accent);}
+    /* PAGINATION */
+    .page-btn{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--border);border-radius:var(--radius);font-family:'Outfit',sans-serif;font-size:13px;color:var(--text-light);text-decoration:none;transition:var(--transition);}
+    .page-btn:hover,.page-btn.active{border-color:var(--accent);color:var(--primary);background:var(--accent);}
+    @media(max-width:1100px){
+      #header,.page-banner,.blog-section,.newsletter,#footer{padding-left:24px;padding-right:24px;}
+      .featured-post{grid-template-columns:1fr;}
+      .fp-img{min-height:260px;}
+      .blog-sidebar{padding-left:0;margin-top:40px;}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:40px;}
+      .nl-inner{grid-template-columns:1fr;gap:28px;}
+    }
+    @media(max-width:768px){
+      .main-nav,.header-cta{display:none;}
+      .mobile-menu-btn{display:block;}
+      .posts-grid{grid-template-columns:1fr;}
+      .posts-grid-header{flex-direction:column;align-items:flex-start;gap:16px;}
+      .footer-grid{grid-template-columns:1fr;gap:36px;}
+      .nl-form{flex-direction:column;}
+      .nl-form input,.nl-form button{border-radius:var(--radius);}
+      .fp-body{padding:28px;}
+    }
+  
+    /* ===== WHATSAPP FLOAT + HEADER PHONE ===== */
+    /* WhatsApp Float Button */
+    @keyframes wa-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,0.5),0 6px 24px rgba(37,211,102,0.4);} 60%{box-shadow:0 0 0 14px rgba(37,211,102,0),0 6px 24px rgba(37,211,102,0.4);} }
+    @keyframes wa-bounce { 0%,100%{transform:scale(1);} 30%{transform:scale(1.15);} 60%{transform:scale(0.95);} }
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 9990; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+    .wa-btn { width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; text-decoration: none; animation: wa-pulse 2.4s ease-in-out infinite; transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), filter 0.25s ease; }
+    .wa-btn:hover { transform: scale(1.14); filter: brightness(1.1); animation: wa-bounce 0.5s ease; }
+    .wa-btn svg { width: 30px; height: 30px; fill: #fff; transition: transform 0.25s ease; }
+    .wa-btn:hover svg { transform: rotate(-8deg) scale(1.08); }
+    .wa-label { background: var(--primary); color: var(--white); font-family: 'Outfit', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; padding: 7px 16px; border-radius: 50px; white-space: nowrap; opacity: 0; transform: translateX(12px); transition: opacity 0.3s ease, transform 0.3s cubic-bezier(.34,1.56,.64,1); pointer-events: none; box-shadow: 0 4px 16px rgba(11,31,58,0.18); }
+    .wa-label::after { content: ''; position: absolute; right: -6px; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-left-color: var(--primary); border-right: none; }
+    .wa-label { position: relative; }
+    .wa-float:hover .wa-label { opacity: 1; transform: translateX(0); }
+    .header-phone { display: flex; align-items: center; gap: 7px; font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; color: rgba(255,255,255,0.9); text-decoration: none; transition: color 0.3s ease; white-space: nowrap; }
+    .header-phone i { color: var(--accent); font-size: 13px; }
+    .header-phone:hover { color: var(--accent); }
+    .header-right { display: flex; align-items: center; gap: 20px; }
+    @media (max-width: 768px) { .header-phone { display: none; } .wa-float { bottom: 18px; right: 18px; } .wa-btn { width: 52px; height: 52px; } }
+  </style>
+</head>
+<body>
+
+  <header id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-wrap"><img src="assets/img/logo.png" alt="Banshap Investment Company Limited" class="site-logo"></a>
+      <nav class="main-nav"><ul><li><a href="index.html">Home</a></li><li><a href="starter-page.html">About Us</a></li><li><a href="service-details.html">Services</a></li><li><a href="index.html#projects">Projects</a></li><li><a href="blog.html" class="active">Insights</a></li><li><a href="index.html#contact">Contact</a></li></ul></nav>
+      <div class="header-right"><a href="tel:+255716628867" class="header-phone"><i class="bi bi-telephone-fill"></i> +255 716 628 867</a><a href="index.html#contact" class="header-cta">Request Consultation</a></div>
+      <button class="mobile-menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"><i class="bi bi-list"></i></button>
+    </div>
+  </header>
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="mobileNav">
+    <div class="offcanvas-header"><div class="logo-wrap"><img src="assets/img/logo.png" alt="Banshap Investment Company Limited" class="site-logo"></div><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+    <div class="offcanvas-body d-flex flex-column"><nav><a href="index.html" class="nav-link">Home</a><a href="starter-page.html" class="nav-link">About Us</a><a href="service-details.html" class="nav-link">Services</a><a href="index.html#projects" class="nav-link" data-bs-dismiss="offcanvas">Projects</a><a href="blog.html" class="nav-link active">Insights</a><a href="index.html#contact" class="nav-link" data-bs-dismiss="offcanvas">Contact</a></nav><a href="index.html#contact" class="offcanvas-cta" data-bs-dismiss="offcanvas">Request Consultation</a></div>
+  </div>
+
+  <section class="page-banner">
+    <div class="page-banner-inner">
+      <div class="label-tag" data-aos="fade-right">Banshap Insights</div>
+      <h1 data-aos="fade-up">Industry <span>Intelligence</span></h1>
+      <p data-aos="fade-up" data-aos-delay="100">Regulatory updates, sector commentary, and business intelligence from our team of specialists across Tanzania's investment and logistics landscape.</p>
+      <div class="breadcrumb-nav" data-aos="fade-up" data-aos-delay="200"><a href="index.html">Home</a><i class="bi bi-chevron-right"></i><span>Insights</span></div>
+    </div>
+  </section>
+
+  <section class="blog-section">
+    <div class="blog-section-inner">
+      <div class="row g-0">
+        <div class="col-lg-8">
+
+          <!-- Featured Post -->
+          <div class="featured-post" data-aos="fade-up">
+            <div class="fp-img">
+              <img src="assets/img/banshap/banshap-transport-2.jpg" alt="Tanzania Freight Corridor 2025">
+              <div class="fp-badge">Featured</div>
+            </div>
+            <div class="fp-body">
+              <span class="post-cat">Logistics</span>
+              <div class="post-meta">
+                <span class="pm-item"><i class="bi bi-calendar3"></i> March 14, 2025</span>
+                <span class="pm-item"><i class="bi bi-clock"></i> 7 min read</span>
+              </div>
+              <h2><a href="blog-details.html">Tanzania's Freight Corridor Expansion: What It Means for Importers and Exporters in 2025</a></h2>
+              <p>The Tanzania Ports Authority's announced expansion of the Dar es Salaam port's handling capacity to 28 million tonnes per annum signals a transformative shift for regional trade flows. Here is what cargo owners and logistics managers must prepare for.</p>
+              <a href="blog-details.html" class="btn-read">Read Full Article <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Grid Header -->
+          <div class="posts-grid-header" data-aos="fade-up">
+            <div class="label-tag" style="margin:0;">Latest Articles</div>
+            <div class="filter-pills">
+              <button class="fp-pill active" data-cat="all">All</button>
+              <button class="fp-pill" data-cat="logistics">Logistics</button>
+              <button class="fp-pill" data-cat="regulatory">Regulatory</button>
+              <button class="fp-pill" data-cat="agriculture">Agriculture</button>
+              <button class="fp-pill" data-cat="business">Business</button>
+            </div>
+          </div>
+
+          <div class="posts-grid">
+            <div class="post-card" data-cat="regulatory" data-aos="fade-up" data-aos-delay="0">
+              <div class="pc-img"><img src="assets/img/blog/blog-post-square-1.webp" alt="BRELA Registration 2025"><div class="pc-cat-badge">Regulatory</div></div>
+              <div class="pc-body">
+                <div class="post-meta"><span class="pm-item"><i class="bi bi-calendar3"></i> Feb 28, 2025</span><span class="pm-item"><i class="bi bi-clock"></i> 5 min</span></div>
+                <h3><a href="blog-details.html">Updated BRELA Registration Procedures: A Practical Guide for Foreign Investors</a></h3>
+                <p>Recent amendments to Tanzania's company incorporation process have reduced the timeline to as few as three business days for standard entities.</p>
+                <div class="pc-footer"><div class="author-mini"><div class="author-avatar aa-1">JO</div><span>James Okonkwo</span></div><span class="read-time">5 min read</span></div>
+              </div>
+            </div>
+            <div class="post-card" data-cat="agriculture" data-aos="fade-up" data-aos-delay="80">
+              <div class="pc-img"><img src="assets/img/blog/blog-post-square-2.webp" alt="Agriculture Cold Chain"><div class="pc-cat-badge">Agriculture</div></div>
+              <div class="pc-body">
+                <div class="post-meta"><span class="pm-item"><i class="bi bi-calendar3"></i> Feb 12, 2025</span><span class="pm-item"><i class="bi bi-clock"></i> 6 min</span></div>
+                <h3><a href="blog-details.html">Optimising Agricultural Supply Chains: Cold Storage Solutions for East Africa's Export Sector</a></h3>
+                <p>Tanzania's horticultural export volumes grew 18% year-on-year. Cold chain integrity is now the defining competitive factor for exporters in 2025.</p>
+                <div class="pc-footer"><div class="author-mini"><div class="author-avatar aa-2">AD</div><span>Amara Diallo</span></div><span class="read-time">6 min read</span></div>
+              </div>
+            </div>
+            <div class="post-card" data-cat="business" data-aos="fade-up" data-aos-delay="0">
+              <div class="pc-img"><img src="assets/img/blog/blog-post-square-3.webp" alt="Business Licensing"><div class="pc-cat-badge">Business</div></div>
+              <div class="pc-body">
+                <div class="post-meta"><span class="pm-item"><i class="bi bi-calendar3"></i> Jan 31, 2025</span><span class="pm-item"><i class="bi bi-clock"></i> 4 min</span></div>
+                <h3><a href="blog-details.html">Navigating Tanzania's Business Licence Landscape: Permits You Cannot Afford to Miss</a></h3>
+                <p>Operating without the correct sector licence in Tanzania carries penalties that can ground operations. This checklist covers the most commonly missed permits.</p>
+                <div class="pc-footer"><div class="author-mini"><div class="author-avatar aa-3">DN</div><span>David Njoroge</span></div><span class="read-time">4 min read</span></div>
+              </div>
+            </div>
+            <div class="post-card" data-cat="regulatory" data-aos="fade-up" data-aos-delay="80">
+              <div class="pc-img"><img src="assets/img/blog/blog-post-square-4.webp" alt="TRA Compliance 2025"><div class="pc-cat-badge">Regulatory</div></div>
+              <div class="pc-body">
+                <div class="post-meta"><span class="pm-item"><i class="bi bi-calendar3"></i> Jan 15, 2025</span><span class="pm-item"><i class="bi bi-clock"></i> 8 min</span></div>
+                <h3><a href="blog-details.html">TRA Compliance in 2025: Annual Filing Deadlines and the Risks of Late Submission</a></h3>
+                <p>The Tanzania Revenue Authority's updated compliance calendar introduces tighter submission windows for annual returns and changes to the VAT provisional filing schedule.</p>
+                <div class="pc-footer"><div class="author-mini"><div class="author-avatar aa-4">FH</div><span>Fatima Hassan</span></div><span class="read-time">8 min read</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="d-flex align-items-center justify-content-center gap-2 mt-5" data-aos="fade-up">
+            <a href="#" class="page-btn active">1</a>
+            <a href="#" class="page-btn">2</a>
+            <a href="#" class="page-btn">3</a>
+            <span style="color:var(--text-light);padding:0 4px;">…</span>
+            <a href="#" class="page-btn"><i class="bi bi-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="col-lg-4">
+          <div class="blog-sidebar" data-aos="fade-up" data-aos-delay="120">
+            <div class="sw">
+              <h4 class="wt">Search</h4>
+              <div class="search-f"><input type="text" placeholder="Search articles…"><button><i class="bi bi-search"></i></button></div>
+            </div>
+            <div class="sw">
+              <h4 class="wt">Categories</h4>
+              <ul class="cat-list">
+                <li><a href="#">Logistics &amp; Freight <span class="cat-count">8</span></a></li>
+                <li><a href="#">Regulatory &amp; Compliance <span class="cat-count">12</span></a></li>
+                <li><a href="#">Agriculture &amp; Supply Chain <span class="cat-count">6</span></a></li>
+                <li><a href="#">Business Registration <span class="cat-count">9</span></a></li>
+                <li><a href="#">Tax &amp; Annual Filing <span class="cat-count">7</span></a></li>
+                <li><a href="#">Investment News <span class="cat-count">4</span></a></li>
+              </ul>
+            </div>
+            <div class="sw">
+              <h4 class="wt">Recent Posts</h4>
+              <div class="rp"><div class="rp-img"><img src="assets/img/blog/blog-post-square-5.webp" alt="EAC Trade Bloc"></div><div class="rp-info"><span class="rp-date">Mar 5, 2025</span><a href="blog-details.html">EAC Trade Bloc Reforms and the Opportunity for Tanzanian SMEs</a></div></div>
+              <div class="rp"><div class="rp-img"><img src="assets/img/blog/blog-post-square-1.webp" alt="BRELA"></div><div class="rp-info"><span class="rp-date">Feb 28, 2025</span><a href="blog-details.html">Updated BRELA Registration Procedures: A Practical Guide</a></div></div>
+              <div class="rp"><div class="rp-img"><img src="assets/img/blog/blog-post-square-2.webp" alt="Cold Chain"></div><div class="rp-info"><span class="rp-date">Feb 12, 2025</span><a href="blog-details.html">Cold Storage Solutions for East Africa's Agricultural Exports</a></div></div>
+            </div>
+            <div class="sw">
+              <h4 class="wt">Topics</h4>
+              <div class="tag-cloud">
+                <a href="#" class="tag">BRELA</a><a href="#" class="tag">TRA</a><a href="#" class="tag">TAUSI</a><a href="#" class="tag">Logistics</a><a href="#" class="tag">EAC</a><a href="#" class="tag">Agriculture</a><a href="#" class="tag">Import/Export</a><a href="#" class="tag">Compliance</a><a href="#" class="tag">Freight</a><a href="#" class="tag">Cold Chain</a>
+              </div>
+            </div>
+            <div class="sw-cta">
+              <h4>Need Expert Guidance?</h4>
+              <p>Speak with our regulatory and logistics specialists. We respond within one business day.</p>
+              <a href="index.html#contact">Book a Consultation <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="nl-inner">
+      <div class="nl-copy" data-aos="fade-right">
+        <div class="label-tag" style="color:var(--accent);">Stay Informed</div>
+        <h2>Regulatory <span>Updates</span> Delivered Monthly</h2>
+        <p>Subscribe for the latest changes to Tanzania's business environment, compliance calendar, and trade sector developments.</p>
+      </div>
+      <div data-aos="fade-left">
+        <div class="nl-form"><input type="email" placeholder="Your professional email address"><button>Subscribe</button></div>
+        <p style="font-size:12px;color:rgba(255,255,255,0.3);margin-top:10px;">No spam. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo-wrap"><img src="assets/img/logo.png" alt="Banshap Investment Company Limited" class="site-logo"></div><p>Tanzania's trusted partner for logistics infrastructure, regulatory navigation, and business facilitation — operating across all major regions since 2010.</p><div class="footer-socials"><a href="https://www.linkedin.com/in/banshapinvestment" target="_blank" rel="noopener" class="footer-social" title="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="https://twitter.com/banshapinvestment" target="_blank" rel="noopener" class="footer-social" title="Twitter/X"><i class="bi bi-twitter-x"></i></a><a href="https://www.facebook.com/banshapinvestment" target="_blank" rel="noopener" class="footer-social" title="Facebook"><i class="bi bi-facebook"></i></a><a href="https://wa.me/255716628867" target="_blank" rel="noopener" class="footer-social" title="WhatsApp"><i class="bi bi-whatsapp"></i></a></div></div>
+        <div class="footer-col"><h5>Quick Links</h5><ul class="footer-links"><li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li><li><a href="starter-page.html"><i class="bi bi-chevron-right"></i> About Us</a></li><li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Services</a></li><li><a href="blog.html"><i class="bi bi-chevron-right"></i> Insights</a></li><li><a href="index.html#contact"><i class="bi bi-chevron-right"></i> Contact</a></li></ul></div>
+        <div class="footer-col"><h5>Services</h5><ul class="footer-links"><li><a href="service-details.html#logistics"><i class="bi bi-chevron-right"></i> Logistics</a></li><li><a href="service-details.html#brela"><i class="bi bi-chevron-right"></i> BRELA</a></li><li><a href="service-details.html#licensing"><i class="bi bi-chevron-right"></i> Licensing</a></li><li><a href="service-details.html#filing"><i class="bi bi-chevron-right"></i> Tax Filing</a></li><li><a href="service-details.html#agriculture"><i class="bi bi-chevron-right"></i> Agriculture</a></li></ul></div>
+        <div class="footer-col"><h5>Contact</h5><div class="footer-contact-item"><i class="bi bi-geo-alt"></i><span>Mkwepu &amp; Samora St, Samora Avenue<br>Near Salamanda Tower, Dar es Salaam</span></div><div class="footer-contact-item"><i class="bi bi-telephone"></i><span>+255 716 628 867</span></div><div class="footer-contact-item"><i class="bi bi-envelope"></i><span>sharifu.mtuta@banshapinvestment.co.tz</span></div><div class="footer-contact-item"><i class="bi bi-envelope"></i><span>adam.sharifu@banshapinvestment.co.tz</span></div><div class="footer-contact-item"><i class="bi bi-clock"></i><span>Mon–Fri: 08:00–17:30</span></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 <a href="index.html">Banshap Investment Company Limited</a>. All rights reserved.</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, easing: 'ease-out-quad', once: true, offset: 60 });
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 60); });
+
+    // Blog category filter
+    document.querySelectorAll('.fp-pill').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.fp-pill').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const cat = this.dataset.cat;
+        document.querySelectorAll('.post-card').forEach(card => {
+          if (cat === 'all' || card.dataset.cat === cat) {
+            card.style.display = '';
+            card.style.animation = 'fadeInUp 0.35s ease both';
+          } else { card.style.display = 'none'; }
+        });
+      });
+    });
+  </script>
+
+  <!-- WhatsApp Float -->
+  <div class="wa-float">
+    <span class="wa-label">Chat on WhatsApp</span>
+    <a href="https://wa.me/255716628867" class="wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
+</body>
+</html>

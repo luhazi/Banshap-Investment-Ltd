@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>About Us — Banshap Investment Company Limited</title>
+  <meta name="description" content="Learn about Banshap Investment Company Limited — Tanzania's trusted partner for logistics, business registration, and investment advisory since 2010.">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary:#0B1F3A; --primary-mid:#0f2847; --secondary:#123E7A;
+      --accent:#F5B041; --accent-dark:#d4922e; --accent-pale:#fef3e2;
+      --light:#F8F9FA; --white:#FFFFFF; --text:#2C3E50; --text-light:#6c757d;
+      --border:rgba(18,62,122,0.1); --shadow-sm:0 2px 12px rgba(11,31,58,0.08);
+      --shadow:0 8px 32px rgba(11,31,58,0.12); --shadow-lg:0 20px 60px rgba(11,31,58,0.18);
+      --radius:8px; --radius-lg:16px; --transition:all 0.3s ease;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;font-size:16px;color:var(--text);background:var(--white);overflow-x:hidden;}
+    h1,h2,h3,h4,h5,h6{font-family:'Poppins',sans-serif;color:var(--primary);line-height:1.25;}
+    p{line-height:1.75;color:var(--text-light);}
+    a{text-decoration:none;}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-track{background:var(--light);}
+    ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
+    .label-tag{font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:10px;margin-bottom:12px;}
+    .label-tag::before{content:'';width:32px;height:2px;background:var(--accent);flex-shrink:0;}
+    .section-heading{font-size:clamp(28px,3.5vw,42px);font-weight:700;color:var(--primary);margin-bottom:16px;}
+    .section-heading span{color:var(--accent);}
+    .section-sub{font-size:16px;color:var(--text-light);line-height:1.75;}
+    .btn-accent{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--primary);font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:14px 30px;border-radius:var(--radius);transition:var(--transition);border:2px solid var(--accent);}
+    .btn-accent:hover{background:var(--accent-dark);border-color:var(--accent-dark);color:var(--white);transform:translateY(-2px);}
+    .btn-outline-accent{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--accent);font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:12px 28px;border-radius:var(--radius);border:2px solid var(--accent);transition:var(--transition);}
+    .btn-outline-accent:hover{background:var(--accent);color:var(--primary);transform:translateY(-2px);}
+
+    /* HEADER */
+    #header{position:fixed;top:0;left:0;right:0;z-index:9999;padding:0 40px;height:80px;background:rgba(11,31,58,0.97);backdrop-filter:blur(20px);transition:var(--transition);}
+    #header.scrolled{height:68px;box-shadow:0 4px 24px rgba(0,0,0,0.25);}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;height:100%;}
+    .logo-wrap{display:flex;align-items:center;text-decoration:none;}
+    .site-logo{height:52px;width:auto;}
+    .footer-brand .site-logo{background:#ffffff;border-radius:8px;padding:6px 14px;height:60px;}
+    #header{background:#ffffff!important;box-shadow:0 2px 16px rgba(0,0,0,0.08)!important;}
+    #header.scrolled{background:#ffffff!important;box-shadow:0 4px 24px rgba(0,0,0,0.12)!important;}
+    .main-nav a{color:var(--primary)!important;}
+    .header-phone{color:var(--primary)!important;}
+    .header-cta{background:var(--primary)!important;color:#fff!important;}
+    .header-cta:hover{background:var(--accent)!important;color:var(--primary)!important;}
+    .mobile-menu-btn{border-color:var(--primary)!important;color:var(--primary)!important;}
+    .main-nav ul{list-style:none;display:flex;align-items:center;gap:32px;margin:0;}
+    .main-nav a{font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;color:rgba(255,255,255,0.8);letter-spacing:0.5px;text-decoration:none;position:relative;padding-bottom:4px;transition:var(--transition);}
+    .main-nav a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent);border-radius:1px;transform:scaleX(0);transition:var(--transition);}
+    .main-nav a:hover,.main-nav a.active{color:var(--accent);}
+    .main-nav a:hover::after,.main-nav a.active::after{transform:scaleX(1);}
+    .header-cta{font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--primary);background:var(--accent);padding:10px 22px;border-radius:var(--radius);transition:var(--transition);text-decoration:none;}
+    .header-cta:hover{background:var(--accent-dark);color:var(--white);}
+    .mobile-menu-btn{display:none;background:transparent;border:2px solid rgba(255,255,255,0.3);color:white;padding:6px 10px;border-radius:6px;cursor:pointer;font-size:18px;}
+    .offcanvas-nav .offcanvas-header,.offcanvas-nav .offcanvas-body{background:var(--primary);}
+    .offcanvas-nav .nav-link{font-family:'Outfit',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:block;transition:var(--transition);}
+    .offcanvas-nav .nav-link:hover{color:var(--accent);padding-left:8px;}
+    .offcanvas-nav .btn-close{filter:invert(1) opacity(0.6);}
+    .offcanvas-nav .offcanvas-cta{display:block;text-align:center;background:var(--accent);color:var(--primary);font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:14px;border-radius:var(--radius);margin-top:24px;text-decoration:none;}
+
+    /* PAGE BANNER */
+    .page-banner{background:var(--primary);padding:140px 40px 80px;position:relative;overflow:hidden;}
+    .page-banner::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:60px 60px;}
+    .page-banner::after{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;border:1px solid rgba(245,176,65,0.08);}
+    .page-banner-inner{max-width:1280px;margin:0 auto;position:relative;z-index:2;}
+    .page-banner h1{font-size:clamp(36px,5vw,60px);color:var(--white);margin-bottom:16px;}
+    .page-banner h1 span{color:var(--accent);}
+    .page-banner p{color:rgba(255,255,255,0.55);font-size:17px;font-weight:300;max-width:520px;line-height:1.7;margin-bottom:24px;}
+    .breadcrumb-nav{display:flex;align-items:center;gap:10px;}
+    .breadcrumb-nav a{font-family:'Outfit',sans-serif;font-size:12px;letter-spacing:1px;color:var(--accent);text-decoration:none;text-transform:uppercase;}
+    .breadcrumb-nav span{font-family:'Outfit',sans-serif;font-size:12px;color:rgba(255,255,255,0.35);text-transform:uppercase;}
+    .breadcrumb-nav i{color:rgba(255,255,255,0.2);font-size:10px;}
+
+    /* STORY */
+    .story-section{padding:100px 40px;background:var(--white);}
+    .story-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:0.9fr 1.1fr;gap:80px;align-items:center;}
+    .story-media{position:relative;}
+    .story-img-main{width:100%;height:520px;object-fit:cover;border-radius:var(--radius-lg);}
+    .story-img-inset{position:absolute;bottom:-28px;right:-24px;width:180px;height:140px;object-fit:cover;border-radius:var(--radius);border:5px solid var(--white);box-shadow:var(--shadow);}
+    .story-badge{position:absolute;top:28px;left:-20px;background:var(--accent);color:var(--primary);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center;}
+    .story-badge .num{font-family:'Poppins',sans-serif;font-size:32px;font-weight:800;line-height:1;display:block;}
+    .story-badge .lbl{font-family:'Outfit',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-top:4px;}
+
+    /* STATS BAR */
+    .stats-bar{background:var(--primary);padding:60px 40px;}
+    .stats-bar-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+    .stat-item{text-align:center;padding:32px;border-right:1px solid rgba(255,255,255,0.07);}
+    .stat-item:last-child{border-right:none;}
+    .stat-num{font-family:'Poppins',sans-serif;font-size:48px;font-weight:800;color:var(--white);line-height:1;display:block;}
+    .stat-num span{color:var(--accent);}
+    .stat-lbl{font-family:'Outfit',sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);display:block;margin-top:8px;}
+
+    /* MISSION / VISION / VALUES SLIDER */
+    .mvv-section{padding:100px 40px;background:var(--light);}
+    .mvv-inner{max-width:1280px;margin:0 auto;}
+    .mvv-slider-wrap{position:relative;overflow:hidden;margin-top:56px;}
+    .mvv-track{display:flex;transition:transform 0.5s cubic-bezier(.4,0,.2,1);}
+    .mvv-slide{min-width:calc(33.333% - 19px);margin-right:28px;flex-shrink:0;}
+    .mvv-card{background:var(--white);border-radius:var(--radius-lg);padding:40px 36px;border:2px solid var(--border);transition:var(--transition);cursor:pointer;height:100%;}
+    .mvv-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--accent);}
+    .mvv-card.active{background:var(--primary);border-color:var(--accent);transform:translateY(-6px);box-shadow:0 20px 48px rgba(11,31,58,0.28);}
+    .mvv-card.active h3{color:var(--white);}
+    .mvv-card.active p{color:rgba(255,255,255,0.78);}
+    .mvv-card.active .mvv-icon{background:rgba(245,176,65,0.18) !important;color:var(--accent) !important;}
+    .mvv-icon{width:64px;height:64px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:24px;transition:var(--transition);}
+    .mvv-icon.mission{background:rgba(18,62,122,0.08);color:var(--secondary);}
+    .mvv-icon.vision{background:rgba(245,176,65,0.12);color:var(--accent-dark);}
+    .mvv-icon.values{background:rgba(44,62,80,0.08);color:var(--text);}
+    .mvv-icon.quality{background:rgba(18,62,122,0.06);color:var(--secondary);}
+    .mvv-card h3{font-size:22px;margin-bottom:14px;transition:var(--transition);}
+    .mvv-card p{font-size:15px;line-height:1.75;color:var(--text-light);transition:var(--transition);}
+    /* Slider controls */
+    .mvv-controls{display:flex;align-items:center;justify-content:space-between;margin-top:32px;}
+    .mvv-dots{display:flex;gap:8px;}
+    .mvv-dot{width:10px;height:10px;border-radius:50%;background:var(--border);border:2px solid rgba(18,62,122,0.15);cursor:pointer;transition:var(--transition);}
+    .mvv-dot.active{background:var(--accent);border-color:var(--accent);transform:scale(1.2);}
+    .mvv-arrows{display:flex;gap:10px;}
+    .mvv-arrow{width:42px;height:42px;border-radius:var(--radius);background:var(--accent);color:var(--primary);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;transition:var(--transition);}
+    .mvv-arrow:hover{background:var(--accent-dark);color:var(--white);}
+    .mvv-arrow:disabled{background:var(--border);color:var(--text-light);cursor:not-allowed;}
+    @media(max-width:900px){.mvv-slide{min-width:calc(50% - 14px);}}
+    @media(max-width:600px){.mvv-slide{min-width:100%;margin-right:0;}}
+
+    /* CORE VALUES */
+    .values-section{padding:100px 40px;background:var(--white);}
+    .values-inner{max-width:1280px;margin:0 auto;}
+    .values-header{text-align:center;max-width:580px;margin:0 auto 56px;}
+    .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .value-card{border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px;transition:var(--transition);position:relative;overflow:hidden;}
+    .value-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transition:var(--transition);}
+    .value-card:hover{box-shadow:var(--shadow);transform:translateY(-4px);}
+    .value-card:hover::before{transform:scaleX(1);}
+    .value-num{font-family:'Poppins',sans-serif;font-size:40px;font-weight:800;color:rgba(11,31,58,0.05);line-height:1;margin-bottom:-4px;}
+    .value-icon{font-size:26px;color:var(--secondary);margin-bottom:14px;display:block;transition:var(--transition);}
+    .value-card:hover .value-icon{color:var(--accent);}
+    .value-card h4{font-size:17px;font-weight:700;margin-bottom:10px;}
+    .value-card p{font-size:14px;line-height:1.7;color:var(--text-light);margin:0;}
+
+    /* TEAM */
+    #team{padding:100px 40px;background:var(--light);}
+    .team-inner{max-width:1280px;margin:0 auto;}
+    .team-header{text-align:center;max-width:560px;margin:0 auto 56px;}
+    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+    .team-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition);}
+    .team-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+    .team-card-img{position:relative;overflow:hidden;height:280px;}
+    .team-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
+    .team-card:hover .team-card-img img{transform:scale(1.06);}
+    .team-avatar{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:56px;font-weight:700;letter-spacing:-2px;color:var(--white);position:relative;}
+    .team-avatar::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.06) 0%,transparent 60%);}
+    .av-1{background:linear-gradient(135deg,#0B1F3A 0%,#123E7A 100%);}
+    .av-2{background:linear-gradient(135deg,#1a3a5c 0%,#0B1F3A 100%);}
+    .av-3{background:linear-gradient(135deg,#123E7A 0%,#0d2d5e 100%);}
+    .av-4{background:linear-gradient(135deg,#0f2847 0%,#1a4a7a 100%);}
+    .av-5{background:linear-gradient(135deg,#0B1F3A 0%,#0d3060 100%);}
+    .av-6{background:linear-gradient(135deg,#162d50 0%,#123E7A 100%);}
+    .av-accent{color:var(--accent);}
+    .team-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,58,0.85),transparent 50%);opacity:0;transition:var(--transition);display:flex;align-items:flex-end;padding:20px;}
+    .team-card:hover .team-overlay{opacity:1;}
+    .team-socials{display:flex;gap:8px;}
+    .ts-link{width:36px;height:36px;background:rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:14px;text-decoration:none;transition:var(--transition);}
+    .ts-link:hover{background:var(--accent);color:var(--primary);}
+    .team-card-body{padding:24px 28px;}
+    .team-card-body h4{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:4px;}
+    .team-role{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:10px;}
+    .team-card-body p{font-size:13.5px;line-height:1.7;color:var(--text-light);margin:0;}
+
+    /* CTA */
+    .about-cta{padding:100px 40px;background:var(--secondary);position:relative;overflow:hidden;}
+    .about-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 20% 50%,rgba(245,176,65,0.08),transparent);}
+    .about-cta::after{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;border:1px solid rgba(255,255,255,0.06);}
+    .cta-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;position:relative;z-index:1;}
+    .cta-inner h2{font-size:clamp(26px,3vw,38px);color:var(--white);}
+    .cta-inner h2 span{color:var(--accent);}
+    .cta-inner p{color:rgba(255,255,255,0.6);font-size:16px;margin-top:10px;}
+    .cta-btns{display:flex;gap:16px;flex-shrink:0;flex-wrap:wrap;}
+
+    /* FOOTER */
+    #footer{background:var(--primary);padding:80px 40px 0;}
+    .footer-inner{max-width:1280px;margin:0 auto;}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:60px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .footer-brand p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8;margin:20px 0 28px;font-weight:300;}
+    .footer-socials{display:flex;gap:10px;}
+    .footer-social{width:38px;height:38px;border:1px solid rgba(255,255,255,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:14px;text-decoration:none;transition:var(--transition);}
+    .footer-social:hover{background:var(--accent);border-color:var(--accent);color:var(--primary);}
+    .footer-col h5{font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:24px;}
+    .footer-links{list-style:none;}
+    .footer-links li{margin-bottom:10px;}
+    .footer-links a{font-size:14px;color:rgba(255,255,255,0.45);text-decoration:none;display:flex;align-items:center;gap:8px;transition:var(--transition);}
+    .footer-links a i{font-size:12px;color:var(--accent);}
+    .footer-links a:hover{color:rgba(255,255,255,0.85);padding-left:4px;}
+    .footer-contact-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;}
+    .footer-contact-item i{color:var(--accent);font-size:14px;margin-top:3px;flex-shrink:0;}
+    .footer-contact-item span{font-size:13.5px;color:rgba(255,255,255,0.45);line-height:1.6;}
+    .footer-bottom{padding:24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .footer-bottom p{font-size:13px;color:rgba(255,255,255,0.3);}
+    .footer-bottom a{color:var(--accent);}
+    .footer-legal{display:flex;gap:24px;}
+    .footer-legal a{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:1px;color:rgba(255,255,255,0.3);text-decoration:none;text-transform:uppercase;transition:var(--transition);}
+    .footer-legal a:hover{color:var(--accent);}
+
+    @media(max-width:1100px){
+      #header{padding:0 24px;}
+      .page-banner,.story-section,.stats-bar,.mvv-section,.values-section,#team,.about-cta,#footer{padding-left:24px;padding-right:24px;}
+      .story-inner{grid-template-columns:1fr;gap:60px;}
+      .story-badge{left:12px;}
+      .story-img-inset{right:12px;}
+      .mvv-grid,.values-grid,.team-grid{grid-template-columns:repeat(2,1fr);}
+      .stats-bar-inner{grid-template-columns:repeat(2,1fr);}
+      .cta-inner{grid-template-columns:1fr;}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:40px;}
+    }
+    @media(max-width:768px){
+      .main-nav,.header-cta{display:none;}
+      .mobile-menu-btn{display:block;}
+      .mvv-grid,.values-grid,.team-grid{grid-template-columns:1fr;}
+      .footer-grid{grid-template-columns:1fr;gap:36px;}
+    }
+  
+    /* ===== WHATSAPP FLOAT + HEADER PHONE ===== */
+    /* WhatsApp Float Button */
+    @keyframes wa-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,0.5),0 6px 24px rgba(37,211,102,0.4);} 60%{box-shadow:0 0 0 14px rgba(37,211,102,0),0 6px 24px rgba(37,211,102,0.4);} }
+    @keyframes wa-bounce { 0%,100%{transform:scale(1);} 30%{transform:scale(1.15);} 60%{transform:scale(0.95);} }
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 9990; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+    .wa-btn { width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; text-decoration: none; animation: wa-pulse 2.4s ease-in-out infinite; transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), filter 0.25s ease; }
+    .wa-btn:hover { transform: scale(1.14); filter: brightness(1.1); animation: wa-bounce 0.5s ease; }
+    .wa-btn svg { width: 30px; height: 30px; fill: #fff; transition: transform 0.25s ease; }
+    .wa-btn:hover svg { transform: rotate(-8deg) scale(1.08); }
+    .wa-label { background: var(--primary); color: var(--white); font-family: 'Outfit', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; padding: 7px 16px; border-radius: 50px; white-space: nowrap; opacity: 0; transform: translateX(12px); transition: opacity 0.3s ease, transform 0.3s cubic-bezier(.34,1.56,.64,1); pointer-events: none; box-shadow: 0 4px 16px rgba(11,31,58,0.18); }
+    .wa-label::after { content: ''; position: absolute; right: -6px; top: 50%; transform: translateY(-50%); border: 6px solid transparent; border-left-color: var(--primary); border-right: none; }
+    .wa-label { position: relative; }
+    .wa-float:hover .wa-label { opacity: 1; transform: translateX(0); }
+    .header-phone { display: flex; align-items: center; gap: 7px; font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; color: rgba(255,255,255,0.9); text-decoration: none; transition: color 0.3s ease; white-space: nowrap; }
+    .header-phone i { color: var(--accent); font-size: 13px; }
+    .header-phone:hover { color: var(--accent); }
+    .header-right { display: flex; align-items: center; gap: 20px; }
+    @media (max-width: 768px) { .header-phone { display: none; } .wa-float { bottom: 18px; right: 18px; } .wa-btn { width: 52px; height: 52px; } }
+  </style>
+</head>
+<body>
+
+  <header id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="assets/img/logo.png" alt="Banshap Investment Company Limited" class="site-logo">
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="starter-page.html" class="active">About Us</a></li>
+          <li><a href="service-details.html">Services</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="blog.html">Insights</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-right"><a href="tel:+255716628867" class="header-phone"><i class="bi bi-telephone-fill"></i> +255 716 628 867</a><a href="index.html#contact" class="header-cta">Request Consultation</a></div>
+      <button class="mobile-menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"><i class="bi bi-list"></i></button>
+    </div>
+  </header>
+
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="mobileNav">
+    <div class="offcanvas-header">
+      <div class="logo-wrap"><img src="assets/img/logo.png" alt="Banshap Investment Company Limited" class="site-logo"></div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="starter-page.html" class="nav-link active">About Us</a>
+        <a href="service-details.html" class="nav-link">Services</a>
+        <a href="index.html#projects" class="nav-link" data-bs-dismiss="offcanvas">Projects</a>
+        <a href="blog.html" class="nav-link">Insights</a>
+        <a href="index.html#contact" class="nav-link" data-bs-dismiss="offcanvas">Contact</a>
+      </nav>
+      <a href="index.html#contact" class="offcanvas-cta" data-bs-dismiss="offcanvas">Request Consultation</a>
+    </div>
+  </div>
+
+  <!-- PAGE BANNER -->
+  <section class="page-banner">
+    <div class="page-banner-inner">
+      <div class="label-tag" data-aos="fade-right">About Banshap</div>
+      <h1 data-aos="fade-up">Who We <span>Are</span></h1>
+      <p data-aos="fade-up" data-aos-delay="100">Fifteen years of operational excellence, regulatory expertise, and client-first service — building Tanzania's business future from Dar es Salaam outward.</p>
+      <div class="breadcrumb-nav" data-aos="fade-up" data-aos-delay="200">
+        <a href="index.html">Home</a>
+        <i class="bi bi-chevron-right"></i>
+        <span>About Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANY STORY -->
+  <section class="story-section">
+    <div class="story-inner">
+      <div class="story-media" data-aos="fade-right">
+        <img src="assets/img/banshap/banshap-transport-6.jpg" alt="Banshap Operations" class="story-img-main">
+        <img src="assets/img/banshap/banshap-team-huddle.jpg" alt="Banshap Team" class="story-img-inset">
+        <div class="story-badge">
+          <span class="num">15+</span>
+          <span class="lbl">Years of<br>Excellence</span>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <div class="label-tag">Our Story</div>
+        <h2 class="section-heading">Built on <span>Trust</span>, Driven by Results</h2>
+        <p class="section-sub" style="margin-bottom:20px;">Founded in 2010, Banshap Investment Company Limited was established with a clear purpose: to eliminate the operational friction that slows business growth in Tanzania.</p>
+        <p style="font-size:15px;color:var(--text-light);line-height:1.8;margin-bottom:20px;">What began as a logistics coordination firm has grown into a fully integrated business facilitation company — serving hundreds of clients across all major sectors with services spanning freight, regulatory compliance, corporate registration, and investment advisory.</p>
+        <p style="font-size:15px;color:var(--text-light);line-height:1.8;margin-bottom:32px;">Our Samora Avenue offices in Dar es Salaam place us at the heart of Tanzania's commercial district — giving clients direct, face-to-face access to specialists who understand the local landscape in depth.</p>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:36px;">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:16px;flex-shrink:0;"></i>
+            <span style="font-size:15px;color:var(--text);">Fully registered with BRELA, TRA, and all applicable regulatory bodies</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:16px;flex-shrink:0;"></i>
+            <span style="font-size:15px;color:var(--text);">Active operations across all 26 regions of Tanzania</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:16px;flex-shrink:0;"></i>
+            <span style="font-size:15px;color:var(--text);">Serving domestic and international clients since 2010</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <i class="bi bi-check-circle-fill" style="color:var(--accent);font-size:16px;flex-shrink:0;"></i>
+            <span style="font-size:15px;color:var(--text);">98% client satisfaction rate across all service lines</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="service-details.html" class="btn-accent">Our Services <i class="bi bi-arrow-right"></i></a>
+          <a href="index.html#contact" class="btn-outline-accent">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-bar-inner">
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="0">
+        <span class="stat-num"><span class="counter" data-target="500">0</span><span style="color:var(--accent);">+</span></span>
+        <span class="stat-lbl">Projects Completed</span>
+      </div>
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+        <span class="stat-num"><span class="counter" data-target="98">0</span><span style="color:var(--accent);">%</span></span>
+        <span class="stat-lbl">Client Satisfaction</span>
+      </div>
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+        <span class="stat-num"><span class="counter" data-target="26">0</span><span style="color:var(--accent);"></span></span>
+        <span class="stat-lbl">Regions Covered</span>
+      </div>
+      <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+        <span class="stat-num"><span class="counter" data-target="50">0</span><span style="color:var(--accent);">+</span></span>
+        <span class="stat-lbl">Strategic Partners</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MISSION / VISION / VALUES SLIDER -->
+  <section class="mvv-section">
+    <div class="mvv-inner">
+      <div style="text-align:center;" data-aos="fade-up">
+        <div class="label-tag" style="justify-content:center;">Our Foundation</div>
+        <h2 class="section-heading">What <span>Drives Us</span></h2>
+        <p class="section-sub mx-auto" style="max-width:520px;">Every decision we make is anchored to these four pillars — guiding how we serve our clients and grow our impact across Tanzania.</p>
+      </div>
+      <div class="mvv-slider-wrap" data-aos="fade-up" data-aos-delay="100">
+        <div class="mvv-track" id="mvvTrack">
+          <!-- Slide 1: Mission -->
+          <div class="mvv-slide">
+            <div class="mvv-card active">
+              <div class="mvv-icon mission"><i class="bi bi-bullseye"></i></div>
+              <h3>Our Mission</h3>
+              <p>To eliminate operational friction for businesses across Tanzania — connecting reliable logistics infrastructure with expert regulatory support to accelerate growth at every stage of the business lifecycle.</p>
+            </div>
+          </div>
+          <!-- Slide 2: Vision -->
+          <div class="mvv-slide">
+            <div class="mvv-card">
+              <div class="mvv-icon vision"><i class="bi bi-eye"></i></div>
+              <h3>Our Vision</h3>
+              <p>To be East Africa's most trusted integrated business facilitation company — recognised for operational reliability, regulatory integrity, and the measurable commercial outcomes we deliver for every client we serve.</p>
+            </div>
+          </div>
+          <!-- Slide 3: Core Values -->
+          <div class="mvv-slide">
+            <div class="mvv-card">
+              <div class="mvv-icon values"><i class="bi bi-gem"></i></div>
+              <h3>Core Values</h3>
+              <p>Integrity, reliability, client partnership, operational excellence, and continuous improvement. These values are not aspirational — they are embedded in every process, engagement, and outcome we deliver.</p>
+            </div>
+          </div>
+          <!-- Slide 4: Quality Statement -->
+          <div class="mvv-slide">
+            <div class="mvv-card">
+              <div class="mvv-icon quality"><i class="bi bi-patch-check"></i></div>
+              <h3>Quality Statement</h3>
+              <p>Banshap Investment Company is fully committed to delivering services that meet and exceed the expectations of our clients. We believe <em>"Quality is What We Provide"</em> — embedded in every process we run.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <div class="mvv-controls">
+        <div class="mvv-dots" id="mvvDots">
+          <div class="mvv-dot active" data-index="0"></div>
+          <div class="mvv-dot" data-index="1"></div>
+          <div class="mvv-dot" data-index="2"></div>
+          <div class="mvv-dot" data-index="3"></div>
+        </div>
+        <div class="mvv-arrows">
+          <button class="mvv-arrow" id="mvvPrev" aria-label="Previous" disabled><i class="bi bi-arrow-left"></i></button>
+          <button class="mvv-arrow" id="mvvNext" aria-label="Next"><i class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE VALUES -->
+  <section class="values-section">
+    <div class="values-inner">
+      <div class="values-header" data-aos="fade-up">
+        <div class="label-tag" style="justify-content:center;">Core Values</div>
+        <h2 class="section-heading">The Principles We <span>Work By</span></h2>
+        <p class="section-sub mx-auto">Six principles that define how every member of the Banshap team approaches their work — and their relationships with our clients.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="value-num">01</div>
+          <i class="bi bi-shield-check value-icon"></i>
+          <h4>Integrity</h4>
+          <p>We operate with complete transparency — in our pricing, our timelines, and our outcomes. Clients receive honest assessments, not optimistic estimates.</p>
+        </div>
+        <div class="value-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="value-num">02</div>
+          <i class="bi bi-lightning-charge value-icon"></i>
+          <h4>Reliability</h4>
+          <p>We deliver what we commit to — on time, every time. Our systems and team structures are built to maintain performance consistency regardless of external pressure.</p>
+        </div>
+        <div class="value-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="value-num">03</div>
+          <i class="bi bi-people value-icon"></i>
+          <h4>Client Partnership</h4>
+          <p>We don't just complete tasks — we invest in understanding our clients' long-term goals and build relationships that extend well beyond individual engagements.</p>
+        </div>
+        <div class="value-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="value-num">04</div>
+          <i class="bi bi-graph-up value-icon"></i>
+          <h4>Operational Excellence</h4>
+          <p>Every process is designed, measured, and continuously improved. We apply structured quality management to logistics, compliance, and advisory services alike.</p>
+        </div>
+        <div class="value-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="value-num">05</div>
+          <i class="bi bi-globe value-icon"></i>
+          <h4>Nationwide Reach</h4>
+          <p>We bring the same quality of service to every region of Tanzania — from Dar es Salaam to Mtwara, from Arusha to Kigoma — with a consistent, reliable standard of delivery.</p>
+        </div>
+        <div class="value-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="value-num">06</div>
+          <i class="bi bi-arrow-repeat value-icon"></i>
+          <h4>Continuous Improvement</h4>
+          <p>We actively invest in our people, our technology, and our processes — staying ahead of regulatory changes and logistics trends to maintain a genuine competitive edge for our clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <div class="team-inner">
+      <div class="team-header" data-aos="fade-up">
+        <div class="label-tag" style="justify-content:center;">Our People</div>
+        <h2 class="section-heading">The <span>Team</span> Behind the Results</h2>
+        <p class="section-sub mx-auto">Specialists with deep expertise across logistics, regulatory compliance, corporate law, and investment advisory — united by a single purpose.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="team-card-img">
+            <div class="team-avatar av-1"><span>SM</span></div>
+            <div class="team-overlay">
+              <div class="team-socials">
+                <a href="mailto:sharifu.mtuta@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-card-body">
+            <h4>Sharifu Mtuta</h4>
+            <span class="team-role">Chief Executive Officer</span>
+            <p>Visionary leader and co-founder of Banshap Investment Company Limited. Drives the company's strategic direction, client partnerships, and long-term growth across Tanzania's logistics, compliance, and investment sectors.</p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="team-card-img">
+            <div class="team-avatar av-2"><span>AS</span></div>
+            <div class="team-overlay">
+              <div class="team-socials">
+                <a href="mailto:adam.sharifu@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-card-body">
+            <h4>Adam Sharifu</h4>
+            <span class="team-role">Managing Director</span>
+            <p>Oversees day-to-day operations and corporate governance at Banshap. Brings deep expertise in business facilitation, regulatory navigation, and organisational leadership across Tanzania's commercial landscape.</p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="team-card-img">
+            <div class="team-avatar av-3"><span>EN</span></div>
+            <div class="team-overlay">
+              <div class="team-socials">
+                <a href="mailto:emmanuel.ntiga@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-card-body">
+            <h4>Emmanuel Ntiga</h4>
+            <span class="team-role">Operations Manager</span>
+            <p>Manages end-to-end logistics operations, freight coordination, and service delivery across all active client engagements. Ensures operational reliability and performance standards are consistently met.</p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="team-card-img">
+            <div class="team-avatar av-4"><span>GK</span></div>
+            <div class="team-overlay">
+              <div class="team-socials">
+                <a href="mailto:glory.kessy@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-card-body">
+            <h4>Glory Kessy</h4>
+            <span class="team-role">Accounts Manager</span>
+            <p>Responsible for financial management, client billing, and TRA compliance reporting. Ensures all financial records are accurate, current, and fully compliant with Tanzanian regulatory requirements.</p>
+          </div>
+        </div>
+        <div class="team-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="team-card-img">
+            <div class="team-avatar av-5"><span>KH</span></div>
+            <div class="team-overlay">
+              <div class="team-socials">
+                <a href="mailto:Khadija@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-card-body">
+            <h4>Khadija</h4>
+            <span class="team-role">Human Resources Manager</span>
+            <p>Leads talent acquisition, staff development, and organisational culture at Banshap. Committed to building a high-performing team that delivers exceptional service to every client.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="about-cta">
+    <div class="cta-inner">
+      <div data-aos="fade-right">
+        <h2>Ready to Partner with <span>Banshap?</span></h2>
+        <p>Join hundreds of businesses that trust Banshap for their logistics, regulatory, and investment needs across Tanzania.</p>
+      </div>
+      <div class="cta-btns" data-aos="fade-left">
+        <a href="index.html#contact" class="btn-accent">Request Consultation <i class="bi bi-arrow-right"></i></a>
+        <a href="service-details.html" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,0.85);font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:14px 30px;border-radius:var(--radius);border:2px solid rgba(255,255,255,0.25);transition:var(--transition);" onmouseover="this.style.borderColor='rgba(255,255,255,0.6)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.25)'">View Services <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-wrap"><img src="assets/img/logo.png" alt="Banshap Investment Company Limited" class="site-logo"></div>
+          <p>Tanzania's trusted partner for logistics infrastructure, regulatory navigation, and business facilitation — operating across all major regions since 2010.</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/banshapinvestment" target="_blank" rel="noopener" class="footer-social" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/banshapinvestment" target="_blank" rel="noopener" class="footer-social" title="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/banshapinvestment" target="_blank" rel="noopener" class="footer-social" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://wa.me/255716628867" target="_blank" rel="noopener" class="footer-social" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="starter-page.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="service-details.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Insights</a></li>
+            <li><a href="index.html#contact"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html#logistics"><i class="bi bi-chevron-right"></i> Logistics</a></li>
+            <li><a href="service-details.html#brela"><i class="bi bi-chevron-right"></i> BRELA Registration</a></li>
+            <li><a href="service-details.html#licensing"><i class="bi bi-chevron-right"></i> Business Licensing</a></li>
+            <li><a href="service-details.html#filing"><i class="bi bi-chevron-right"></i> Annual Filing</a></li>
+            <li><a href="service-details.html#advisory"><i class="bi bi-chevron-right"></i> Advisory</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="bi bi-geo-alt"></i><span>Mkwepu & Samora St, Dar es Salaam</span></div>
+          <div class="footer-contact-item"><i class="bi bi-telephone"></i><span>+255 716 628 867</span></div>
+          <div class="footer-contact-item"><i class="bi bi-envelope"></i><span>sharifu.mtuta@banshapinvestment.co.tz</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Banshap Investment Company Limited. All rights reserved.</span>
+        <span>Registered in Tanzania | BRELA No. 123456</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <div class="wa-float">
+    <span class="wa-label">Chat on WhatsApp</span>
+    <a href="https://wa.me/255716628867" class="wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, easing: 'ease-out-quad', once: true, offset: 60 });
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 60); });
+
+    // Counter animation
+    function animateCounter(el, target) {
+      let start = 0, step = target / 80;
+      const timer = setInterval(() => {
+        start += step;
+        if (start >= target) { el.textContent = target; clearInterval(timer); }
+        else { el.textContent = Math.floor(start); }
+      }, 18);
+    }
+    const cObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('[data-target]').forEach(el => {
+            animateCounter(el, parseInt(el.dataset.target));
+          });
+          cObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0 });
+    document.querySelectorAll('.stats-bar').forEach(el => cObs.observe(el));
+
+    // MVV Slider — JS-controlled widths
+    (function() {
+      var wrap = document.querySelector('.mvv-slider-wrap');
+      var track = document.getElementById('mvvTrack');
+      var slides = track ? Array.from(track.querySelectorAll('.mvv-slide')) : [];
+      var dots = Array.from(document.querySelectorAll('.mvv-dot'));
+      var prevBtn = document.getElementById('mvvPrev');
+      var nextBtn = document.getElementById('mvvNext');
+      var current = 0;
+      var gap = 28;
+
+      function perView() { return window.innerWidth <= 600 ? 1 : window.innerWidth <= 900 ? 2 : 3; }
+      function slideW() { return (wrap.offsetWidth - gap * (perView() - 1)) / perView(); }
+
+      function setWidths() {
+        var w = slideW();
+        slides.forEach(function(s) { s.style.width = w + 'px'; s.style.minWidth = w + 'px'; s.style.marginRight = gap + 'px'; });
+      }
+      function goTo(idx) {
+        var max = slides.length - perView();
+        idx = Math.max(0, Math.min(idx, max));
+        current = idx;
+        track.style.transform = 'translateX(-' + (idx * (slideW() + gap)) + 'px)';
+        dots.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
+        slides.forEach(function(s, i) { s.querySelector('.mvv-card').classList.toggle('active', i === idx); });
+        if (prevBtn) prevBtn.disabled = idx === 0;
+        if (nextBtn) nextBtn.disabled = idx >= max;
+      }
+      if (prevBtn) prevBtn.addEventListener('click', function() { goTo(current - 1); });
+      if (nextBtn) nextBtn.addEventListener('click', function() { goTo(current + 1); });
+      dots.forEach(function(d) { d.addEventListener('click', function() { goTo(parseInt(this.dataset.index)); }); });
+      setInterval(function() { goTo(current < slides.length - perView() ? current + 1 : 0); }, 4500);
+      window.addEventListener('resize', function() { setWidths(); goTo(0); });
+      setWidths(); goTo(0);
+    })();
+  </script>
+</body>
+</html>
