@@ -106,24 +106,24 @@
     .hero-stat-lbl { font-family: 'Outfit', sans-serif; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 6px; display: block; }
 
     /* ===== CLIENTS STRIP ===== */
-    .clients-strip { background: var(--light); padding: 36px 40px; border-bottom: 1px solid var(--border); }
-    .clients-strip-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 48px; flex-wrap: wrap; }
-    .clients-label { font-family: 'Outfit', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); white-space: nowrap; flex-shrink: 0; }
-    .clients-logos { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; flex: 1; }
-    /* ---- new logo cards ---- */
+    .clients-strip { background: var(--light); padding: 24px 40px; border-bottom: 1px solid var(--border); }
+    .clients-strip-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+    .clients-label { font-family: 'Outfit', sans-serif; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); white-space: nowrap; flex-shrink: 0; }
+    .clients-logos { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; flex: 1; }
+    /* ---- logo cards ---- */
     .client-logo-wrap {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 5px;
+      gap: 3px;
     }
     .client-logo-img {
-      height: 36px;
+      height: 28px;
       width: auto;
-      max-width: 110px;
+      max-width: 90px;
       object-fit: contain;
       filter: grayscale(30%);
-      opacity: 0.85;
+      opacity: 0.82;
       transition: var(--transition);
     }
     .client-logo-wrap:hover .client-logo-img {
@@ -132,13 +132,13 @@
     }
     .client-logo-dark-bg .client-logo-img {
       background: var(--primary);
-      border-radius: 5px;
-      padding: 4px 10px;
+      border-radius: 4px;
+      padding: 3px 8px;
     }
     .cb-name {
       font-family: 'Outfit', sans-serif;
-      font-size: 9px;
-      letter-spacing: 1px;
+      font-size: 7px;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
       color: var(--text-light);
     }
@@ -394,8 +394,9 @@
       .footer-grid { grid-template-columns: 1fr; gap: 36px; }
       .form-row { grid-template-columns: 1fr; }
       .clients-strip-inner { flex-direction: column; align-items: flex-start; }
-      .clients-logos { gap: 12px; }
-      .client-logo-img { height: 28px; max-width: 85px; }
+      .clients-logos { gap: 10px; }
+      .client-logo-img { height: 22px; max-width: 70px; }
+      .cb-name { font-size: 6px; }
       .client-badge { font-size: 11px; padding: 6px 12px; }
     }
   
@@ -519,59 +520,59 @@
       <span class="clients-label">Trusted By</span>
       <div class="clients-logos">
         <div class="client-logo-wrap">
-          <img src="https://crdbbank.co.tz/storage/app/media/images/logo.svg" alt="CRDB Bank" class="client-logo-img">
+          <img src="assets/img/clients/crdb.svg" alt="CRDB Bank" class="client-logo-img" onerror="this.onerror=null;this.src='https://crdbbank.co.tz/storage/app/media/images/logo.svg'">
           <span class="cb-name">CRDB Bank</span>
         </div>
         <div class="client-logo-wrap client-logo-dark-bg">
-          <img src="https://www.nmbbank.co.tz/images/nmb-white-logo.png" alt="NMB Bank" class="client-logo-img">
+          <img src="assets/img/clients/nmb.png" alt="NMB Bank" class="client-logo-img" onerror="this.onerror=null;this.src='https://www.nmbbank.co.tz/images/nmb-white-logo.png'">
           <span class="cb-name">NMB Bank</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="https://images.seeklogo.com/logo-png/21/1/vodacom-logo-png_seeklogo-215102.png" alt="Vodacom Tanzania" class="client-logo-img">
+          <img src="assets/img/clients/vodacom.png" alt="Vodacom Tanzania" class="client-logo-img" onerror="this.onerror=null;this.src='https://images.seeklogo.com/logo-png/21/1/vodacom-logo-png_seeklogo-215102.png'">
           <span class="cb-name">Vodacom TZ</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="https://images.seeklogo.com/logo-png/63/1/azam-logo-png_seeklogo-631037.png" alt="Azam Group" class="client-logo-img">
+          <img src="assets/img/clients/azam.png" alt="Azam Group" class="client-logo-img" onerror="this.onerror=null;this.src='https://images.seeklogo.com/logo-png/63/1/azam-logo-png_seeklogo-631037.png'">
           <span class="cb-name">Azam Group</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="https://images.seeklogo.com/logo-png/31/1/tanesco-tanzania-electric-supply-company-limited-logo-png_seeklogo-311615.png" alt="TANESCO" class="client-logo-img">
+          <img src="assets/img/clients/tanesco.png" alt="TANESCO" class="client-logo-img" onerror="this.onerror=null;this.src='https://images.seeklogo.com/logo-png/31/1/tanesco-tanzania-electric-supply-company-limited-logo-png_seeklogo-311615.png'">
           <span class="cb-name">TANESCO</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="https://images.seeklogo.com/logo-png/56/1/tanzania-ports-authority-tpa-logo-png_seeklogo-569241.png" alt="Tanzania Ports Authority" class="client-logo-img">
+          <img src="assets/img/clients/tpa.png" alt="Tanzania Ports Authority" class="client-logo-img" onerror="this.onerror=null;this.src='https://images.seeklogo.com/logo-png/56/1/tanzania-ports-authority-tpa-logo-png_seeklogo-569241.png'">
           <span class="cb-name">TPA</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="https://www.tra.go.tz/public/dist/images/LOGO_WINGS.png" alt="Tanzania Revenue Authority" class="client-logo-img">
+          <img src="assets/img/clients/tra.png" alt="Tanzania Revenue Authority" class="client-logo-img">
           <span class="cb-name">TRA</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="https://images.seeklogo.com/logo-png/57/3/stanbic-bank-logo-png_seeklogo-571354.png" alt="Stanbic Bank Tanzania" class="client-logo-img">
+          <img src="assets/img/clients/stanbic%20logo.jpg" alt="Stanbic Bank Tanzania" class="client-logo-img">
           <span class="cb-name">Stanbic Bank</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="https://images.seeklogo.com/logo-png/39/1/tanzania-breweries-limited-logo-png_seeklogo-394056.png" alt="Tanzania Breweries Limited" class="client-logo-img">
+          <img src="assets/img/clients/tbl%20tz.jpg" alt="Tanzania Breweries Limited" class="client-logo-img">
           <span class="cb-name">TBL</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="https://watu.com/wp-content/uploads/Watu-Logo_Colour.svg" alt="Watu Credit" class="client-logo-img" onerror="this.src='https://watu.com/wp-content/uploads/Watu-Logo_White.svg';this.closest('.client-logo-wrap').classList.add('client-logo-dark-bg')">
+          <img src="assets/img/clients/watu%20logo.png" alt="Watu Credit" class="client-logo-img">
           <span class="cb-name">Watu Credit</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="https://images.seeklogo.com/logo-png/31/1/coat-of-arms-of-tanzania-logo-png_seeklogo-311608.png" alt="Government of Tanzania" class="client-logo-img">
+          <img src="assets/img/clients/local%20government.jpg" alt="Government of Tanzania" class="client-logo-img">
           <span class="cb-name">Govt. of Tanzania</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="https://www.brela.go.tz/site/images/brela.png" alt="BRELA" class="client-logo-img">
+          <img src="assets/img/clients/blera.png" alt="BRELA" class="client-logo-img">
           <span class="cb-name">BRELA</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="https://www.tfra.go.tz/site/images/logo.png" alt="TFRA" class="client-logo-img">
+          <img src="assets/img/clients/Mamlaka%20ya%20Udhibiti%20wa%20Mbolea%20Tanzania%20(TFRA).png" alt="TFRA" class="client-logo-img">
           <span class="cb-name">TFRA</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="https://www.kilimo.go.tz/site/images/logo-kilimoo.png" alt="Ministry of Agriculture Tanzania" class="client-logo-img">
+          <img src="assets/img/clients/wizara%20ya%20kilimo.png" alt="Ministry of Agriculture Tanzania" class="client-logo-img">
           <span class="cb-name">Min. of Agriculture</span>
         </div>
       </div>
