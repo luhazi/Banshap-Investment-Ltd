@@ -109,7 +109,40 @@
     .clients-strip { background: var(--light); padding: 36px 40px; border-bottom: 1px solid var(--border); }
     .clients-strip-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 48px; flex-wrap: wrap; }
     .clients-label { font-family: 'Outfit', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); white-space: nowrap; flex-shrink: 0; }
-    .clients-logos { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; flex: 1; }
+    .clients-logos { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; flex: 1; }
+    /* ---- new logo cards ---- */
+    .client-logo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    .client-logo-img {
+      height: 36px;
+      width: auto;
+      max-width: 110px;
+      object-fit: contain;
+      filter: grayscale(30%);
+      opacity: 0.85;
+      transition: var(--transition);
+    }
+    .client-logo-wrap:hover .client-logo-img {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+    .client-logo-dark-bg .client-logo-img {
+      background: var(--primary);
+      border-radius: 5px;
+      padding: 4px 10px;
+    }
+    .cb-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+    /* ---- keep old badge style for any fallback ---- */
     .client-badge {
       font-family: 'Outfit', sans-serif;
       font-size: 12px;
@@ -361,7 +394,8 @@
       .footer-grid { grid-template-columns: 1fr; gap: 36px; }
       .form-row { grid-template-columns: 1fr; }
       .clients-strip-inner { flex-direction: column; align-items: flex-start; }
-      .clients-logos { gap: 10px; }
+      .clients-logos { gap: 12px; }
+      .client-logo-img { height: 28px; max-width: 85px; }
       .client-badge { font-size: 11px; padding: 6px 12px; }
     }
   
@@ -484,16 +518,46 @@
     <div class="clients-strip-inner">
       <span class="clients-label">Trusted By</span>
       <div class="clients-logos">
-        <span class="client-badge">CRDB Bank<span class="cb-sector">Banking</span></span>
-        <span class="client-badge">NMB Bank<span class="cb-sector">Banking</span></span>
-        <span class="client-badge">Vodacom TZ<span class="cb-sector">Telecoms</span></span>
-        <span class="client-badge">Azam Group<span class="cb-sector">Conglomerate</span></span>
-        <span class="client-badge">TANESCO<span class="cb-sector">Energy</span></span>
-        <span class="client-badge">TPA<span class="cb-sector">Ports Authority</span></span>
-        <span class="client-badge">TRA<span class="cb-sector">Revenue Authority</span></span>
-        <span class="client-badge">Watu Credit<span class="cb-sector">Finance</span></span>
-        <span class="client-badge">Stanbic Tanzania<span class="cb-sector">Banking</span></span>
-        <span class="client-badge">TBL<span class="cb-sector">Manufacturing</span></span>
+        <div class="client-logo-wrap">
+          <img src="assets/img/clients/crdb.svg" alt="CRDB Bank" class="client-logo-img">
+          <span class="cb-name">CRDB Bank</span>
+        </div>
+        <div class="client-logo-wrap client-logo-dark-bg">
+          <img src="assets/img/clients/nmb.png" alt="NMB Bank" class="client-logo-img">
+          <span class="cb-name">NMB Bank</span>
+        </div>
+        <div class="client-logo-wrap">
+          <img src="assets/img/clients/vodacom.png" alt="Vodacom Tanzania" class="client-logo-img">
+          <span class="cb-name">Vodacom TZ</span>
+        </div>
+        <div class="client-logo-wrap">
+          <img src="assets/img/clients/azam.png" alt="Azam Group" class="client-logo-img">
+          <span class="cb-name">Azam Group</span>
+        </div>
+        <div class="client-logo-wrap">
+          <img src="assets/img/clients/tanesco.png" alt="TANESCO" class="client-logo-img">
+          <span class="cb-name">TANESCO</span>
+        </div>
+        <div class="client-logo-wrap">
+          <img src="assets/img/clients/tpa.png" alt="Tanzania Ports Authority" class="client-logo-img">
+          <span class="cb-name">TPA</span>
+        </div>
+        <div class="client-logo-wrap">
+          <img src="assets/img/clients/tra.png" alt="Tanzania Revenue Authority" class="client-logo-img">
+          <span class="cb-name">TRA</span>
+        </div>
+        <div class="client-logo-wrap client-logo-dark-bg">
+          <img src="assets/img/clients/watu.svg" alt="Watu Credit" class="client-logo-img">
+          <span class="cb-name">Watu Credit</span>
+        </div>
+        <div class="client-logo-wrap">
+          <img src="assets/img/clients/stanbic.png" alt="Stanbic Bank Tanzania" class="client-logo-img">
+          <span class="cb-name">Stanbic</span>
+        </div>
+        <div class="client-logo-wrap">
+          <img src="assets/img/clients/tbl.png" alt="Tanzania Breweries Limited" class="client-logo-img">
+          <span class="cb-name">TBL</span>
+        </div>
       </div>
     </div>
   </div>
