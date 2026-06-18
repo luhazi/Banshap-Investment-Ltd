@@ -9,9 +9,8 @@
 
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/css/fonts.css" as="style">
+  <link href="assets/css/fonts.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -547,7 +546,7 @@
 
   <!-- ===== HERO ===== -->
   <section id="hero">
-    <div class="hero-bg"><img src="assets/img/banshap/banshap-transport-2.jpg" alt="Banshap Operations"></div>
+    <div class="hero-bg"><img src="assets/img/banshap/banshap-transport-2.jpg" alt="Banshap Operations" loading="lazy"></div>
     <div class="hero-overlay"></div>
     <div class="hero-pattern"></div>
     <div class="hero-grid"></div>
@@ -596,27 +595,27 @@
       <span class="clients-label">Trusted By</span>
       <div class="clients-logos">
         <div class="client-logo-wrap">
-          <img src="assets/img/clients/crdb.svg" alt="CRDB Bank" class="client-logo-img" onerror="this.onerror=null;this.src='https://crdbbank.co.tz/storage/app/media/images/logo.svg'">
+          <img src="assets/img/clients/crdb.svg" alt="CRDB Bank" class="client-logo-img">
           <span class="cb-name">CRDB Bank</span>
         </div>
         <div class="client-logo-wrap client-logo-dark-bg">
-          <img src="assets/img/clients/nmb.png" alt="NMB Bank" class="client-logo-img" onerror="this.onerror=null;this.src='https://www.nmbbank.co.tz/images/nmb-white-logo.png'">
+          <img src="assets/img/clients/nmb.png" alt="NMB Bank" class="client-logo-img">
           <span class="cb-name">NMB Bank</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="assets/img/clients/vodacom.png" alt="Vodacom Tanzania" class="client-logo-img" onerror="this.onerror=null;this.src='https://images.seeklogo.com/logo-png/21/1/vodacom-logo-png_seeklogo-215102.png'">
+          <img src="assets/img/clients/vodacom.png" alt="Vodacom Tanzania" class="client-logo-img">
           <span class="cb-name">Vodacom TZ</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="assets/img/clients/azam.png" alt="Azam Group" class="client-logo-img" onerror="this.onerror=null;this.src='https://images.seeklogo.com/logo-png/63/1/azam-logo-png_seeklogo-631037.png'">
+          <img src="assets/img/clients/azam.png" alt="Azam Group" class="client-logo-img">
           <span class="cb-name">Azam Group</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="assets/img/clients/tanesco.png" alt="TANESCO" class="client-logo-img" onerror="this.onerror=null;this.src='https://images.seeklogo.com/logo-png/31/1/tanesco-tanzania-electric-supply-company-limited-logo-png_seeklogo-311615.png'">
+          <img src="assets/img/clients/tanesco.png" alt="TANESCO" class="client-logo-img">
           <span class="cb-name">TANESCO</span>
         </div>
         <div class="client-logo-wrap">
-          <img src="assets/img/clients/tpa.png" alt="Tanzania Ports Authority" class="client-logo-img" onerror="this.onerror=null;this.src='https://images.seeklogo.com/logo-png/56/1/tanzania-ports-authority-tpa-logo-png_seeklogo-569241.png'">
+          <img src="assets/img/clients/tpa.png" alt="Tanzania Ports Authority" class="client-logo-img">
           <span class="cb-name">TPA</span>
         </div>
         <div class="client-logo-wrap">
@@ -659,8 +658,8 @@
   <section id="about">
     <div class="about-inner">
       <div class="about-media" data-aos="fade-right">
-        <img src="assets/img/banshap/banshap-team-meeting.jpg" alt="Banshap Operations" class="about-img-main">
-        <img src="assets/img/banshap/banshap-team-review.jpg" alt="Banshap Team" class="about-img-inset">
+        <img src="assets/img/banshap/banshap-team-meeting.jpg" alt="Banshap Operations" class="about-img-main" loading="lazy">
+        <img src="assets/img/banshap/banshap-team-review.jpg" alt="Banshap Team" class="about-img-inset" loading="lazy">
         <div class="about-badge">
           <span class="num">6+</span>
           <span class="lbl">Years of<br>Excellence</span>
@@ -869,7 +868,7 @@
 
         <div class="portfolio-item filter-logistics">
           <div class="portfolio-badge">Logistics</div>
-          <img src="assets/img/banshap/banshap-transport-1.jpg" alt="Northern Corridor Freight Programme">
+          <img src="assets/img/banshap/banshap-transport-1.jpg" alt="Northern Corridor Freight Programme" loading="lazy">
           <div class="portfolio-overlay">
             <div class="portfolio-cat">Logistics</div>
             <h4>Northern Corridor Freight Programme</h4>
@@ -882,7 +881,7 @@
 
         <div class="portfolio-item filter-transport">
           <div class="portfolio-badge">Transport</div>
-          <img src="assets/img/banshap/banshap-fleet-1.jpg" alt="Fleet Mobilisation — Mbeya Region">
+          <img src="assets/img/banshap/banshap-fleet-1.jpg" alt="Fleet Mobilisation — Mbeya Region" loading="lazy">
           <div class="portfolio-overlay">
             <div class="portfolio-cat">Transportation</div>
             <h4>Fleet Mobilisation — Mbeya Region</h4>
@@ -895,7 +894,7 @@
 
         <div class="portfolio-item filter-investment">
           <div class="portfolio-badge">Investment</div>
-          <img src="assets/img/banshap/banshap-agri-farmer-1.jpg" alt="Agri-Investment Advisory — Kilosa">
+          <img src="assets/img/banshap/banshap-agri-farmer-1.jpg" alt="Agri-Investment Advisory — Kilosa" loading="lazy">
           <div class="portfolio-overlay">
             <div class="portfolio-cat">Investment Advisory</div>
             <h4>Agri-Investment Advisory — Kilosa</h4>
@@ -908,7 +907,7 @@
 
         <div class="portfolio-item filter-corporate">
           <div class="portfolio-badge">Corporate</div>
-          <img src="assets/img/banshap/banshap-reg-certificate-1.jpg" alt="BRELA Bulk Registration — Arusha SME Cluster">
+          <img src="assets/img/banshap/banshap-reg-certificate-1.jpg" alt="BRELA Bulk Registration — Arusha SME Cluster" loading="lazy">
           <div class="portfolio-overlay">
             <div class="portfolio-cat">Corporate Services</div>
             <h4>BRELA Bulk Registration — Arusha SME Cluster</h4>
@@ -921,7 +920,7 @@
 
         <div class="portfolio-item filter-logistics">
           <div class="portfolio-badge">Logistics</div>
-          <img src="assets/img/banshap/banshap-transport-3.jpg" alt="Dar es Salaam Port Clearance Operations">
+          <img src="assets/img/banshap/banshap-transport-3.jpg" alt="Dar es Salaam Port Clearance Operations" loading="lazy">
           <div class="portfolio-overlay">
             <div class="portfolio-cat">Logistics</div>
             <h4>Dar es Salaam Port Clearance Operations</h4>
@@ -934,7 +933,7 @@
 
         <div class="portfolio-item filter-transport">
           <div class="portfolio-badge">Transport</div>
-          <img src="assets/img/banshap/banshap-agri-citrus-1.jpg" alt="Cold Chain Horticultural Distribution — Iringa">
+          <img src="assets/img/banshap/banshap-agri-citrus-1.jpg" alt="Cold Chain Horticultural Distribution — Iringa" loading="lazy">
           <div class="portfolio-overlay">
             <div class="portfolio-cat">Transportation</div>
             <h4>Cold Chain Distribution — Iringa</h4>
