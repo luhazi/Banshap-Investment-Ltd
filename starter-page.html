@@ -88,7 +88,7 @@
     .story-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:0.9fr 1.1fr;gap:80px;align-items:center;}
     .story-media{position:relative;}
     .story-img-main{width:100%;height:520px;object-fit:cover;border-radius:var(--radius-lg);}
-    .story-img-inset{position:absolute;bottom:-28px;right:-24px;width:180px;height:140px;object-fit:cover;border-radius:var(--radius);border:5px solid var(--white);box-shadow:var(--shadow);}
+    .story-img-inset{position:absolute;bottom:-28px;right:-24px;width:220px;height:160px;object-fit:cover;object-position:center 20%;border-radius:var(--radius);border:5px solid var(--white);box-shadow:var(--shadow);}
     .story-badge{position:absolute;top:28px;left:-20px;background:var(--accent);color:var(--primary);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center;}
     .story-badge .num{font-family:'Poppins',sans-serif;font-size:32px;font-weight:800;line-height:1;display:block;}
     .story-badge .lbl{font-family:'Outfit',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;display:block;margin-top:4px;}
@@ -149,33 +149,75 @@
     .value-card p{font-size:14px;line-height:1.7;color:var(--text-light);margin:0;}
 
     /* TEAM */
-    #team{padding:100px 40px;background:var(--light);}
-    .team-inner{max-width:1280px;margin:0 auto;}
+    /* ===== TEAM SECTION ===== */
+    #team{padding:100px 0;background:var(--light);overflow:hidden;}
+    .team-inner{max-width:1280px;margin:0 auto;padding:0 40px;}
     .team-header{text-align:center;max-width:560px;margin:0 auto 56px;}
-    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-    .team-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition);}
-    .team-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
-    .team-card-img{position:relative;overflow:hidden;height:280px;}
-    .team-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
-    .team-card:hover .team-card-img img{transform:scale(1.06);}
-    .team-avatar{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:56px;font-weight:700;letter-spacing:-2px;color:var(--white);position:relative;}
-    .team-avatar::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.06) 0%,transparent 60%);}
-    .av-1{background:linear-gradient(135deg,#0B1F3A 0%,#123E7A 100%);}
+
+    /* avatar colours */
+    .av-1{background:linear-gradient(135deg,#0B1F3A 0%,#1a5296 100%);}
     .av-2{background:linear-gradient(135deg,#1a3a5c 0%,#0B1F3A 100%);}
     .av-3{background:linear-gradient(135deg,#123E7A 0%,#0d2d5e 100%);}
     .av-4{background:linear-gradient(135deg,#0f2847 0%,#1a4a7a 100%);}
     .av-5{background:linear-gradient(135deg,#0B1F3A 0%,#0d3060 100%);}
     .av-6{background:linear-gradient(135deg,#162d50 0%,#123E7A 100%);}
-    .av-accent{color:var(--accent);}
-    .team-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,58,0.85),transparent 50%);opacity:0;transition:var(--transition);display:flex;align-items:flex-end;padding:20px;}
-    .team-card:hover .team-overlay{opacity:1;}
-    .team-socials{display:flex;gap:8px;}
+    .av-7{background:linear-gradient(135deg,#0d2d5e 0%,#1a3a5c 100%);}
+    .av-8{background:linear-gradient(135deg,#123E7A 0%,#0B1F3A 100%);}
+    .av-9{background:linear-gradient(135deg,#1a4a7a 0%,#0f2847 100%);}
+
+    /* ---- Leadership row ---- */
+    .team-leadership{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:64px;}
+    .team-card-lead{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition);}
+    .team-card-lead:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+    .tc-img{position:relative;height:260px;overflow:hidden;}
+    .team-avatar{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:60px;font-weight:700;letter-spacing:-2px;color:var(--white);position:relative;}
+    .team-avatar::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.07) 0%,transparent 60%);}
+    .tc-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,58,0.88) 0%,transparent 55%);display:flex;align-items:flex-end;padding:20px;opacity:0;transition:var(--transition);}
+    .team-card-lead:hover .tc-overlay{opacity:1;}
     .ts-link{width:36px;height:36px;background:rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:14px;text-decoration:none;transition:var(--transition);}
     .ts-link:hover{background:var(--accent);color:var(--primary);}
-    .team-card-body{padding:24px 28px;}
-    .team-card-body h4{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:4px;}
-    .team-role{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:10px;}
-    .team-card-body p{font-size:13.5px;line-height:1.7;color:var(--text-light);margin:0;}
+    .tc-body{padding:22px 26px;}
+    .tc-body h4{font-size:17px;font-weight:700;color:var(--primary);margin-bottom:3px;}
+    .team-role{font-family:'Outfit',sans-serif;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:10px;}
+    .tc-body p{font-size:13px;line-height:1.7;color:var(--text-light);margin:0;}
+
+    /* ---- Ops carousel divider ---- */
+    .ops-label{display:flex;align-items:center;gap:16px;margin-bottom:32px;}
+    .ops-label span{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-light);white-space:nowrap;}
+    .ops-label::before,.ops-label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+    /* ---- Carousel ---- */
+    .carousel-outer{position:relative;}
+    .carousel-track-wrap{overflow:hidden;border-radius:var(--radius-lg);}
+    .carousel-track{display:flex;gap:22px;transition:transform 0.45s cubic-bezier(0.4,0,0.2,1);will-change:transform;padding:6px 2px 12px;}
+    .team-card-ops{flex:0 0 calc(25% - 17px);background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition);}
+    .team-card-ops:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);}
+    .tc-img-ops{position:relative;height:200px;overflow:hidden;}
+    .team-avatar-sm{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:44px;font-weight:700;letter-spacing:-2px;color:var(--white);position:relative;}
+    .team-avatar-sm::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.06) 0%,transparent 60%);}
+    .tc-overlay-ops{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,58,0.88) 0%,transparent 55%);display:flex;align-items:flex-end;padding:16px;opacity:0;transition:var(--transition);}
+    .team-card-ops:hover .tc-overlay-ops{opacity:1;}
+    .tc-body-ops{padding:18px 20px;}
+    .tc-body-ops h4{font-size:15px;font-weight:700;color:var(--primary);margin-bottom:3px;}
+    .tc-body-ops p{font-size:12.5px;line-height:1.65;color:var(--text-light);margin:0;}
+
+    /* carousel controls */
+    .carousel-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:28px;}
+    .carousel-btn{width:44px;height:44px;border-radius:50%;border:2px solid var(--border);background:var(--white);color:var(--primary);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--transition);box-shadow:var(--shadow-sm);}
+    .carousel-btn:hover:not(:disabled){background:var(--primary);border-color:var(--primary);color:var(--white);}
+    .carousel-btn:disabled{opacity:0.35;cursor:not-allowed;}
+    .carousel-dots{display:flex;gap:8px;align-items:center;}
+    .cdot{width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;transition:var(--transition);}
+    .cdot.active{background:var(--primary);width:24px;border-radius:4px;}
+
+    /* ---- Responsive ---- */
+    @media(max-width:1024px){.team-card-ops{flex:0 0 calc(33.333% - 15px);}}
+    @media(max-width:768px){
+      .team-leadership{grid-template-columns:1fr;}
+      .team-card-ops{flex:0 0 calc(50% - 11px);}
+    }
+    @media(max-width:520px){.team-card-ops{flex:0 0 calc(85%);}}
+    @media(max-width:480px){.team-inner{padding:0 20px;}#team{padding:64px 0;}}
 
     /* CTA */
     .about-cta{padding:100px 40px;background:var(--secondary);position:relative;overflow:hidden;}
@@ -217,7 +259,8 @@
       .story-inner{grid-template-columns:1fr;gap:60px;}
       .story-badge{left:12px;}
       .story-img-inset{right:12px;}
-      .mvv-grid,.values-grid,.team-grid{grid-template-columns:repeat(2,1fr);}
+      .mvv-grid,.values-grid{grid-template-columns:repeat(2,1fr);}
+      .team-leadership{grid-template-columns:repeat(2,1fr);}
       .stats-bar-inner{grid-template-columns:repeat(2,1fr);}
       .cta-inner{grid-template-columns:1fr;}
       .footer-grid{grid-template-columns:1fr 1fr;gap:40px;}
@@ -225,7 +268,7 @@
     @media(max-width:768px){
       .main-nav,.header-cta{display:none;}
       .mobile-menu-btn{display:block;}
-      .mvv-grid,.values-grid,.team-grid{grid-template-columns:1fr;}
+      .mvv-grid,.values-grid,.team-leadership{grid-template-columns:1fr;}
       .footer-grid{grid-template-columns:1fr;gap:36px;}
     }
   
@@ -308,7 +351,7 @@
     <div class="story-inner">
       <div class="story-media" data-aos="fade-right">
         <img src="assets/img/banshap/banshap-transport-6.jpg" alt="Banshap Operations" class="story-img-main" loading="lazy">
-        <img src="assets/img/banshap/banshap-team-huddle.jpg" alt="Banshap Team" class="story-img-inset" loading="lazy">
+        <img src="assets/img/team/team-discussion-2.jpg" alt="Banshap Team" class="story-img-inset" loading="lazy">
         <div class="story-badge">
           <span class="num">6+</span>
           <span class="lbl">Years of<br>Excellence</span>
@@ -480,90 +523,211 @@
   <!-- TEAM -->
   <section id="team">
     <div class="team-inner">
+
+      <!-- Header -->
       <div class="team-header" data-aos="fade-up">
         <div class="label-tag" style="justify-content:center;">Our People</div>
         <h2 class="section-heading">The <span>Team</span> Behind the Results</h2>
-        <p class="section-sub mx-auto">Specialists with deep expertise across logistics, regulatory compliance, corporate law, and investment advisory — united by a single purpose.</p>
+        <p class="section-sub mx-auto">Specialists united by a single purpose — delivering reliable logistics, compliance, and investment solutions across Tanzania.</p>
       </div>
-      <div class="team-grid">
-        <div class="team-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="team-card-img">
-            <div class="team-avatar av-1"><span>SM</span></div>
-            <div class="team-overlay">
-              <div class="team-socials">
-                <a href="mailto:sharifu.mtuta@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a>
-              </div>
-            </div>
+
+      <!-- ── Leadership ── -->
+      <div class="team-leadership">
+
+        <div class="team-card-lead" data-aos="fade-up" data-aos-delay="0">
+          <div class="tc-img">
+            <img src="assets/img/team/team-sharifu-mtuta.jpg" alt="Sharifu Said Mtuta" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
+            <div class="tc-overlay"><a href="mailto:sharifu.mtuta@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a></div>
           </div>
-          <div class="team-card-body">
-            <h4>Sharifu Mtuta</h4>
-            <span class="team-role">Chief Executive Officer</span>
-            <p>Visionary leader and co-founder of Banshap Investment Company Limited. Drives the company's strategic direction, client partnerships, and long-term growth across Tanzania's logistics, compliance, and investment sectors.</p>
+          <div class="tc-body">
+            <h4>Sharifu Said Mtuta</h4>
+            <span class="team-role">Founder &amp; Director · Project Manager</span>
+            <p>Founder of Banshap Investment Company Limited. Drives strategic direction, client partnerships, and oversees project management across all active engagements.</p>
           </div>
         </div>
-        <div class="team-card" data-aos="fade-up" data-aos-delay="80">
-          <div class="team-card-img">
+
+        <div class="team-card-lead" data-aos="fade-up" data-aos-delay="80">
+          <div class="tc-img">
             <div class="team-avatar av-2"><span>AS</span></div>
-            <div class="team-overlay">
-              <div class="team-socials">
-                <a href="mailto:adam.sharifu@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a>
-              </div>
-            </div>
+            <div class="tc-overlay"><a href="mailto:adam.sharifu@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a></div>
           </div>
-          <div class="team-card-body">
-            <h4>Adam Sharifu</h4>
-            <span class="team-role">Managing Director</span>
-            <p>Oversees day-to-day operations and corporate governance at Banshap. Brings deep expertise in business facilitation, regulatory navigation, and organisational leadership across Tanzania's commercial landscape.</p>
+          <div class="tc-body">
+            <h4>Adam Sharifu Said</h4>
+            <span class="team-role">Co-Director</span>
+            <p>Co-leads governance, business development, and regulatory strategy. Brings deep expertise in facilitation, corporate compliance, and organisational leadership.</p>
           </div>
         </div>
-        <div class="team-card" data-aos="fade-up" data-aos-delay="160">
-          <div class="team-card-img">
-            <div class="team-avatar av-3"><span>EN</span></div>
-            <div class="team-overlay">
-              <div class="team-socials">
-                <a href="mailto:emmanuel.ntiga@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a>
-              </div>
-            </div>
+
+        <div class="team-card-lead" data-aos="fade-up" data-aos-delay="160">
+          <div class="tc-img">
+            <div class="team-avatar av-3"><span>JF</span></div>
+            <div class="tc-overlay"><a href="mailto:justina.fokasi@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a></div>
           </div>
-          <div class="team-card-body">
-            <h4>Emmanuel Ntiga</h4>
-            <span class="team-role">Operations Manager</span>
-            <p>Manages end-to-end logistics operations, freight coordination, and service delivery across all active client engagements. Ensures operational reliability and performance standards are consistently met.</p>
+          <div class="tc-body">
+            <h4>Justina Fokasi</h4>
+            <span class="team-role">Accountant</span>
+            <p>Manages financial records, client billing, and TRA compliance reporting. Ensures all accounts are accurate and fully aligned with Tanzanian regulatory requirements.</p>
           </div>
         </div>
-        <div class="team-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="team-card-img">
-            <div class="team-avatar av-4"><span>GK</span></div>
-            <div class="team-overlay">
-              <div class="team-socials">
-                <a href="mailto:glory.kessy@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="team-card-body">
-            <h4>Glory Kessy</h4>
-            <span class="team-role">Accounts Manager</span>
-            <p>Responsible for financial management, client billing, and TRA compliance reporting. Ensures all financial records are accurate, current, and fully compliant with Tanzanian regulatory requirements.</p>
-          </div>
-        </div>
-        <div class="team-card" data-aos="fade-up" data-aos-delay="80">
-          <div class="team-card-img">
-            <div class="team-avatar av-5"><span>KH</span></div>
-            <div class="team-overlay">
-              <div class="team-socials">
-                <a href="mailto:Khadija@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="team-card-body">
-            <h4>Khadija</h4>
-            <span class="team-role">Human Resources Manager</span>
-            <p>Leads talent acquisition, staff development, and organisational culture at Banshap. Committed to building a high-performing team that delivers exceptional service to every client.</p>
-          </div>
-        </div>
+
+      </div><!-- /team-leadership -->
+
+      <!-- ── Operations Team Carousel ── -->
+      <div class="ops-label" data-aos="fade-up">
+        <span>Facilitation &amp; Operations Team</span>
       </div>
-    </div>
+
+      <div class="carousel-outer" data-aos="fade-up" data-aos-delay="60">
+        <div class="carousel-track-wrap">
+          <div class="carousel-track" id="opsTrack">
+
+            <div class="team-card-ops">
+              <div class="tc-img-ops">
+                <div class="team-avatar-sm av-4"><span>NM</span></div>
+                <div class="tc-overlay-ops"><a href="mailto:info@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a></div>
+              </div>
+              <div class="tc-body-ops">
+                <h4>Noela Morris</h4>
+                <span class="team-role">Cleaning Officer</span>
+                <p>Maintains a clean, professional environment across Banshap offices, supporting daily operations and client-facing standards.</p>
+              </div>
+            </div>
+
+            <div class="team-card-ops">
+              <div class="tc-img-ops">
+                <img src="assets/img/team/team-ops-work-2.jpg" alt="Hadija Salumu" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+                <div class="tc-overlay-ops"><a href="mailto:info@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a></div>
+              </div>
+              <div class="tc-body-ops">
+                <h4>Hadija Salumu</h4>
+                <span class="team-role">Facilitation &amp; Operations Officer</span>
+                <p>Supports facilitation and operational coordination, ensuring smooth delivery of client services and field activities.</p>
+              </div>
+            </div>
+
+            <div class="team-card-ops">
+              <div class="tc-img-ops">
+                <div class="team-avatar-sm av-6"><span>HM</span></div>
+                <div class="tc-overlay-ops"><a href="mailto:info@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a></div>
+              </div>
+              <div class="tc-body-ops">
+                <h4>Halima Mtuta</h4>
+                <span class="team-role">Facilitation &amp; Operations Officer</span>
+                <p>Handles regulatory facilitation, client liaison, and operational support across Banshap's active service areas.</p>
+              </div>
+            </div>
+
+            <div class="team-card-ops">
+              <div class="tc-img-ops">
+                <div class="team-avatar-sm av-7"><span>EN</span></div>
+                <div class="tc-overlay-ops"><a href="mailto:emmanuel.ntiga@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a></div>
+              </div>
+              <div class="tc-body-ops">
+                <h4>Emmanuel Ntiga</h4>
+                <span class="team-role">Facilitation &amp; Operations Officer</span>
+                <p>Coordinates logistics and service delivery across active engagements, ensuring performance standards are consistently met.</p>
+              </div>
+            </div>
+
+            <div class="team-card-ops">
+              <div class="tc-img-ops">
+                <div class="team-avatar-sm av-5"><span>GK</span></div>
+                <div class="tc-overlay-ops"><a href="mailto:glory.kessy@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a></div>
+              </div>
+              <div class="tc-body-ops">
+                <h4>Glory Kessy</h4>
+                <span class="team-role">Facilitation &amp; Operations Officer</span>
+                <p>Supports client facilitation, field operations, and regulatory coordination to deliver seamless service experiences.</p>
+              </div>
+            </div>
+
+            <div class="team-card-ops">
+              <div class="tc-img-ops">
+                <div class="team-avatar-sm av-8"><span>HK</span></div>
+                <div class="tc-overlay-ops"><a href="mailto:info@banshapinvestment.co.tz" class="ts-link"><i class="bi bi-envelope"></i></a></div>
+              </div>
+              <div class="tc-body-ops">
+                <h4>Halid Kifimbo</h4>
+                <span class="team-role">Facilitation &amp; Operations Officer</span>
+                <p>Assists in daily operations and facilitation, coordinating services and ensuring client requirements are met efficiently.</p>
+              </div>
+            </div>
+
+          </div><!-- /carousel-track -->
+        </div><!-- /carousel-track-wrap -->
+
+        <!-- Navigation -->
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="opsPrev" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+          <div class="carousel-dots" id="opsDots"></div>
+          <button class="carousel-btn" id="opsNext" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+        </div>
+
+      </div><!-- /carousel-outer -->
+
+    </div><!-- /team-inner -->
   </section>
+
+  <script>
+  (function(){
+    const track   = document.getElementById('opsTrack');
+    const btnPrev = document.getElementById('opsPrev');
+    const btnNext = document.getElementById('opsNext');
+    const dotsWrap= document.getElementById('opsDots');
+    if(!track) return;
+
+    const cards   = track.querySelectorAll('.team-card-ops');
+    let current   = 0;
+
+    function visibleCount(){
+      const w = track.parentElement.offsetWidth;
+      if(w < 520)  return 1;
+      if(w < 768)  return 2;
+      if(w < 1024) return 3;
+      return 4;
+    }
+
+    function totalSteps(){ return Math.ceil(cards.length / visibleCount()); }
+
+    function buildDots(){
+      dotsWrap.innerHTML = '';
+      for(let i=0;i<totalSteps();i++){
+        const d = document.createElement('span');
+        d.className = 'cdot' + (i===current?' active':'');
+        d.addEventListener('click',()=>goTo(i));
+        dotsWrap.appendChild(d);
+      }
+    }
+
+    function goTo(idx){
+      const steps = totalSteps();
+      current = Math.max(0, Math.min(idx, steps-1));
+      const vc   = visibleCount();
+      const gap  = 22;
+      const cardW= track.querySelector('.team-card-ops').offsetWidth;
+      track.style.transform = `translateX(-${current*(cardW+gap)*vc}px)`;
+      btnPrev.disabled = current === 0;
+      btnNext.disabled = current >= steps-1;
+      dotsWrap.querySelectorAll('.cdot').forEach((d,i)=>d.classList.toggle('active',i===current));
+    }
+
+    btnPrev.addEventListener('click',()=>goTo(current-1));
+    btnNext.addEventListener('click',()=>goTo(current+1));
+
+    // Touch swipe
+    let touchX = 0;
+    track.addEventListener('touchstart', e=>{ touchX = e.touches[0].clientX; }, {passive:true});
+    track.addEventListener('touchend',   e=>{
+      const dx = touchX - e.changedTouches[0].clientX;
+      if(Math.abs(dx)>40) goTo(current + (dx>0?1:-1));
+    }, {passive:true});
+
+    // Init + resize
+    buildDots();
+    goTo(0);
+    window.addEventListener('resize',()=>{ buildDots(); goTo(0); });
+  })();
+  </script>
 
   <!-- CTA -->
   <section class="about-cta">
