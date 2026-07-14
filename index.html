@@ -104,30 +104,80 @@
     .hero-stat-num span { color: var(--accent); }
     .hero-stat-lbl { font-family: 'Outfit', sans-serif; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 6px; display: block; }
 
-    /* ===== CLIENTS STRIP ===== */
-    .clients-strip { background: var(--light); padding: 24px 40px; border-bottom: 1px solid var(--border); }
-    .clients-strip-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
-    .clients-label { font-family: 'Outfit', sans-serif; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); white-space: nowrap; flex-shrink: 0; }
-    .clients-logos { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; flex: 1; }
+    /* ===== CLIENTS STRIP / INFINITE TICKER ===== */
+    .clients-strip {
+      background: var(--light);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    /* Edge fade masks */
+    .clients-strip::before,
+    .clients-strip::after {
+      content: '';
+      position: absolute; top: 0; bottom: 0;
+      width: 160px; z-index: 2; pointer-events: none;
+    }
+    .clients-strip::before { left: 0; background: linear-gradient(to right, var(--light) 30%, transparent); }
+    .clients-strip::after  { right: 0; background: linear-gradient(to left,  var(--light) 30%, transparent); }
+
+    .clients-label-col {
+      flex-shrink: 0;
+      padding: 0 20px 0 48px;
+      z-index: 3;
+      position: relative;
+    }
+    .clients-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      white-space: nowrap;
+      line-height: 1.6;
+    }
+
+    .ticker-viewport {
+      flex: 1;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    @keyframes ticker-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .ticker-track {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      animation: ticker-scroll 38s linear infinite;
+    }
+    .ticker-track:hover { animation-play-state: paused; }
+
     /* ---- logo cards ---- */
     .client-logo-wrap {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 3px;
+      gap: 4px;
+      padding: 0 28px;
+      flex-shrink: 0;
     }
     .client-logo-img {
-      height: 28px;
+      height: 30px;
       width: auto;
-      max-width: 90px;
+      max-width: 96px;
       object-fit: contain;
-      filter: grayscale(30%);
-      opacity: 0.82;
-      transition: var(--transition);
+      filter: grayscale(100%) opacity(0.48);
+      transition: filter 0.35s ease;
     }
-    .client-logo-wrap:hover .client-logo-img {
-      filter: grayscale(0%);
-      opacity: 1;
+    .ticker-track:hover .client-logo-wrap:hover .client-logo-img {
+      filter: grayscale(0%) opacity(1);
     }
     .client-logo-dark-bg .client-logo-img {
       background: var(--primary);
@@ -140,36 +190,7 @@
       letter-spacing: 0.8px;
       text-transform: uppercase;
       color: var(--text-light);
-    }
-    /* ---- keep old badge style for any fallback ---- */
-    .client-badge {
-      font-family: 'Outfit', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      color: var(--text-light);
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 8px 16px;
       white-space: nowrap;
-      transition: var(--transition);
-      cursor: default;
-    }
-    .client-badge:hover {
-      color: var(--secondary);
-      border-color: var(--secondary);
-      background: var(--white);
-      box-shadow: var(--shadow-sm);
-    }
-    .client-badge .cb-sector {
-      display: block;
-      font-size: 9px;
-      font-weight: 400;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-top: 2px;
     }
 
     /* ===== ABOUT / INTRODUCTION ===== */
@@ -405,10 +426,10 @@
       .hero-stat-lbl { font-size: 9px; letter-spacing: 1px; margin-top: 4px; }
 
       /* Clients strip */
-      .clients-strip { padding: 20px 20px; }
-      .clients-strip-inner { gap: 16px; }
-      .client-logo-img { height: 24px; max-width: 80px; }
-      .cb-name { font-size: 6.5px; }
+      .clients-label-col { padding: 0 16px 0 24px; }
+      .clients-strip::before, .clients-strip::after { width: 100px; }
+      .client-logo-img { height: 26px; max-width: 84px; }
+      .ticker-track { animation-duration: 28s; }
 
       /* Sections */
       #about, #services, #metrics, #why, #projects, #testimonials, #process, #contact, #footer { padding-left: 20px; padding-right: 20px; }
@@ -439,12 +460,13 @@
       .hero-stat { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 16px 10px; }
       .hero-stat-num { font-size: 24px; }
 
-      /* Clients */
-      .clients-strip { padding: 16px; }
-      .clients-strip-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
-      .clients-logos { gap: 8px; }
-      .client-logo-img { height: 20px; max-width: 64px; }
-      .cb-name { font-size: 6px; }
+      /* Clients ticker */
+      .clients-label-col { display: none; }
+      .clients-strip::before { width: 60px; }
+      .clients-strip::after  { width: 60px; }
+      .client-logo-wrap { padding: 0 18px; }
+      .client-logo-img { height: 22px; max-width: 68px; }
+      .ticker-track { animation-duration: 22s; }
 
       /* Sections */
       .services-grid { grid-template-columns: 1fr; }
@@ -589,67 +611,43 @@
     </div>
   </section>
 
-  <!-- ===== CLIENTS STRIP ===== -->
-  <div class="clients-strip">
-    <div class="clients-strip-inner">
-      <span class="clients-label">Trusted By</span>
-      <div class="clients-logos">
-        <div class="client-logo-wrap">
-          <img src="assets/img/clients/crdb.svg" alt="CRDB Bank" class="client-logo-img">
-          <span class="cb-name">CRDB Bank</span>
-        </div>
-        <div class="client-logo-wrap client-logo-dark-bg">
-          <img src="assets/img/clients/nmb.png" alt="NMB Bank" class="client-logo-img">
-          <span class="cb-name">NMB Bank</span>
-        </div>
-        <div class="client-logo-wrap">
-          <img src="assets/img/clients/vodacom.png" alt="Vodacom Tanzania" class="client-logo-img">
-          <span class="cb-name">Vodacom TZ</span>
-        </div>
-        <div class="client-logo-wrap">
-          <img src="assets/img/clients/azam.png" alt="Azam Group" class="client-logo-img">
-          <span class="cb-name">Azam Group</span>
-        </div>
-        <div class="client-logo-wrap">
-          <img src="assets/img/clients/tanesco.png" alt="TANESCO" class="client-logo-img">
-          <span class="cb-name">TANESCO</span>
-        </div>
-        <div class="client-logo-wrap">
-          <img src="assets/img/clients/tpa.png" alt="Tanzania Ports Authority" class="client-logo-img">
-          <span class="cb-name">TPA</span>
-        </div>
-        <div class="client-logo-wrap">
-          <img src="assets/img/clients/tra.png" alt="Tanzania Revenue Authority" class="client-logo-img">
-          <span class="cb-name">TRA</span>
-        </div>
-        <div class="client-logo-wrap">
-          <img src="assets/img/clients/stanbic%20logo.jpg" alt="Stanbic Bank Tanzania" class="client-logo-img">
-          <span class="cb-name">Stanbic Bank</span>
-        </div>
-        <div class="client-logo-wrap">
-          <img src="assets/img/clients/tbl%20tz.jpg" alt="Tanzania Breweries Limited" class="client-logo-img">
-          <span class="cb-name">TBL</span>
-        </div>
-        <div class="client-logo-wrap">
-          <img src="assets/img/clients/watu%20logo.png" alt="Watu Credit" class="client-logo-img">
-          <span class="cb-name">Watu Credit</span>
-        </div>
-        <div class="client-logo-wrap">
-          <img src="assets/img/clients/local%20government.jpg" alt="Government of Tanzania" class="client-logo-img">
-          <span class="cb-name">Govt. of Tanzania</span>
-        </div>
-        <div class="client-logo-wrap">
-          <img src="assets/img/clients/blera.png" alt="BRELA" class="client-logo-img">
-          <span class="cb-name">BRELA</span>
-        </div>
-        <div class="client-logo-wrap">
-          <img src="assets/img/clients/Mamlaka%20ya%20Udhibiti%20wa%20Mbolea%20Tanzania%20(TFRA).png" alt="TFRA" class="client-logo-img">
-          <span class="cb-name">TFRA</span>
-        </div>
-        <div class="client-logo-wrap">
-          <img src="assets/img/clients/wizara%20ya%20kilimo.png" alt="Ministry of Agriculture Tanzania" class="client-logo-img">
-          <span class="cb-name">Min. of Agriculture</span>
-        </div>
+  <!-- ===== CLIENTS STRIP / INFINITE TICKER ===== -->
+  <div class="clients-strip" aria-label="Our clients">
+    <div class="clients-label-col" aria-hidden="true">
+      <span class="clients-label">Trusted<br>By</span>
+    </div>
+    <div class="ticker-viewport">
+      <div class="ticker-track">
+        <!-- ── Set A ── -->
+        <div class="client-logo-wrap"><img src="assets/img/clients/crdb.svg" alt="CRDB Bank" class="client-logo-img"><span class="cb-name">CRDB Bank</span></div>
+        <div class="client-logo-wrap client-logo-dark-bg"><img src="assets/img/clients/nmb.png" alt="NMB Bank" class="client-logo-img"><span class="cb-name">NMB Bank</span></div>
+        <div class="client-logo-wrap"><img src="assets/img/clients/vodacom.png" alt="Vodacom Tanzania" class="client-logo-img"><span class="cb-name">Vodacom TZ</span></div>
+        <div class="client-logo-wrap"><img src="assets/img/clients/azam.png" alt="Azam Group" class="client-logo-img"><span class="cb-name">Azam Group</span></div>
+        <div class="client-logo-wrap"><img src="assets/img/clients/tanesco.png" alt="TANESCO" class="client-logo-img"><span class="cb-name">TANESCO</span></div>
+        <div class="client-logo-wrap"><img src="assets/img/clients/tpa.png" alt="Tanzania Ports Authority" class="client-logo-img"><span class="cb-name">TPA</span></div>
+        <div class="client-logo-wrap"><img src="assets/img/clients/tra.png" alt="Tanzania Revenue Authority" class="client-logo-img"><span class="cb-name">TRA</span></div>
+        <div class="client-logo-wrap"><img src="assets/img/clients/stanbic%20logo.jpg" alt="Stanbic Bank Tanzania" class="client-logo-img"><span class="cb-name">Stanbic Bank</span></div>
+        <div class="client-logo-wrap"><img src="assets/img/clients/tbl%20tz.jpg" alt="Tanzania Breweries Limited" class="client-logo-img"><span class="cb-name">TBL</span></div>
+        <div class="client-logo-wrap"><img src="assets/img/clients/watu%20logo.png" alt="Watu Credit" class="client-logo-img"><span class="cb-name">Watu Credit</span></div>
+        <div class="client-logo-wrap"><img src="assets/img/clients/local%20government.jpg" alt="Government of Tanzania" class="client-logo-img"><span class="cb-name">Govt. of Tanzania</span></div>
+        <div class="client-logo-wrap"><img src="assets/img/clients/blera.png" alt="BRELA" class="client-logo-img"><span class="cb-name">BRELA</span></div>
+        <div class="client-logo-wrap"><img src="assets/img/clients/Mamlaka%20ya%20Udhibiti%20wa%20Mbolea%20Tanzania%20(TFRA).png" alt="TFRA" class="client-logo-img"><span class="cb-name">TFRA</span></div>
+        <div class="client-logo-wrap"><img src="assets/img/clients/wizara%20ya%20kilimo.png" alt="Ministry of Agriculture Tanzania" class="client-logo-img"><span class="cb-name">Min. of Agriculture</span></div>
+        <!-- ── Set B (duplicate for seamless loop) ── -->
+        <div class="client-logo-wrap" aria-hidden="true"><img src="assets/img/clients/crdb.svg" alt="" class="client-logo-img"><span class="cb-name">CRDB Bank</span></div>
+        <div class="client-logo-wrap client-logo-dark-bg" aria-hidden="true"><img src="assets/img/clients/nmb.png" alt="" class="client-logo-img"><span class="cb-name">NMB Bank</span></div>
+        <div class="client-logo-wrap" aria-hidden="true"><img src="assets/img/clients/vodacom.png" alt="" class="client-logo-img"><span class="cb-name">Vodacom TZ</span></div>
+        <div class="client-logo-wrap" aria-hidden="true"><img src="assets/img/clients/azam.png" alt="" class="client-logo-img"><span class="cb-name">Azam Group</span></div>
+        <div class="client-logo-wrap" aria-hidden="true"><img src="assets/img/clients/tanesco.png" alt="" class="client-logo-img"><span class="cb-name">TANESCO</span></div>
+        <div class="client-logo-wrap" aria-hidden="true"><img src="assets/img/clients/tpa.png" alt="" class="client-logo-img"><span class="cb-name">TPA</span></div>
+        <div class="client-logo-wrap" aria-hidden="true"><img src="assets/img/clients/tra.png" alt="" class="client-logo-img"><span class="cb-name">TRA</span></div>
+        <div class="client-logo-wrap" aria-hidden="true"><img src="assets/img/clients/stanbic%20logo.jpg" alt="" class="client-logo-img"><span class="cb-name">Stanbic Bank</span></div>
+        <div class="client-logo-wrap" aria-hidden="true"><img src="assets/img/clients/tbl%20tz.jpg" alt="" class="client-logo-img"><span class="cb-name">TBL</span></div>
+        <div class="client-logo-wrap" aria-hidden="true"><img src="assets/img/clients/watu%20logo.png" alt="" class="client-logo-img"><span class="cb-name">Watu Credit</span></div>
+        <div class="client-logo-wrap" aria-hidden="true"><img src="assets/img/clients/local%20government.jpg" alt="" class="client-logo-img"><span class="cb-name">Govt. of Tanzania</span></div>
+        <div class="client-logo-wrap" aria-hidden="true"><img src="assets/img/clients/blera.png" alt="" class="client-logo-img"><span class="cb-name">BRELA</span></div>
+        <div class="client-logo-wrap" aria-hidden="true"><img src="assets/img/clients/Mamlaka%20ya%20Udhibiti%20wa%20Mbolea%20Tanzania%20(TFRA).png" alt="" class="client-logo-img"><span class="cb-name">TFRA</span></div>
+        <div class="client-logo-wrap" aria-hidden="true"><img src="assets/img/clients/wizara%20ya%20kilimo.png" alt="" class="client-logo-img"><span class="cb-name">Min. of Agriculture</span></div>
       </div>
     </div>
   </div>
