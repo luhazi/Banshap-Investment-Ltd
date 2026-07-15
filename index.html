@@ -15,6 +15,7 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
@@ -80,29 +81,86 @@
     .header-cta:hover { background: var(--accent); color: var(--primary); }
     .mobile-menu-btn { display: none; background: transparent; border: 2px solid var(--primary); color: var(--primary); padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 18px; }
 
-    /* ===== HERO ===== */
-    #hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; background: var(--primary); }
-    .hero-bg { position: absolute; inset: 0; }
-    .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.18; }
-    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(11,31,58,0.96) 0%, rgba(18,62,122,0.85) 50%, rgba(11,31,58,0.94) 100%); }
-    .hero-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 50%, rgba(245,176,65,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(18,62,122,0.4) 0%, transparent 50%); }
-    .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 64px 64px; }
-    .hero-shape-1 { position: absolute; right: -80px; top: 10%; width: 400px; height: 400px; border-radius: 50%; border: 1px solid rgba(245,176,65,0.1); }
-    .hero-shape-2 { position: absolute; right: 40px; top: 5%; width: 200px; height: 200px; border-radius: 50%; border: 1px solid rgba(245,176,65,0.15); }
-    .hero-shape-3 { position: absolute; left: -60px; bottom: 10%; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(ellipse, rgba(18,62,122,0.3), transparent 70%); }
-    .hero-content { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 120px 40px 80px; width: 100%; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,176,65,0.15); border: 1px solid rgba(245,176,65,0.3); color: var(--accent); font-family: 'Outfit', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; padding: 8px 16px; border-radius: 50px; margin-bottom: 28px; }
-    .hero-badge i { font-size: 14px; }
-    .hero-title { font-size: clamp(38px, 5.5vw, 72px); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 24px; }
-    .hero-title span { color: var(--accent); }
-    .hero-desc { font-size: 18px; color: rgba(255,255,255,0.65); line-height: 1.8; margin-bottom: 44px; max-width: 600px; font-weight: 300; }
-    .hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 72px; }
-    .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); }
-    .hero-stat { padding: 28px 24px; border-right: 1px solid rgba(255,255,255,0.06); text-align: center; }
-    .hero-stat:last-child { border-right: none; }
-    .hero-stat-num { font-family: 'Poppins', sans-serif; font-size: 36px; font-weight: 800; color: var(--white); line-height: 1; display: block; }
-    .hero-stat-num span { color: var(--accent); }
-    .hero-stat-lbl { font-family: 'Outfit', sans-serif; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 6px; display: block; }
+    /* ===== HERO SLIDER ===== */
+    #hero { position: relative; overflow: hidden; background: #050E1F; }
+    .hero-swiper { width: 100%; height: 100vh; min-height: 640px; }
+    .hero-slide { position: relative; display: flex; align-items: center; overflow: hidden; }
+
+    /* Ken Burns background zoom */
+    .slide-bg { position: absolute; inset: -6%; background-size: cover; background-position: center; will-change: transform; }
+    .swiper-slide-active .slide-bg { animation: kbZoom 8s ease-out forwards; }
+    @keyframes kbZoom { from { transform: scale(1); } to { transform: scale(1.07); } }
+
+    /* Dark overlay */
+    .slide-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(5,25,55,.92) 0%, rgba(5,25,55,.82) 50%, rgba(5,25,55,.68) 100%); }
+
+    /* Dot grid */
+    .slide-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 60px 60px; }
+
+    /* Decorative circles */
+    .slide-circle-1 { position: absolute; right: -80px; top: 8%; width: 420px; height: 420px; border-radius: 50%; border: 1px solid rgba(245,176,65,0.10); pointer-events: none; }
+    .slide-circle-2 { position: absolute; right: 60px; top: 4%; width: 210px; height: 210px; border-radius: 50%; border: 1px solid rgba(245,176,65,0.16); pointer-events: none; }
+    .slide-circle-3 { position: absolute; left: -80px; bottom: 8%; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(ellipse, rgba(18,62,122,0.25), transparent 70%); pointer-events: none; }
+
+    /* Slide content wrapper */
+    .slide-content { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 140px 40px 100px; width: 100%; }
+
+    /* Initial hidden state for all animated elements */
+    .hero-slide .slide-badge   { opacity: 0; transform: translateY(-22px); }
+    .hero-slide .slide-title   { opacity: 0; transform: translateY(32px); }
+    .hero-slide .slide-desc    { opacity: 0; }
+    .hero-slide .slide-actions { opacity: 0; transform: translateY(22px); }
+    .hero-slide .slide-stats   { opacity: 0; transform: translateY(18px); }
+
+    /* Animate in on active slide */
+    .swiper-slide-active .slide-badge   { animation: sBadge 0.65s ease 0.20s forwards; }
+    .swiper-slide-active .slide-title   { animation: sTitle 0.75s ease 0.40s forwards; }
+    .swiper-slide-active .slide-desc    { animation: sFade  0.70s ease 0.80s forwards; }
+    .swiper-slide-active .slide-actions { animation: sUp    0.65s ease 1.00s forwards; }
+    .swiper-slide-active .slide-stats   { animation: sUp    0.65s ease 1.10s forwards; }
+
+    @keyframes sBadge { to { opacity:1; transform:translateY(0); } }
+    @keyframes sTitle { to { opacity:1; transform:translateY(0); } }
+    @keyframes sFade  { to { opacity:1; } }
+    @keyframes sUp    { to { opacity:1; transform:translateY(0); } }
+
+    /* Badge */
+    .slide-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(245,176,65,0.14); border: 1px solid rgba(245,176,65,0.32); color: var(--accent); font-family: 'Outfit', sans-serif; font-size: 11.5px; letter-spacing: 2.5px; text-transform: uppercase; padding: 9px 18px; border-radius: 50px; margin-bottom: 30px; }
+    .slide-badge .badge-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: bdot 1.8s ease infinite; flex-shrink: 0; }
+    @keyframes bdot { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+
+    /* Title */
+    .slide-title { font-family: 'Poppins', sans-serif; font-size: clamp(38px, 5.5vw, 72px); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 26px; }
+    .slide-title .hl { color: var(--accent); }
+
+    /* Description */
+    .slide-desc { font-size: 17px; color: rgba(255,255,255,0.72); line-height: 1.85; max-width: 580px; margin-bottom: 46px; font-weight: 300; }
+
+    /* Actions */
+    .slide-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 72px; }
+
+    /* Stats bar */
+    .slide-stats { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-lg); overflow: hidden; background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); }
+    .slide-stat { padding: 28px 24px; border-right: 1px solid rgba(255,255,255,0.06); text-align: center; }
+    .slide-stat:last-child { border-right: none; }
+    .slide-stat-num { font-family: 'Poppins', sans-serif; font-size: 36px; font-weight: 800; color: var(--white); line-height: 1; display: block; }
+    .slide-stat-num span { color: var(--accent); }
+    .slide-stat-lbl { font-family: 'Outfit', sans-serif; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 6px; display: block; }
+
+    /* Swiper navigation */
+    .hero-swiper .swiper-button-prev,
+    .hero-swiper .swiper-button-next { width: 52px; height: 52px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 50%; backdrop-filter: blur(8px); color: var(--white); transition: var(--transition); }
+    .hero-swiper .swiper-button-prev::after,
+    .hero-swiper .swiper-button-next::after { font-size: 14px; font-weight: 700; }
+    .hero-swiper .swiper-button-prev:hover,
+    .hero-swiper .swiper-button-next:hover { background: var(--accent); border-color: var(--accent); color: var(--primary); }
+    .hero-swiper .swiper-button-prev { left: 32px; }
+    .hero-swiper .swiper-button-next { right: 32px; }
+
+    /* Swiper pagination */
+    .hero-swiper .swiper-pagination { bottom: 32px; }
+    .hero-swiper .swiper-pagination-bullet { width: 8px; height: 8px; background: rgba(255,255,255,0.35); opacity: 1; transition: var(--transition); }
+    .hero-swiper .swiper-pagination-bullet-active { background: var(--accent); width: 28px; border-radius: 4px; }
 
     /* ===== CLIENTS STRIP / INFINITE TICKER ===== */
     .clients-strip {
@@ -389,7 +447,7 @@
     /* ── Large tablet / small laptop (≤1100px) ── */
     @media (max-width: 1100px) {
       #header { padding: 0 24px; }
-      #hero .hero-content, #about, #services, #metrics, #why, #projects, #testimonials, #process, #contact, #footer { padding-left: 24px; padding-right: 24px; }
+      .slide-content, #about, #services, #metrics, #why, #projects, #testimonials, #process, #contact, #footer { padding-left: 24px; padding-right: 24px; }
       .about-inner { grid-template-columns: 1fr; gap: 48px; }
       .about-badge { left: 12px; }
       .about-img-inset { right: 12px; }
@@ -451,14 +509,17 @@
       .header-phone { display: none; }
       #header { height: 64px; padding: 0 16px; }
 
-      /* Hero */
-      #hero { padding-top: 64px; }
-      #hero .hero-content { padding: 48px 16px 32px; }
-      .hero-title { font-size: clamp(24px, 6vw, 34px); }
-      .hero-sub { font-size: 14px; }
-      .hero-stats { grid-template-columns: repeat(2, 1fr); }
-      .hero-stat { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 16px 10px; }
-      .hero-stat-num { font-size: 24px; }
+      /* Hero slider */
+      .hero-swiper { min-height: 580px; }
+      .slide-content { padding: 80px 16px 60px; }
+      .slide-title { font-size: clamp(28px, 6vw, 38px); }
+      .slide-desc { font-size: 15px; }
+      .slide-stats { grid-template-columns: repeat(2, 1fr); }
+      .slide-stat { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 16px 10px; }
+      .slide-stat-num { font-size: 24px; }
+      .slide-circle-1, .slide-circle-2, .slide-circle-3 { display: none; }
+      .hero-swiper .swiper-button-prev { left: 12px; }
+      .hero-swiper .swiper-button-next { right: 12px; }
 
       /* Clients ticker */
       .clients-label-col { display: none; }
@@ -487,12 +548,12 @@
 
     /* ── Small mobile (≤480px) ── */
     @media (max-width: 480px) {
-      #hero .hero-content { padding: 40px 14px 28px; }
-      .hero-title { font-size: clamp(22px, 7vw, 28px); }
-      .hero-actions { flex-direction: column; align-items: flex-start; }
-      .hero-actions a { width: 100%; justify-content: center; }
-      .hero-stat-num { font-size: 20px; }
-      .hero-stat-lbl { font-size: 8px; }
+      .slide-content { padding: 70px 14px 40px; }
+      .slide-title { font-size: clamp(24px, 7vw, 30px); }
+      .slide-actions { flex-direction: column; align-items: flex-start; }
+      .slide-actions a { width: 100%; justify-content: center; }
+      .slide-stat-num { font-size: 20px; }
+      .slide-stat-lbl { font-size: 8px; }
       .services-grid, .why-grid, .metrics-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .section-heading { font-size: clamp(20px, 6vw, 26px); }
@@ -566,48 +627,148 @@
     </div>
   </div>
 
-  <!-- ===== HERO ===== -->
-  <section id="hero">
-    <div class="hero-bg"><img src="assets/img/banshap/banshap-transport-2.jpg" alt="Banshap Operations" loading="lazy"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-pattern"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-shape-1"></div>
-    <div class="hero-shape-2"></div>
-    <div class="hero-shape-3"></div>
-    <div class="hero-content">
-      <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
-        <i class="bi bi-patch-check-fill"></i>
-        Tanzania's Trusted Investment & Logistics Partner
-      </div>
-      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
-        Driving Business Growth Through<br><span>Strategic Investments</span><br>&amp; Logistics Excellence
-      </h1>
-      <p class="hero-desc" data-aos="fade-up" data-aos-delay="300">
-        Banshap Investment Company Limited delivers reliable logistics infrastructure, transportation solutions, business investments, and strategic growth services across Tanzania.
-      </p>
-      <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
-        <a href="service-details.html" class="btn-accent">Explore Our Services <i class="bi bi-arrow-right"></i></a>
-        <a href="#contact" class="btn-outline-primary-custom">Request Consultation <i class="bi bi-calendar-check"></i></a>
-      </div>
-      <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
-        <div class="hero-stat">
-          <span class="hero-stat-num"><span class="counter" data-target="500">0</span><span>+</span></span>
-          <span class="hero-stat-lbl">Projects Completed</span>
+  <!-- ===== HERO SLIDER ===== -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-swiper swiper" role="region" aria-roledescription="carousel" aria-label="Featured highlights">
+      <div class="swiper-wrapper">
+
+        <!-- ── Slide 1 — Logistics & Investment ── -->
+        <div class="swiper-slide hero-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+          <div class="slide-bg" style="background-image:url('assets/img/banshap/banshap-transport-2.jpg')" aria-hidden="true"></div>
+          <div class="slide-overlay" aria-hidden="true"></div>
+          <div class="slide-grid" aria-hidden="true"></div>
+          <div class="slide-circle-1" aria-hidden="true"></div>
+          <div class="slide-circle-2" aria-hidden="true"></div>
+          <div class="slide-circle-3" aria-hidden="true"></div>
+          <div class="slide-content">
+            <div class="slide-badge">
+              <span class="badge-dot" aria-hidden="true"></span>
+              🇹🇿 Tanzania's Trusted Investment &amp; Logistics Partner
+            </div>
+            <h1 class="slide-title">
+              Driving Business Growth<br>Through<br>
+              <span class="hl">Strategic Investments</span><br>&amp; Logistics Excellence
+            </h1>
+            <p class="slide-desc">Banshap Investment Company Limited delivers reliable logistics infrastructure, transportation solutions, business investments, and strategic growth services across Tanzania and East Africa.</p>
+            <div class="slide-actions">
+              <a href="#services" class="btn-accent">Explore Our Services <i class="bi bi-arrow-right"></i></a>
+              <a href="#contact" class="btn-outline-primary-custom">Request Consultation <i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+            <div class="slide-stats" aria-label="Key statistics">
+              <div class="slide-stat">
+                <span class="slide-stat-num">200<span>+</span></span>
+                <span class="slide-stat-lbl">Clients Served</span>
+              </div>
+              <div class="slide-stat">
+                <span class="slide-stat-num">6<span>+</span></span>
+                <span class="slide-stat-lbl">Years Active</span>
+              </div>
+              <div class="slide-stat">
+                <span class="slide-stat-num">7</span>
+                <span class="slide-stat-lbl">Service Lines</span>
+              </div>
+              <div class="slide-stat">
+                <span class="slide-stat-num">24<span>/7</span></span>
+                <span class="slide-stat-lbl">Operational Support</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="hero-stat">
-          <span class="hero-stat-num"><span class="counter" data-target="98">0</span><span>%</span></span>
-          <span class="hero-stat-lbl">Client Satisfaction</span>
+
+        <!-- ── Slide 2 — Investment & Corporate ── -->
+        <div class="swiper-slide hero-slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+          <div class="slide-bg" style="background-image:url('assets/img/banshap/banshap-team-review.jpg');background-position:top center;" aria-hidden="true"></div>
+          <div class="slide-overlay" aria-hidden="true"></div>
+          <div class="slide-grid" aria-hidden="true"></div>
+          <div class="slide-circle-1" aria-hidden="true"></div>
+          <div class="slide-circle-2" aria-hidden="true"></div>
+          <div class="slide-circle-3" aria-hidden="true"></div>
+          <div class="slide-content">
+            <div class="slide-badge">
+              <span class="badge-dot" aria-hidden="true"></span>
+              Reliable &bull; Professional &bull; Growth Focused
+            </div>
+            <h2 class="slide-title">
+              Building Tomorrow's<br>
+              <span class="hl">Investment Opportunities</span>
+            </h2>
+            <p class="slide-desc">We empower businesses through strategic investments, financial partnerships, project development, and sustainable growth solutions across Tanzania and East Africa.</p>
+            <div class="slide-actions">
+              <a href="#services" class="btn-accent">Investment Solutions <i class="bi bi-arrow-right"></i></a>
+              <a href="#contact" class="btn-outline-primary-custom">Book Consultation <i class="bi bi-calendar-check"></i></a>
+            </div>
+            <div class="slide-stats" aria-label="Key statistics">
+              <div class="slide-stat">
+                <span class="slide-stat-num">200<span>+</span></span>
+                <span class="slide-stat-lbl">Clients Served</span>
+              </div>
+              <div class="slide-stat">
+                <span class="slide-stat-num">6<span>+</span></span>
+                <span class="slide-stat-lbl">Years Active</span>
+              </div>
+              <div class="slide-stat">
+                <span class="slide-stat-num">7</span>
+                <span class="slide-stat-lbl">Service Lines</span>
+              </div>
+              <div class="slide-stat">
+                <span class="slide-stat-num">24<span>/7</span></span>
+                <span class="slide-stat-lbl">Operational Support</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="hero-stat">
-          <span class="hero-stat-num"><span class="counter" data-target="6">0</span><span>+</span></span>
-          <span class="hero-stat-lbl">Years Experience</span>
+
+        <!-- ── Slide 3 — Transportation & Logistics ── -->
+        <div class="swiper-slide hero-slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+          <div class="slide-bg" style="background-image:url('assets/img/banshap/banshap-transport-3.jpg')" aria-hidden="true"></div>
+          <div class="slide-overlay" aria-hidden="true"></div>
+          <div class="slide-grid" aria-hidden="true"></div>
+          <div class="slide-circle-1" aria-hidden="true"></div>
+          <div class="slide-circle-2" aria-hidden="true"></div>
+          <div class="slide-circle-3" aria-hidden="true"></div>
+          <div class="slide-content">
+            <div class="slide-badge">
+              <span class="badge-dot" aria-hidden="true"></span>
+              Fast &bull; Secure &bull; Nationwide Delivery
+            </div>
+            <h2 class="slide-title">
+              <span class="hl">Reliable Logistics</span><br>
+              Powering Every Business
+            </h2>
+            <p class="slide-desc">Our nationwide logistics network provides transportation, warehousing, freight handling, and supply chain solutions that keep businesses moving forward across Tanzania.</p>
+            <div class="slide-actions">
+              <a href="#services" class="btn-accent">Explore Logistics <i class="bi bi-arrow-right"></i></a>
+              <a href="#contact" class="btn-outline-primary-custom">Request Quote <i class="bi bi-file-text"></i></a>
+            </div>
+            <div class="slide-stats" aria-label="Key statistics">
+              <div class="slide-stat">
+                <span class="slide-stat-num">200<span>+</span></span>
+                <span class="slide-stat-lbl">Clients Served</span>
+              </div>
+              <div class="slide-stat">
+                <span class="slide-stat-num">6<span>+</span></span>
+                <span class="slide-stat-lbl">Years Active</span>
+              </div>
+              <div class="slide-stat">
+                <span class="slide-stat-num">7</span>
+                <span class="slide-stat-lbl">Service Lines</span>
+              </div>
+              <div class="slide-stat">
+                <span class="slide-stat-num">24<span>/7</span></span>
+                <span class="slide-stat-lbl">Operational Support</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">24<span>/7</span></span>
-          <span class="hero-stat-lbl">Operational Support</span>
-        </div>
-      </div>
+
+      </div><!-- /swiper-wrapper -->
+
+      <!-- Navigation -->
+      <button class="swiper-button-prev" aria-label="Previous slide"></button>
+      <button class="swiper-button-next" aria-label="Next slide"></button>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination" role="tablist" aria-label="Slide navigation"></div>
     </div>
   </section>
 
@@ -1212,7 +1373,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 <a href="index.html">Banshap Investment Company Limited</a>. All rights reserved.</p>
+        <p>&copy; 2026 <a href="index.html">Banshap Investment Company Limited</a>. All rights reserved.</p>
         <div class="footer-legal">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
@@ -1222,12 +1383,44 @@
   </footer>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-
   <script>
-    // AOS
+    // ── Hero Slider ──
+    const heroSwiper = new Swiper('.hero-swiper', {
+      loop: true,
+      speed: 900,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      keyboard: { enabled: true, onlyInViewport: true },
+      a11y: { prevSlideMessage: 'Previous slide', nextSlideMessage: 'Next slide' },
+      on: {
+        slideChangeTransitionStart: function () {
+          // Re-trigger animations by briefly removing them from inactive slides
+          document.querySelectorAll('.hero-slide:not(.swiper-slide-active)').forEach(function(slide) {
+            ['.slide-badge','.slide-title','.slide-desc','.slide-actions','.slide-stats'].forEach(function(sel) {
+              const el = slide.querySelector(sel);
+              if (el) { el.style.animation = 'none'; void el.offsetWidth; el.style.animation = ''; }
+            });
+          });
+        },
+      },
+    });
+
+    // ── AOS ──
     AOS.init({ duration: 700, easing: 'ease-out-quad', once: true, offset: 60 });
 
     // Header scroll
